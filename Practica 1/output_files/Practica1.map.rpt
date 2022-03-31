@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Práctica1
-Thu Mar 31 08:13:44 2022
+Analysis & Synthesis report for Practica1
+Thu Mar 31 09:05:07 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,9 +10,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Multiplexer Restructuring Statistics (Restructuring Performed)
-  6. Elapsed Time Per Partition
-  7. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -38,20 +42,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 31 08:13:44 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu Mar 31 09:05:07 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; Práctica1                                       ;
-; Top-level Entity Name              ; Prac1                                           ;
+; Revision Name                      ; Practica1                                       ;
+; Top-level Entity Name              ; Practica1                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 55                                              ;
+;     Total combinational functions  ; 54                                              ;
+;     Dedicated logic registers      ; 31                                              ;
+; Total registers                    ; 31                                              ;
+; Total pins                         ; 8                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -61,9 +65,8 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C5T144C8        ;                    ;
-; Top-level entity name                                                      ; Prac1              ; Práctica1          ;
+; Top-level entity name                                                      ; Practica1          ; Practica1          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
-; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -152,14 +155,91 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Prac1|FlipFlopSR:inst1|Q~reg0 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Prac1|Mux4:SelectorQ|Q        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; Mux4.vhd                         ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Mux4.vhd         ;         ;
+; Flip-Flop T.vhd                  ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Flip-Flop T.vhd  ;         ;
+; Flip-Flop SR.vhd                 ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Flip-Flop SR.vhd ;         ;
+; Flip-Flop JK.vhd                 ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Flip-Flop JK.vhd ;         ;
+; Flip-Flop D.vhd                  ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Flip-Flop D.vhd  ;         ;
+; Divisor2.5.vhd                   ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Divisor2.5.vhd   ;         ;
+; Practica1.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/Practica1.bdf    ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 55    ;
+;                                             ;       ;
+; Total combinational functions               ; 54    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 12    ;
+;     -- 3 input functions                    ; 3     ;
+;     -- <=2 input functions                  ; 39    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 30    ;
+;     -- arithmetic mode                      ; 24    ;
+;                                             ;       ;
+; Total registers                             ; 31    ;
+;     -- Dedicated logic registers            ; 31    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 8     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; Reloj ;
+; Maximum fan-out                             ; 26    ;
+; Total fan-out                               ; 224   ;
+; Average fan-out                             ; 2.41  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
+; |Practica1                 ; 54 (0)            ; 31 (0)       ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |Practica1                  ; work         ;
+;    |FlipFlopD:inst|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopD:inst   ; work         ;
+;    |FlipFlopJK:inst1|      ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopJK:inst1 ; work         ;
+;    |FlipFlopSR:inst2|      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopSR:inst2 ; work         ;
+;    |FlipFlopT:inst3|       ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopT:inst3  ; work         ;
+;    |Mux4:inst4|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|Mux4:inst4       ; work         ;
+;    |Mux4:inst5|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|Mux4:inst5       ; work         ;
+;    |Reloj:inst6|           ; 46 (46)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|Reloj:inst6      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 31    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Practica1|FlipFlopSR:inst2|Q~reg0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Practica1|Mux4:inst4|Q            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +-------------------------------+
@@ -177,40 +257,49 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 31 08:13:43 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Práctica1 -c Práctica1
+    Info: Processing started: Thu Mar 31 09:05:05 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica1 -c Practica1
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file flip-flop d.vhd
-    Info (12022): Found design unit 1: FlipFlopD-FFD
-    Info (12023): Found entity 1: FlipFlopD
-Info (12021): Found 2 design units, including 1 entities, in source file divisor2.5.vhd
-    Info (12022): Found design unit 1: Reloj-divisor
-    Info (12023): Found entity 1: Reloj
+Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info (12022): Found design unit 1: Mux4-multiplexor4
+    Info (12023): Found entity 1: Mux4
+Info (12021): Found 2 design units, including 1 entities, in source file flip-flop t.vhd
+    Info (12022): Found design unit 1: FlipFlopT-FFT
+    Info (12023): Found entity 1: FlipFlopT
 Info (12021): Found 2 design units, including 1 entities, in source file flip-flop sr.vhd
     Info (12022): Found design unit 1: FlipFlopSR-FFSR
     Info (12023): Found entity 1: FlipFlopSR
 Info (12021): Found 2 design units, including 1 entities, in source file flip-flop jk.vhd
     Info (12022): Found design unit 1: FlipFlopJK-FFJK
     Info (12023): Found entity 1: FlipFlopJK
-Info (12021): Found 2 design units, including 1 entities, in source file flip-flop t.vhd
-    Info (12022): Found design unit 1: FlipFlopT-FFT
-    Info (12023): Found entity 1: FlipFlopT
-Info (12021): Found 2 design units, including 1 entities, in source file mux4.vhd
-    Info (12022): Found design unit 1: Mux4-multiplexor4
-    Info (12023): Found entity 1: Mux4
-Info (12021): Found 1 design units, including 1 entities, in source file prac1.bdf
-    Info (12023): Found entity 1: Prac1
-Info (12127): Elaborating entity "Prac1" for the top level hierarchy
-Info (12128): Elaborating entity "Mux4" for hierarchy "Mux4:SelectorQ"
+Info (12021): Found 2 design units, including 1 entities, in source file flip-flop d.vhd
+    Info (12022): Found design unit 1: FlipFlopD-FFD
+    Info (12023): Found entity 1: FlipFlopD
+Info (12021): Found 2 design units, including 1 entities, in source file divisor2.5.vhd
+    Info (12022): Found design unit 1: Reloj-divisor
+    Info (12023): Found entity 1: Reloj
+Info (12021): Found 1 design units, including 1 entities, in source file practica1.bdf
+    Info (12023): Found entity 1: Practica1
+Info (12127): Elaborating entity "Practica1" for the top level hierarchy
+Info (12128): Elaborating entity "Mux4" for hierarchy "Mux4:inst4"
 Info (10041): Inferred latch for "Q" at Mux4.vhd(16)
 Info (12128): Elaborating entity "FlipFlopD" for hierarchy "FlipFlopD:inst"
 Info (12128): Elaborating entity "Reloj" for hierarchy "Reloj:inst6"
-Info (12128): Elaborating entity "FlipFlopSR" for hierarchy "FlipFlopSR:inst1"
-Info (12128): Elaborating entity "FlipFlopT" for hierarchy "FlipFlopT:inst2"
-Info (12128): Elaborating entity "FlipFlopJK" for hierarchy "FlipFlopJK:inst3"
-Warning (14026): LATCH primitive "Mux4:SelectorQN|Q" is permanently enabled
-Warning (14026): LATCH primitive "Mux4:SelectorQ|Q" is permanently enabled
+Info (12128): Elaborating entity "FlipFlopSR" for hierarchy "FlipFlopSR:inst2"
+Info (12128): Elaborating entity "FlipFlopT" for hierarchy "FlipFlopT:inst3"
+Info (12128): Elaborating entity "FlipFlopJK" for hierarchy "FlipFlopJK:inst1"
+Warning (14026): LATCH primitive "Mux4:inst5|Q" is permanently enabled
+Warning (14026): LATCH primitive "Mux4:inst4|Q" is permanently enabled
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 63 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 55 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4631 megabytes
+    Info: Processing ended: Thu Mar 31 09:05:07 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
 
 
