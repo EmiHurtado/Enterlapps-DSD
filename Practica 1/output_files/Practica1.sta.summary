@@ -3,16 +3,16 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'Reloj'
-Slack : -3.979
-TNS   : -67.982
+Slack : -3.944
+TNS   : -66.666
 
 Type  : Slow Model Setup 'Reloj:inst6|salida_media'
 Slack : 0.235
 TNS   : 0.000
 
 Type  : Slow Model Hold 'Reloj'
-Slack : -2.556
-TNS   : -2.556
+Slack : -2.541
+TNS   : -2.541
 
 Type  : Slow Model Hold 'Reloj:inst6|salida_media'
 Slack : 0.499
@@ -27,16 +27,16 @@ Slack : -0.742
 TNS   : -7.420
 
 Type  : Fast Model Setup 'Reloj'
-Slack : -0.838
-TNS   : -8.738
+Slack : -0.841
+TNS   : -8.442
 
 Type  : Fast Model Setup 'Reloj:inst6|salida_media'
 Slack : 0.665
 TNS   : 0.000
 
 Type  : Fast Model Hold 'Reloj'
-Slack : -1.359
-TNS   : -1.359
+Slack : -1.352
+TNS   : -1.352
 
 Type  : Fast Model Hold 'Reloj:inst6|salida_media'
 Slack : 0.215

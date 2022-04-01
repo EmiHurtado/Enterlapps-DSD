@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C5T144) Path("C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 1/output_files/") File("Practica1.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C5T144) Path("C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 1/output_files/") File("Practica1.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

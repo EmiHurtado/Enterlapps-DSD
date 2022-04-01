@@ -70,9 +70,9 @@ Q                            : 3         : output : 3.3-V LVTTL       :         
 GND*                         : 4         :        :                   :         : 1         :                
 VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
 GND                          : 6         : gnd    :                   :         :           :                
-GND*                         : 7         :        :                   :         : 1         :                
+QNegada                      : 7         : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 8         :        :                   :         : 1         :                
-QNegada                      : 9         : output : 3.3-V LVTTL       :         : 1         : Y              
+SalidaReloj                  : 9         : output : 3.3-V LVTTL       :         : 1         : Y              
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
 TCK                          : 12        : input  :                   :         : 1         :                
@@ -103,15 +103,15 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-Data1                        : 40        : input  : 3.3-V LVTTL       :         : 4         : Y              
-Data2                        : 41        : input  : 3.3-V LVTTL       :         : 4         : Y              
+GND*                         : 40        :        :                   :         : 4         :                
+GND*                         : 41        :        :                   :         : 4         :                
 GND*                         : 42        :        :                   :         : 4         :                
 GND*                         : 43        :        :                   :         : 4         :                
 GND*                         : 44        :        :                   :         : 4         :                
 GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-Sel0                         : 47        : input  : 3.3-V LVTTL       :         : 4         : Y              
-Sel1                         : 48        : input  : 3.3-V LVTTL       :         : 4         : Y              
+GND*                         : 47        :        :                   :         : 4         :                
+GND*                         : 48        :        :                   :         : 4         :                
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
 GND*                         : 51        :        :                   :         : 4         :                
@@ -175,8 +175,8 @@ GND_PLL2                     : 108       : gnd    :                   :         
 VCCA_PLL2                    : 109       : power  :                   : 1.2V    :           :                
 GNDA_PLL2                    : 110       : gnd    :                   :         :           :                
 GND                          : 111       : gnd    :                   :         :           :                
-GND*                         : 112       :        :                   :         : 2         :                
-GND*                         : 113       :        :                   :         : 2         :                
+Data2                        : 112       : input  : 3.3-V LVTTL       :         : 2         : Y              
+Data1                        : 113       : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 114       :        :                   :         : 2         :                
 GND*                         : 115       :        :                   :         : 2         :                
 VCCIO2                       : 116       : power  :                   : 3.3V    : 2         :                
@@ -205,6 +205,6 @@ VCCIO2                       : 138       : power  :                   : 3.3V    
 GND*                         : 139       :        :                   :         : 2         :                
 GND                          : 140       : gnd    :                   :         :           :                
 GND*                         : 141       :        :                   :         : 2         :                
-GND*                         : 142       :        :                   :         : 2         :                
-GND*                         : 143       :        :                   :         : 2         :                
+Sel1                         : 142       : input  : 3.3-V LVTTL       :         : 2         : Y              
+Sel0                         : 143       : input  : 3.3-V LVTTL       :         : 2         : Y              
 ResetReloj                   : 144       : input  : 3.3-V LVTTL       :         : 2         : Y              

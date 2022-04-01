@@ -35,6 +35,7 @@ applicable agreement for further details.
 	)
 	(rotate90)
 	(text "VCC" (rect 7 20 17 40)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect 632 640 688 656))
 )
 (pin
 	(input)
@@ -52,12 +53,13 @@ applicable agreement for further details.
 	)
 	(rotate90)
 	(text "VCC" (rect 7 20 17 40)(font "Arial" (font_size 6))(vertical))
+	(annotation_block (location)(rect 664 640 720 656))
 )
 (pin
 	(input)
 	(rect 248 456 416 472)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Data1" (rect 5 0 35 12)(font "Arial" ))
+	(text "Data1" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -68,12 +70,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 192 472 248 488))
 )
 (pin
 	(input)
 	(rect 248 480 416 496)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Data2" (rect 5 0 35 12)(font "Arial" ))
+	(text "Data2" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -84,12 +87,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 192 496 248 512))
 )
 (pin
 	(input)
 	(rect 24 216 192 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Reloj" (rect 5 0 30 12)(font "Arial" ))
+	(text "Reloj" (rect 5 0 29 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -100,12 +104,13 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -24 232 24 248))
 )
 (pin
 	(input)
 	(rect 24 240 192 256)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ResetReloj" (rect 5 0 60 12)(font "Arial" ))
+	(text "ResetReloj" (rect 5 0 59 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -116,6 +121,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -32 256 24 272))
 )
 (pin
 	(output)
@@ -132,12 +138,30 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1128 104 1176 120))
 )
 (pin
 	(output)
 	(rect 960 248 1136 264)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "QNegada" (rect 90 0 136 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1136 264 1184 280))
+)
+(pin
+	(output)
+	(rect 904 208 1080 224)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SalidaReloj" (rect 90 0 144 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -467,10 +491,6 @@ applicable agreement for further details.
 	(pt 368 80)
 )
 (connector
-	(pt 368 184)
-	(pt 368 224)
-)
-(connector
 	(pt 368 392)
 	(pt 512 392)
 )
@@ -682,6 +702,18 @@ applicable agreement for further details.
 	(pt 728 336)
 	(pt 728 472)
 )
+(connector
+	(pt 904 216)
+	(pt 368 216)
+)
+(connector
+	(pt 368 184)
+	(pt 368 216)
+)
+(connector
+	(pt 368 216)
+	(pt 368 224)
+)
 (junction (pt 368 184))
 (junction (pt 368 224))
 (junction (pt 368 288))
@@ -691,3 +723,4 @@ applicable agreement for further details.
 (junction (pt 456 376))
 (junction (pt 696 320))
 (junction (pt 728 336))
+(junction (pt 368 216))
