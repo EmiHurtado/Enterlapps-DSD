@@ -1,5 +1,5 @@
 Assembler report for divisor_frecuencia
-Thu Mar 31 19:36:15 2022
+Fri Apr 01 08:30:37 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof
-  6. Assembler Device Options: C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof
+  5. Assembler Device Options: C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof
+  6. Assembler Device Options: C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof
   7. Assembler Messages
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 31 19:36:15 2022 ;
+; Assembler Status      ; Successful - Fri Apr 01 08:30:37 2022 ;
 ; Revision Name         ; divisor_frecuencia                    ;
-; Top-level Entity Name ; divisor_frecuencia                    ;
+; Top-level Entity Name ; Practica2                             ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C5T144C8                           ;
 +-----------------------+---------------------------------------+
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                      ;
-+--------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                      ;
-+--------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof ;
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof ;
-+--------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                               ;
++-------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof ;
+; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof ;
++-------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                 ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C5T144C8                                                                                                                             ;
-; JTAG usercode  ; 0x00072D60                                                                                                                              ;
-; Checksum       ; 0x00072D60                                                                                                                              ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.sof ;
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                          ;
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C5T144C8                                                                                                                      ;
+; JTAG usercode  ; 0x000830B1                                                                                                                       ;
+; Checksum       ; 0x000830B1                                                                                                                       ;
++----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                             ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS4                                                                                                                               ;
-; JTAG usercode      ; 0x00000000                                                                                                                          ;
-; Checksum           ; 0x07534C75                                                                                                                          ;
-; Compression Ratio  ; 3                                                                                                                                   ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica_2/output_files/divisor_frecuencia.pof ;
++--------------------+------------------------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                                      ;
++--------------------+------------------------------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS4                                                                                                                        ;
+; JTAG usercode      ; 0x00000000                                                                                                                   ;
+; Checksum           ; 0x07502121                                                                                                                   ;
+; Compression Ratio  ; 3                                                                                                                            ;
++--------------------+------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 31 19:36:14 2022
+    Info: Processing started: Fri Apr 01 08:30:36 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off divisor_frecuencia -c divisor_frecuencia
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Thu Mar 31 19:36:15 2022
+    Info: Peak virtual memory: 4528 megabytes
+    Info: Processing ended: Fri Apr 01 08:30:37 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
