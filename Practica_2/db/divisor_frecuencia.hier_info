@@ -1,0 +1,6 @@
+|divisor_frecuencia
+salida <= <GND>
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+
+
