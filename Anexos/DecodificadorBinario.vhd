@@ -5,7 +5,7 @@ entity DecodifiadorBinario is
 	port(
 		value : in std_logic;
 		a, b, c, d, e, f, g : out std_logic;
-		salidaVector : out std_logic_vector(6 downto 0)
+		salidaVector : inout std_logic_vector(6 downto 0)
 	);
 end DecodifiadorBinario; 
 
