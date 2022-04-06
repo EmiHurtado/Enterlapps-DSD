@@ -3,9 +3,10 @@ use ieee.std_logic_1164.all;
 
 entity DecodifiadorDecimal is
 	port(
-		valueVector : in std_logic_vector(4 downto 0);
-		a, b, c, d, e, f, g : out std_logic;
-		salidaVector : out std_logic_vector(6 downto 0)
+		valueVector : in std_logic_vector(0 to 4);
+		dot : in std_logic;
+		a, b, c, d, e, f, g, h : out std_logic;
+		salidaVector : out std_logic_vector(0 to 6)
 	);
 end DecodifiadorDecimal; 
 
@@ -30,4 +31,5 @@ begin
 	e <= salidaVector(4);
 	f <= salidaVector(5);
 	g <= salidaVector(6);
+	h <= dot;
 end DecoBin;

@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity DecodifiadorBinario is
 	port(
-		value : in std_logic;
-		a, b, c, d, e, f, g : out std_logic;
-		salidaVector : inout std_logic_vector(6 downto 0)
+		value, dot : in std_logic;
+		a, b, c, d, e, f, g, h : out std_logic;
+		salidaVector : inout std_logic_vector(0 to 6)
 	);
 end DecodifiadorBinario; 
 
@@ -21,4 +21,5 @@ begin
 	e <= salidaVector(4);
 	f <= salidaVector(5);
 	g <= salidaVector(6);
+	h <= dot;
 end DecoBin;
