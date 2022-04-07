@@ -16,8 +16,26 @@ ENTITY GameManager IS
     );
 END ENTITY GameManager;
 
-architecture GM of GameManager is
-    
-begin
-    -- TODO: Todo XD
-end architecture GM;
+ARCHITECTURE GM OF GameManager IS
+    SIGNAL pausedGame : STD_LOGIC := '0';
+    SIGNAL phaseGame : INTEGER RANGE 0 TO 3; -- 0 - Antes de lanzar, 1 - Corriendo, 2 - Pausado, 3 - Victoria
+BEGIN
+    PROCESS (clk, pausedGame)
+    BEGIN
+        IF (clk'event AND clk = '1' AND pausedGame = '0')
+        BEGIN
+            game : PROCESS (phaseGame)
+            BEGIN
+                IF (phaseGame = '0') THEN
+                    -- TODO: Phase de lanzamiento
+                ELSIF (phaseGame = '1') THEN
+                    --TODO: Juego
+                ELSIF (phaseGame = '2') THEN
+                    -- TODO: Fase de pausa
+                ELSIF (phaseGame = '3') THEN
+                    -- TODO: Fase de victoria
+                END IF;
+            END PROCESS game;
+        END IF;
+    END PROCESS;
+END ARCHITECTURE GM;
