@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity ConvertidorUnitarioVector4 is
 	port(
 		a, b, c, d : in std_logic;
-		salidaVector : out std_logic_vector(3 downto 0)
+		salidaVector : out std_logic_vector(0 to 3)
 	);
 end ConvertidorUnitarioVector4; 
 

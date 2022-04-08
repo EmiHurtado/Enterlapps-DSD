@@ -1,42 +1,37 @@
----------------------------------- LIBRERÍAS ----------------------------------------
-Library ieee;
+LIBRARY ieee;
 
-use ieee.std_logic_1164.all; -- Librería de funciones lógicas
-use work.std_arith.all; -- Biblioteca de aritmética
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+USE IEEE.MATH_REAL.ALL;
 
----------------------------------- ENTIDAD ----------------------------------------
--- Se definen las salidas y entradas del circuito.
-entity  DivisorDeFrecuencia  is
-	port(
-		newFreq : in integer range 0 to 50000000;
-		clk, reset : in std_logic;
-		salida : out std_logic
+ENTITY DivisorDeFrecuencia IS
+	GENERIC (
+		frequency : real RANGE 0.1 TO 50000000.0 := 5.0
 	);
-end DivisorDeFrecuencia;
+	PORT (
+		CLK, RESET : IN STD_LOGIC;
+		salida : OUT STD_LOGIC
+	);
+END DivisorDeFrecuencia;
 
--------------------------------- ARQUITECTURA ----------------------------------------
--- Se define las instrucciones a ejecutar por el FPGA.
--- Se diseña un divisor de frecuencia a 1Hz.
-architecture DivFrec of DivisorDeFrecuencia is
-
-signal limite : integer range 0 to 49999999 := (50000000 / newFrec) - 1
-signal contador: integer range 0 to limite := 0;    -- Declaración del wire
-signal salida_media: std_logic;  -- Declaración del wire
-
-begin
-	process(clk,reset) 		  
-	begin
-		if reset = '0' then
+ARCHITECTURE DivFrec OF DivisorDeFrecuencia IS
+	SIGNAL limite : INTEGER RANGE 0 TO 49999999 := INTEGER((50000000.0 / frequency) - 1.0);
+	SIGNAL contador : INTEGER RANGE 0 TO limite := 0;
+	SIGNAL salida_media : STD_LOGIC;
+BEGIN
+	PROCESS (CLK, RESET)
+	BEGIN
+		IF RESET = '0' THEN
 			salida_media <= '0';
-			contador <= 0;  -- Reseteo del contador
-		elsif rising_edge(clk) then -- Al detectar una subida en el reloj, ejecuta el siguiente código
-			if contador = limite then
+			contador <= 0;
+		ELSIF rising_edge(CLK) THEN
+			IF contador = limite THEN
 				contador <= 0;
-				salida_media <= not salida_media;
-			else
-				contador <= contador+1;
-			end if;
-		end if;
-	end process;
+				salida_media <= NOT salida_media;
+			ELSE
+				contador <= contador + 1;
+			END IF;
+		END IF;
+	END PROCESS;
 	salida <= salida_media;
-end DivFrec;
+END DivFrec;
