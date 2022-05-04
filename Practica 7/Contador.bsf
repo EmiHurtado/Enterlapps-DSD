@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 160 32)
 		(bidir)
-		(text "salida[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "salida[7..0]" (rect 98 27 139 39)(font "Arial" ))
+		(text "salida[3..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "salida[3..0]" (rect 98 27 139 39)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
