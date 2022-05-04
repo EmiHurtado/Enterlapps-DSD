@@ -26,8 +26,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "valueVector[3..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "valueVector[3..0]" (rect 21 27 90 39)(font "Arial" ))
+		(text "valueVector[0..7]" (rect 0 0 69 12)(font "Arial" ))
+		(text "valueVector[0..7]" (rect 21 27 90 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
