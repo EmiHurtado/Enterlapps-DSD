@@ -1,0 +1,5 @@
+set tool_name "Active-HDL (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Practica7.vho Practica7_vhd.sdo}}
+	{{"Fast Model"} {Practica7_fast.vho Practica7_vhd_fast.sdo}}
+}
