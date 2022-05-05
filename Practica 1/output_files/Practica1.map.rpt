@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica1
-Sat Apr 02 11:41:15 2022
+Wed Apr 06 12:20:48 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 02 11:41:15 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 06 12:20:48 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica1                                       ;
 ; Top-level Entity Name              ; Practica1                                       ;
@@ -51,7 +51,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 54                                              ;
 ;     Dedicated logic registers      ; 31                                              ;
 ; Total registers                    ; 31                                              ;
-; Total pins                         ; 21                                              ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -192,12 +192,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 31    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 21    ;
+; I/O pins                                    ; 18    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; Reloj ;
 ; Maximum fan-out                             ; 26    ;
-; Total fan-out                               ; 231   ;
-; Average fan-out                             ; 2.18  ;
+; Total fan-out                               ; 230   ;
+; Average fan-out                             ; 2.23  ;
 +---------------------------------------------+-------+
 
 
@@ -206,7 +206,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+--------------+
-; |Practica1                 ; 54 (0)            ; 31 (0)       ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |Practica1                  ; work         ;
+; |Practica1                 ; 54 (0)            ; 31 (0)       ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |Practica1                  ; work         ;
 ;    |FlipFlopD:inst|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopD:inst   ; work         ;
 ;    |FlipFlopJK:inst1|      ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopJK:inst1 ; work         ;
 ;    |FlipFlopSR:inst2|      ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica1|FlipFlopSR:inst2 ; work         ;
@@ -258,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Apr 02 11:41:14 2022
+    Info: Processing started: Wed Apr 06 12:20:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica1 -c Practica1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/decodificadorbinario.vhd
@@ -285,33 +285,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file divisor
 Info (12021): Found 1 design units, including 1 entities, in source file practica1.bdf
     Info (12023): Found entity 1: Practica1
 Info (12127): Elaborating entity "Practica1" for the top level hierarchy
-Info (12128): Elaborating entity "Reloj" for hierarchy "Reloj:inst6"
 Info (12128): Elaborating entity "DecodifiadorBinario" for hierarchy "DecodifiadorBinario:inst7"
 Info (12128): Elaborating entity "Mux4" for hierarchy "Mux4:inst4"
 Info (10041): Inferred latch for "Q" at Mux4.vhd(16)
 Info (12128): Elaborating entity "FlipFlopD" for hierarchy "FlipFlopD:inst"
+Info (12128): Elaborating entity "Reloj" for hierarchy "Reloj:inst6"
 Info (12128): Elaborating entity "FlipFlopSR" for hierarchy "FlipFlopSR:inst2"
 Info (12128): Elaborating entity "FlipFlopT" for hierarchy "FlipFlopT:inst3"
 Info (12128): Elaborating entity "FlipFlopJK" for hierarchy "FlipFlopJK:inst1"
 Warning (14026): LATCH primitive "Mux4:inst5|Q" is permanently enabled
 Warning (14026): LATCH primitive "Mux4:inst4|Q" is permanently enabled
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "A" is stuck at GND
-    Warning (13410): Pin "E" is stuck at VCC
-    Warning (13410): Pin "F" is stuck at VCC
-    Warning (13410): Pin "AN" is stuck at GND
-    Warning (13410): Pin "EN" is stuck at VCC
-    Warning (13410): Pin "FN" is stuck at VCC
+    Warning (13410): Pin "B" is stuck at VCC
+    Warning (13410): Pin "C" is stuck at VCC
+    Warning (13410): Pin "NB" is stuck at VCC
+    Warning (13410): Pin "NC" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 15 output pins
+    Info (21059): Implemented 12 output pins
     Info (21061): Implemented 55 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Sat Apr 02 11:41:15 2022
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Wed Apr 06 12:20:48 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 

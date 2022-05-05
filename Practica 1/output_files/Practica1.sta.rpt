@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Practica1
-Sat Apr 02 11:41:22 2022
+Wed Apr 06 12:20:57 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -119,7 +119,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------+-----------------+--------------------------+-------------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name               ; Note                                                  ;
 +-------------+-----------------+--------------------------+-------------------------------------------------------+
-; 202.43 MHz  ; 202.43 MHz      ; Reloj                    ;                                                       ;
+; 196.77 MHz  ; 196.77 MHz      ; Reloj                    ;                                                       ;
 ; 1307.19 MHz ; 402.58 MHz      ; Reloj:inst6|salida_media ; limit due to high minimum pulse width violation (tch) ;
 +-------------+-----------------+--------------------------+-------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -130,7 +130,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; Reloj                    ; -3.940 ; -67.061       ;
+; Reloj                    ; -4.082 ; -66.142       ;
 ; Reloj:inst6|salida_media ; 0.235  ; 0.000         ;
 +--------------------------+--------+---------------+
 
@@ -140,7 +140,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; Reloj                    ; -2.559 ; -2.559        ;
+; Reloj                    ; -2.554 ; -2.554        ;
 ; Reloj:inst6|salida_media ; 0.499  ; 0.000         ;
 +--------------------------+--------+---------------+
 
@@ -172,106 +172,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; -3.940 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.978      ;
-; -3.904 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.942      ;
-; -3.813 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.851      ;
-; -3.768 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.806      ;
-; -3.732 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.770      ;
-; -3.719 ; Reloj:inst6|contador[6]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.759      ;
-; -3.716 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.756      ;
-; -3.714 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.752      ;
-; -3.697 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.735      ;
-; -3.683 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.721      ;
-; -3.678 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.716      ;
-; -3.641 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.679      ;
-; -3.624 ; Reloj:inst6|contador[8]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.664      ;
-; -3.621 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.661      ;
-; -3.602 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.640      ;
-; -3.587 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.625      ;
-; -3.584 ; Reloj:inst6|contador[9]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.624      ;
-; -3.581 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.621      ;
-; -3.562 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.600      ;
-; -3.560 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.600      ;
-; -3.544 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.582      ;
-; -3.511 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.549      ;
+; -4.082 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 5.119      ;
+; -4.046 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 5.083      ;
+; -3.955 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.992      ;
+; -3.939 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.977      ;
+; -3.903 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.941      ;
+; -3.825 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.862      ;
+; -3.812 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.850      ;
+; -3.721 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.761      ;
+; -3.686 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.723      ;
+; -3.682 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.720      ;
+; -3.597 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.635      ;
+; -3.578 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.619      ;
+; -3.561 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.599      ;
+; -3.555 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.595      ;
+; -3.555 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.595      ;
+; -3.554 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.591      ;
+; -3.548 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.585      ;
+; -3.543 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.581      ;
+; -3.529 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.566      ;
+; -3.522 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.560      ;
+; -3.522 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.560      ;
+; -3.518 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.555      ;
 ; -3.507 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.545      ;
-; -3.472 ; Reloj:inst6|contador[17] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.514      ;
+; -3.493 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.530      ;
+; -3.481 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.523      ;
+; -3.481 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.519      ;
+; -3.481 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.519      ;
 ; -3.471 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.509      ;
-; -3.469 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.511      ;
-; -3.459 ; Reloj:inst6|contador[0]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.499      ;
-; -3.457 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.495      ;
-; -3.456 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.496      ;
-; -3.450 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.488      ;
-; -3.450 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.488      ;
-; -3.450 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.490      ;
-; -3.441 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.479      ;
-; -3.416 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.454      ;
-; -3.416 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.454      ;
-; -3.414 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.452      ;
-; -3.414 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.452      ;
-; -3.414 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.452      ;
-; -3.412 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.450      ;
-; -3.411 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.449      ;
-; -3.410 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.448      ;
-; -3.405 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.443      ;
-; -3.388 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.428      ;
+; -3.470 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.508      ;
+; -3.458 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.495      ;
+; -3.456 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.493      ;
+; -3.450 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.487      ;
+; -3.448 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.488      ;
+; -3.427 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.464      ;
+; -3.426 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.464      ;
+; -3.426 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.464      ;
+; -3.422 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.459      ;
+; -3.414 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.451      ;
+; -3.407 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.447      ;
+; -3.405 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.443      ;
+; -3.402 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.439      ;
+; -3.386 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.424      ;
+; -3.386 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.424      ;
+; -3.384 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.424      ;
 ; -3.380 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.418      ;
-; -3.372 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.410      ;
-; -3.368 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.406      ;
-; -3.367 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.405      ;
-; -3.340 ; Reloj:inst6|contador[24] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.382      ;
-; -3.337 ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.379      ;
-; -3.334 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.374      ;
-; -3.333 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.371      ;
-; -3.323 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.361      ;
-; -3.323 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.361      ;
-; -3.321 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.359      ;
-; -3.321 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.359      ;
-; -3.319 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.357      ;
-; -3.318 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.356      ;
-; -3.318 ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.358      ;
-; -3.317 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.355      ;
-; -3.315 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.353      ;
-; -3.314 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.352      ;
-; -3.310 ; Reloj:inst6|contador[15] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.352      ;
-; -3.307 ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.349      ;
-; -3.297 ; Reloj:inst6|contador[10] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.337      ;
-; -3.297 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.335      ;
-; -3.294 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.334      ;
-; -3.288 ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.328      ;
-; -3.286 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.324      ;
-; -3.281 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.319      ;
-; -3.281 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.319      ;
-; -3.279 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.317      ;
-; -3.277 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.315      ;
-; -3.275 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.313      ;
-; -3.275 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.313      ;
-; -3.273 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.311      ;
-; -3.272 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.310      ;
-; -3.270 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.308      ;
-; -3.261 ; Reloj:inst6|contador[7]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.301      ;
-; -3.258 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.298      ;
+; -3.376 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.413      ;
+; -3.352 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.392      ;
+; -3.352 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.390      ;
+; -3.351 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.389      ;
+; -3.343 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.380      ;
+; -3.335 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.376      ;
+; -3.335 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.376      ;
+; -3.331 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.368      ;
+; -3.328 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.368      ;
+; -3.323 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.360      ;
+; -3.317 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.354      ;
+; -3.312 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.352      ;
+; -3.310 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.348      ;
+; -3.299 ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.339      ;
+; -3.299 ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.339      ;
+; -3.297 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.334      ;
+; -3.291 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.001     ; 4.330      ;
+; -3.284 ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.325      ;
+; -3.284 ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.325      ;
+; -3.281 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.318      ;
+; -3.278 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.315      ;
+; -3.278 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.318      ;
+; -3.272 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.309      ;
+; -3.272 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.309      ;
+; -3.261 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.003      ; 4.304      ;
+; -3.258 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.295      ;
+; -3.255 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.293      ;
 ; -3.250 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.288      ;
-; -3.250 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.288      ;
-; -3.240 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.278      ;
-; -3.240 ; Reloj:inst6|contador[19] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.282      ;
-; -3.239 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.277      ;
-; -3.239 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.277      ;
-; -3.237 ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.279      ;
-; -3.234 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.272      ;
-; -3.233 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.271      ;
-; -3.232 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.270      ;
-; -3.218 ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.258      ;
-; -3.209 ; Reloj:inst6|contador[14] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.251      ;
-; -3.206 ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.248      ;
-; -3.206 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.244      ;
-; -3.195 ; Reloj:inst6|contador[23] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.237      ;
-; -3.193 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.231      ;
-; -3.193 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.231      ;
-; -3.192 ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.234      ;
-; -3.189 ; Reloj:inst6|contador[18] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.231      ;
-; -3.187 ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.227      ;
-; -3.186 ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.228      ;
+; -3.249 ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.290      ;
+; -3.249 ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.290      ;
+; -3.246 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.001     ; 4.285      ;
+; -3.246 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.001     ; 4.285      ;
+; -3.243 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.001     ; 4.282      ;
+; -3.242 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.279      ;
+; -3.236 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.001      ; 4.277      ;
+; -3.236 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.273      ;
+; -3.233 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.271      ;
+; -3.228 ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.268      ;
+; -3.228 ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.268      ;
+; -3.225 ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 4.267      ;
+; -3.219 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.259      ;
+; -3.219 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.259      ;
+; -3.217 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.254      ;
+; -3.215 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.253      ;
+; -3.213 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.250      ;
+; -3.213 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.250      ;
+; -3.210 ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.003      ; 4.253      ;
+; -3.210 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.247      ;
+; -3.201 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 4.239      ;
+; -3.201 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.238      ;
+; -3.199 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.236      ;
+; -3.193 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.233      ;
+; -3.193 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.230      ;
+; -3.190 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.003     ; 4.227      ;
+; -3.184 ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 4.224      ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -292,106 +292,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
-; -2.559 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; 0.000        ; 2.754      ; 0.805      ;
-; -2.059 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; -0.500       ; 2.754      ; 0.805      ;
+; -2.554 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; 0.000        ; 2.749      ; 0.805      ;
+; -2.054 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; -0.500       ; 2.749      ; 0.805      ;
 ; 1.172  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.478      ;
 ; 1.172  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.478      ;
 ; 1.172  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.177  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.483      ;
 ; 1.177  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.483      ;
 ; 1.178  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[0]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.484      ;
-; 1.182  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.488      ;
-; 1.183  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.489      ;
 ; 1.221  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.527      ;
 ; 1.221  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.527      ;
 ; 1.221  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.527      ;
 ; 1.226  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[1]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.532      ;
 ; 1.228  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.534      ;
 ; 1.229  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.535      ;
-; 1.496  ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.802      ;
+; 1.494  ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.800      ;
+; 1.650  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.956      ;
 ; 1.651  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.957      ;
 ; 1.656  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[1]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.962      ;
-; 1.657  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.963      ;
-; 1.662  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.968      ;
-; 1.671  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.977      ;
+; 1.656  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 1.962      ;
 ; 1.701  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.007      ;
 ; 1.706  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.012      ;
 ; 1.708  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.014      ;
 ; 1.709  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.015      ;
+; 1.736  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.042      ;
+; 1.742  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.048      ;
 ; 1.742  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.048      ;
+; 1.742  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.048      ;
 ; 1.743  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.049      ;
 ; 1.744  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.050      ;
-; 1.747  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.053      ;
-; 1.748  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.054      ;
-; 1.757  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.063      ;
 ; 1.761  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.067      ;
 ; 1.787  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.093      ;
 ; 1.792  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.098      ;
 ; 1.795  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.101      ;
+; 1.822  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.128      ;
+; 1.828  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.134      ;
 ; 1.828  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.134      ;
-; 1.833  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.139      ;
-; 1.834  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.140      ;
-; 1.843  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.149      ;
+; 1.828  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.134      ;
+; 1.830  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.136      ;
 ; 1.847  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.153      ;
+; 1.864  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.171      ;
+; 1.878  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.185      ;
 ; 1.880  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.186      ;
 ; 1.891  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.197      ;
-; 1.919  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[22] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.225      ;
-; 1.919  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.225      ;
-; 1.929  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.235      ;
-; 1.950  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.256      ;
-; 1.953  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.259      ;
-; 1.962  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.268      ;
+; 1.908  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.214      ;
+; 1.914  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.220      ;
+; 1.921  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.227      ;
+; 1.929  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.235      ;
 ; 1.966  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.272      ;
 ; 1.977  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.283      ;
 ; 1.982  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.288      ;
-; 2.005  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.311      ;
+; 1.991  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.298      ;
+; 2.000  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.306      ;
 ; 2.018  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.324      ;
 ; 2.019  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.325      ;
-; 2.038  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.344      ;
-; 2.039  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.345      ;
+; 2.036  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.343      ;
+; 2.051  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.358      ;
 ; 2.052  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.358      ;
 ; 2.068  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.374      ;
 ; 2.091  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.395      ;
 ; 2.104  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.410      ;
 ; 2.105  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.411      ;
-; 2.125  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.431      ;
-; 2.136  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.442      ;
+; 2.135  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.442      ;
 ; 2.138  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.444      ;
 ; 2.149  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.455      ;
 ; 2.172  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.476      ;
 ; 2.191  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.497      ;
-; 2.211  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.517      ;
+; 2.223  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.530      ;
+; 2.224  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.530      ;
 ; 2.235  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.541      ;
 ; 2.235  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.541      ;
 ; 2.240  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.546      ;
-; 2.246  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.552      ;
 ; 2.263  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.567      ;
-; 2.264  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.570      ;
-; 2.267  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.573      ;
+; 2.270  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.576      ;
 ; 2.276  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.582      ;
 ; 2.277  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.583      ;
-; 2.308  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.614      ;
+; 2.307  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.614      ;
 ; 2.316  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.620      ;
-; 2.320  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.626      ;
 ; 2.321  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.627      ;
 ; 2.326  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.632      ;
-; 2.329  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.635      ;
+; 2.335  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.642      ;
 ; 2.344  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.648      ;
-; 2.355  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.659      ;
-; 2.356  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[13] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.662      ;
-; 2.362  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.668      ;
+; 2.349  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.653      ;
+; 2.355  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.661      ;
 ; 2.362  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.668      ;
-; 2.392  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.698      ;
-; 2.398  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[22] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.704      ;
+; 2.377  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.683      ;
+; 2.391  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.697      ;
+; 2.403  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.710      ;
 ; 2.407  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.713      ;
 ; 2.407  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.713      ;
 ; 2.412  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.718      ;
-; 2.419  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.725      ;
-; 2.432  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.738      ;
+; 2.414  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.720      ;
+; 2.422  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[14] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.728      ;
+; 2.429  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.733      ;
 ; 2.448  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.754      ;
-; 2.450  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.754      ;
-; 2.484  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.790      ;
 ; 2.488  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.792      ;
+; 2.498  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.001      ; 2.805      ;
 ; 2.498  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 2.804      ;
+; 2.521  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.825      ;
+; 2.521  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 2.825      ;
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
 
 
@@ -554,8 +554,8 @@ No paths to report.
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; 5.520 ; 5.520 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; 5.521 ; 5.521 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; 4.711 ; 4.711 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; 5.201 ; 5.201 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
@@ -564,45 +564,41 @@ No paths to report.
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; -4.984 ; -4.984 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; -5.252 ; -5.252 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; -4.438 ; -4.438 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; -4.887 ; -4.887 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                            ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 11.100 ; 11.100 ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 11.082 ; 11.082 ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 11.100 ; 11.100 ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 10.748 ; 10.748 ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 11.080 ; 11.080 ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 10.747 ; 10.747 ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 11.464 ; 11.464 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 11.145 ; 11.145 ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 4.171  ;        ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;        ; 4.171  ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
++------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 10.103 ; 10.103 ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 10.856 ; 10.856 ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 11.223 ; 11.223 ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 11.575 ; 11.575 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 9.746  ; 9.746  ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 10.835 ; 10.835 ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 11.553 ; 11.553 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 11.554 ; 11.554 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                    ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 9.681  ; 9.681  ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 9.663  ; 9.663  ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 9.681  ; 9.681  ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 9.329  ; 9.329  ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 9.661  ; 9.661  ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 9.328  ; 9.328  ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 10.045 ; 10.045 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 9.726  ; 9.726  ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 4.171  ;        ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;        ; 4.171  ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
++------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                  ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 8.849  ; 8.849  ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 9.602  ; 9.602  ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 9.969  ; 9.969  ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 10.321 ; 10.321 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 8.333  ; 8.333  ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 9.422  ; 9.422  ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 10.140 ; 10.140 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 10.141 ; 10.141 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
 
 
 +--------------------------------------------------------------+
@@ -610,22 +606,22 @@ No paths to report.
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; Sel0       ; B           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; BN          ; 15.132 ; 15.132 ; 15.132 ; 15.132 ;
-; Sel0       ; C           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; CN          ; 14.798 ; 14.798 ; 14.798 ; 14.798 ;
-; Sel0       ; D           ; 15.131 ; 15.131 ; 15.131 ; 15.131 ;
-; Sel0       ; DN          ; 14.797 ; 14.797 ; 14.797 ; 14.797 ;
-; Sel0       ; G           ; 15.515 ; 15.515 ; 15.515 ; 15.515 ;
-; Sel0       ; GN          ; 15.195 ; 15.195 ; 15.195 ; 15.195 ;
-; Sel1       ; B           ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
-; Sel1       ; BN          ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
-; Sel1       ; C           ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
-; Sel1       ; CN          ; 14.845 ; 14.845 ; 14.845 ; 14.845 ;
-; Sel1       ; D           ; 14.668 ; 14.668 ; 14.668 ; 14.668 ;
-; Sel1       ; DN          ; 14.844 ; 14.844 ; 14.844 ; 14.844 ;
-; Sel1       ; G           ; 15.052 ; 15.052 ; 15.052 ; 15.052 ;
-; Sel1       ; GN          ; 15.242 ; 15.242 ; 15.242 ; 15.242 ;
+; Sel0       ; A           ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; Sel0       ; D           ; 13.833 ; 13.833 ; 13.833 ; 13.833 ;
+; Sel0       ; E           ; 14.200 ; 14.200 ; 14.200 ; 14.200 ;
+; Sel0       ; F           ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; Sel0       ; NA          ; 12.248 ; 12.248 ; 12.248 ; 12.248 ;
+; Sel0       ; ND          ; 13.337 ; 13.337 ; 13.337 ; 13.337 ;
+; Sel0       ; NE          ; 14.055 ; 14.055 ; 14.055 ; 14.055 ;
+; Sel0       ; NF          ; 14.056 ; 14.056 ; 14.056 ; 14.056 ;
+; Sel1       ; A           ; 12.822 ; 12.822 ; 12.822 ; 12.822 ;
+; Sel1       ; D           ; 13.575 ; 13.575 ; 13.575 ; 13.575 ;
+; Sel1       ; E           ; 13.942 ; 13.942 ; 13.942 ; 13.942 ;
+; Sel1       ; F           ; 14.294 ; 14.294 ; 14.294 ; 14.294 ;
+; Sel1       ; NA          ; 12.764 ; 12.764 ; 12.764 ; 12.764 ;
+; Sel1       ; ND          ; 13.853 ; 13.853 ; 13.853 ; 13.853 ;
+; Sel1       ; NE          ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; Sel1       ; NF          ; 14.572 ; 14.572 ; 14.572 ; 14.572 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
@@ -634,22 +630,22 @@ No paths to report.
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; Sel0       ; B           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; BN          ; 14.130 ; 14.130 ; 14.130 ; 14.130 ;
-; Sel0       ; C           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; CN          ; 13.796 ; 13.796 ; 13.796 ; 13.796 ;
-; Sel0       ; D           ; 15.131 ; 15.131 ; 15.131 ; 15.131 ;
-; Sel0       ; DN          ; 13.795 ; 13.795 ; 13.795 ; 13.795 ;
-; Sel0       ; G           ; 15.515 ; 15.515 ; 15.515 ; 15.515 ;
-; Sel0       ; GN          ; 14.193 ; 14.193 ; 14.193 ; 14.193 ;
-; Sel1       ; B           ; 14.171 ; 14.171 ; 14.171 ; 14.171 ;
-; Sel1       ; BN          ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
-; Sel1       ; C           ; 14.171 ; 14.171 ; 14.171 ; 14.171 ;
-; Sel1       ; CN          ; 14.845 ; 14.845 ; 14.845 ; 14.845 ;
-; Sel1       ; D           ; 14.151 ; 14.151 ; 14.151 ; 14.151 ;
-; Sel1       ; DN          ; 14.844 ; 14.844 ; 14.844 ; 14.844 ;
-; Sel1       ; G           ; 14.535 ; 14.535 ; 14.535 ; 14.535 ;
-; Sel1       ; GN          ; 15.242 ; 15.242 ; 15.242 ; 15.242 ;
+; Sel0       ; A           ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; Sel0       ; D           ; 13.833 ; 13.833 ; 13.833 ; 13.833 ;
+; Sel0       ; E           ; 14.200 ; 14.200 ; 14.200 ; 14.200 ;
+; Sel0       ; F           ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; Sel0       ; NA          ; 11.734 ; 11.734 ; 11.734 ; 11.734 ;
+; Sel0       ; ND          ; 12.823 ; 12.823 ; 12.823 ; 12.823 ;
+; Sel0       ; NE          ; 13.541 ; 13.541 ; 13.541 ; 13.541 ;
+; Sel0       ; NF          ; 13.542 ; 13.542 ; 13.542 ; 13.542 ;
+; Sel1       ; A           ; 11.658 ; 11.658 ; 11.658 ; 11.658 ;
+; Sel1       ; D           ; 12.411 ; 12.411 ; 12.411 ; 12.411 ;
+; Sel1       ; E           ; 12.778 ; 12.778 ; 12.778 ; 12.778 ;
+; Sel1       ; F           ; 13.130 ; 13.130 ; 13.130 ; 13.130 ;
+; Sel1       ; NA          ; 12.764 ; 12.764 ; 12.764 ; 12.764 ;
+; Sel1       ; ND          ; 13.853 ; 13.853 ; 13.853 ; 13.853 ;
+; Sel1       ; NE          ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; Sel1       ; NF          ; 14.572 ; 14.572 ; 14.572 ; 14.572 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
@@ -658,7 +654,7 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; Reloj                    ; -0.838 ; -8.548        ;
+; Reloj                    ; -0.854 ; -8.540        ;
 ; Reloj:inst6|salida_media ; 0.665  ; 0.000         ;
 +--------------------------+--------+---------------+
 
@@ -668,7 +664,7 @@ No paths to report.
 +--------------------------+--------+---------------+
 ; Clock                    ; Slack  ; End Point TNS ;
 +--------------------------+--------+---------------+
-; Reloj                    ; -1.364 ; -1.364        ;
+; Reloj                    ; -1.360 ; -1.360        ;
 ; Reloj:inst6|salida_media ; 0.215  ; 0.000         ;
 +--------------------------+--------+---------------+
 
@@ -700,106 +696,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
-; -0.838 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.868      ;
-; -0.816 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.846      ;
-; -0.781 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.811      ;
-; -0.767 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.797      ;
-; -0.745 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.775      ;
-; -0.729 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.759      ;
-; -0.710 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.740      ;
+; -0.854 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.884      ;
+; -0.835 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.865      ;
+; -0.832 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.862      ;
+; -0.813 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.843      ;
+; -0.797 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.827      ;
+; -0.778 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.808      ;
+; -0.745 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.775      ;
+; -0.726 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.756      ;
 ; -0.697 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.727      ;
 ; -0.675 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.705      ;
-; -0.658 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.688      ;
+; -0.670 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.700      ;
 ; -0.654 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.684      ;
-; -0.654 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.684      ;
+; -0.651 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.681      ;
 ; -0.640 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.670      ;
 ; -0.632 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.662      ;
-; -0.607 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.637      ;
-; -0.597 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.627      ;
+; -0.621 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.651      ;
+; -0.616 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.646      ;
+; -0.602 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.632      ;
 ; -0.597 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.627      ;
+; -0.596 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.628      ;
+; -0.594 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.624      ;
 ; -0.588 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.618      ;
-; -0.583 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.613      ;
-; -0.578 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.608      ;
-; -0.575 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.605      ;
-; -0.573 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.603      ;
-; -0.572 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.604      ;
+; -0.583 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.613      ;
+; -0.577 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.609      ;
+; -0.576 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.606      ;
+; -0.571 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.601      ;
+; -0.564 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.594      ;
 ; -0.561 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[23] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.591      ;
-; -0.551 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.581      ;
+; -0.559 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.589      ;
+; -0.554 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.584      ;
+; -0.551 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.581      ;
+; -0.549 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.579      ;
 ; -0.545 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.575      ;
-; -0.540 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.570      ;
 ; -0.539 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[23] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.569      ;
-; -0.538 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.568      ;
-; -0.537 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.567      ;
-; -0.536 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.566      ;
-; -0.516 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.546      ;
-; -0.515 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.545      ;
-; -0.515 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.545      ;
+; -0.538 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.568      ;
+; -0.532 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.562      ;
+; -0.531 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.561      ;
+; -0.519 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.549      ;
+; -0.516 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.546      ;
+; -0.514 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.544      ;
 ; -0.513 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.543      ;
-; -0.507 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.537      ;
-; -0.507 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.537      ;
-; -0.506 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.536      ;
+; -0.512 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.542      ;
+; -0.508 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.538      ;
+; -0.507 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.537      ;
 ; -0.504 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[23] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.534      ;
-; -0.501 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.533      ;
-; -0.488 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.518      ;
-; -0.485 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.515      ;
-; -0.484 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.514      ;
-; -0.484 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.514      ;
-; -0.480 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.510      ;
-; -0.480 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.510      ;
+; -0.503 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.533      ;
+; -0.486 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.516      ;
+; -0.481 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.511      ;
+; -0.481 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.511      ;
+; -0.479 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.509      ;
+; -0.472 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.502      ;
 ; -0.470 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.500      ;
-; -0.469 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.499      ;
-; -0.467 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.497      ;
-; -0.466 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.496      ;
-; -0.465 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.495      ;
-; -0.464 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.494      ;
-; -0.463 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.493      ;
-; -0.458 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.488      ;
-; -0.453 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.485      ;
-; -0.453 ; Reloj:inst6|contador[8]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.485      ;
+; -0.467 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.497      ;
+; -0.464 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.494      ;
+; -0.462 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.492      ;
+; -0.460 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.490      ;
 ; -0.452 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[23] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.482      ;
-; -0.450 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.480      ;
-; -0.449 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.479      ;
-; -0.444 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.474      ;
-; -0.438 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.470      ;
-; -0.438 ; Reloj:inst6|contador[6]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.470      ;
-; -0.437 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.467      ;
-; -0.434 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.466      ;
-; -0.434 ; Reloj:inst6|contador[9]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.466      ;
-; -0.431 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.463      ;
-; -0.429 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.459      ;
-; -0.429 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.461      ;
-; -0.428 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.458      ;
-; -0.423 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.453      ;
-; -0.423 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.453      ;
-; -0.414 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.446      ;
-; -0.414 ; Reloj:inst6|contador[0]  ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.446      ;
-; -0.413 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.443      ;
-; -0.413 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.443      ;
-; -0.413 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.443      ;
-; -0.411 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.441      ;
-; -0.410 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.440      ;
-; -0.407 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.437      ;
-; -0.404 ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.434      ;
-; -0.398 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.428      ;
-; -0.398 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 1.432      ;
-; -0.398 ; Reloj:inst6|contador[17] ; Reloj:inst6|salida_media ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 1.432      ;
-; -0.398 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.428      ;
-; -0.398 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.428      ;
-; -0.397 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.427      ;
-; -0.397 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.427      ;
-; -0.396 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.426      ;
-; -0.395 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.425      ;
-; -0.394 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.424      ;
-; -0.394 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.424      ;
-; -0.392 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.424      ;
-; -0.392 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.422      ;
-; -0.392 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.422      ;
-; -0.391 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.421      ;
-; -0.389 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.419      ;
-; -0.388 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.420      ;
-; -0.388 ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.420      ;
-; -0.388 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.418      ;
-; -0.382 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.412      ;
+; -0.451 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.481      ;
+; -0.450 ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.480      ;
+; -0.446 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.476      ;
+; -0.445 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.475      ;
+; -0.439 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.469      ;
+; -0.439 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.471      ;
+; -0.437 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.469      ;
+; -0.436 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.468      ;
+; -0.432 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.462      ;
+; -0.429 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[12] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.459      ;
+; -0.426 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.456      ;
+; -0.426 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.456      ;
+; -0.421 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.451      ;
+; -0.420 ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.450      ;
+; -0.419 ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.449      ;
+; -0.415 ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[11] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.445      ;
+; -0.407 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.399 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[14] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.429      ;
+; -0.396 ; Reloj:inst6|contador[11] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.428      ;
+; -0.394 ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.424      ;
+; -0.394 ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.424      ;
+; -0.392 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.422      ;
+; -0.388 ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.420      ;
+; -0.387 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.417      ;
+; -0.384 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.416      ;
+; -0.383 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.413      ;
+; -0.383 ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.413      ;
+; -0.381 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.002      ; 1.415      ;
+; -0.377 ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[23] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.407      ;
+; -0.375 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.405      ;
+; -0.373 ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[22] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.405      ;
+; -0.372 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[13] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.404      ;
+; -0.371 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.403      ;
+; -0.371 ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[24] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.403      ;
+; -0.370 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.400      ;
+; -0.370 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.400      ;
+; -0.370 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[16] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.400      ;
+; -0.370 ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.402      ;
+; -0.370 ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.402      ;
+; -0.369 ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.401      ;
+; -0.367 ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[19] ; Reloj        ; Reloj       ; 1.000        ; -0.002     ; 1.397      ;
+; -0.367 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[21] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.399      ;
+; -0.367 ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[18] ; Reloj        ; Reloj       ; 1.000        ; 0.000      ; 1.399      ;
 +--------+--------------------------+--------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -820,106 +816,106 @@ No paths to report.
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                ; To Node                  ; Launch Clock             ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
-; -1.364 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; 0.000        ; 1.438      ; 0.367      ;
-; -0.864 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; -0.500       ; 1.438      ; 0.367      ;
+; -1.360 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; 0.000        ; 1.434      ; 0.367      ;
+; -0.860 ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj:inst6|salida_media ; Reloj       ; -0.500       ; 1.434      ; 0.367      ;
 ; 0.358  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.510      ;
 ; 0.360  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.512      ;
 ; 0.361  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[0]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.513      ;
 ; 0.361  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.513      ;
-; 0.364  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.516      ;
-; 0.365  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.517      ;
+; 0.362  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.514      ;
 ; 0.369  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.521      ;
 ; 0.369  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.521      ;
 ; 0.372  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[1]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.372  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.524      ;
 ; 0.374  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.526      ;
 ; 0.375  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.527      ;
-; 0.486  ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.638      ;
+; 0.482  ; Reloj:inst6|contador[24] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.634      ;
+; 0.497  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.649      ;
 ; 0.498  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.650      ;
 ; 0.499  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[1]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.651      ;
-; 0.500  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.652      ;
-; 0.503  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.655      ;
-; 0.508  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.660      ;
+; 0.500  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.652      ;
 ; 0.512  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.664      ;
 ; 0.512  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.664      ;
 ; 0.514  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.666      ;
 ; 0.515  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.667      ;
 ; 0.525  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.532  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.684      ;
 ; 0.534  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[2]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.686      ;
 ; 0.535  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.687      ;
-; 0.537  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.689      ;
-; 0.538  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.690      ;
-; 0.543  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.695      ;
+; 0.535  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.687      ;
+; 0.535  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.687      ;
 ; 0.544  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.696      ;
 ; 0.547  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.699      ;
 ; 0.550  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.702      ;
 ; 0.554  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.706      ;
+; 0.567  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.720      ;
 ; 0.569  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[3]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.721      ;
-; 0.572  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.724      ;
-; 0.573  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.725      ;
-; 0.578  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.730      ;
-; 0.579  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.731      ;
+; 0.570  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.722      ;
+; 0.570  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.723      ;
+; 0.574  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.726      ;
 ; 0.584  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.736      ;
-; 0.584  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.587  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.739      ;
 ; 0.589  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.741      ;
-; 0.603  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[22] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.755      ;
+; 0.602  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.754      ;
+; 0.604  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.756      ;
+; 0.605  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.757      ;
 ; 0.606  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.758      ;
-; 0.607  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.759      ;
-; 0.613  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.765      ;
-; 0.614  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.766      ;
+; 0.611  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.763      ;
 ; 0.619  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.771      ;
-; 0.622  ; Reloj:inst6|contador[6]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.774      ;
-; 0.639  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.791      ;
+; 0.621  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.773      ;
+; 0.638  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.790      ;
+; 0.640  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.792      ;
 ; 0.641  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.793      ;
 ; 0.641  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.793      ;
-; 0.642  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.794      ;
-; 0.649  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.801      ;
 ; 0.654  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.806      ;
-; 0.656  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.808      ;
+; 0.655  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.807      ;
 ; 0.659  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.811      ;
 ; 0.663  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[4]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.815      ;
-; 0.672  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[20] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.824      ;
+; 0.664  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.816      ;
 ; 0.676  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.828      ;
-; 0.679  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.831      ;
-; 0.681  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.833      ;
-; 0.684  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.836      ;
+; 0.682  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.834      ;
 ; 0.689  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.841      ;
-; 0.693  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[13] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.845      ;
+; 0.691  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.843      ;
+; 0.691  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.843      ;
 ; 0.693  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.843      ;
 ; 0.694  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.846      ;
-; 0.696  ; Reloj:inst6|contador[16] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.848      ;
 ; 0.698  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[5]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.850      ;
+; 0.702  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.854      ;
 ; 0.711  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.863      ;
-; 0.726  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.878      ;
+; 0.725  ; Reloj:inst6|contador[12] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.877      ;
 ; 0.727  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.877      ;
 ; 0.729  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.881      ;
-; 0.732  ; Reloj:inst6|contador[20] ; Reloj:inst6|contador[21] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.884      ;
-; 0.738  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.890      ;
-; 0.741  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[22] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.893      ;
+; 0.735  ; Reloj:inst6|contador[23] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.887      ;
 ; 0.743  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.895      ;
-; 0.744  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.896      ;
 ; 0.746  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.898      ;
 ; 0.746  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.898      ;
-; 0.754  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.906      ;
-; 0.755  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.907      ;
-; 0.759  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.911      ;
-; 0.760  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[14] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.912      ;
+; 0.746  ; Reloj:inst6|contador[19] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.898      ;
+; 0.751  ; Reloj:inst6|contador[14] ; Reloj:inst6|contador[14] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.903      ;
+; 0.752  ; Reloj:inst6|contador[5]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.904      ;
+; 0.755  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[16] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.907      ;
+; 0.758  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.910      ;
 ; 0.763  ; Reloj:inst6|contador[10] ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.913      ;
 ; 0.764  ; Reloj:inst6|contador[3]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.916      ;
 ; 0.768  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[7]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.920      ;
-; 0.768  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[14] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.920      ;
-; 0.770  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.922      ;
-; 0.777  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[11] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.929      ;
-; 0.777  ; Reloj:inst6|contador[13] ; Reloj:inst6|contador[12] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.929      ;
-; 0.777  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.929      ;
-; 0.779  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.931      ;
+; 0.775  ; Reloj:inst6|contador[22] ; Reloj:inst6|contador[22] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.927      ;
 ; 0.779  ; Reloj:inst6|contador[8]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.929      ;
+; 0.779  ; Reloj:inst6|contador[18] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.931      ;
 ; 0.781  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.933      ;
 ; 0.781  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.933      ;
 ; 0.797  ; Reloj:inst6|contador[9]  ; Reloj:inst6|contador[17] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.947      ;
+; 0.798  ; Reloj:inst6|contador[17] ; Reloj:inst6|contador[19] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.950      ;
+; 0.799  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.949      ;
 ; 0.801  ; Reloj:inst6|contador[4]  ; Reloj:inst6|contador[6]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.953      ;
-; 0.802  ; Reloj:inst6|contador[7]  ; Reloj:inst6|contador[15] ; Reloj                    ; Reloj       ; 0.000        ; -0.002     ; 0.952      ;
+; 0.803  ; Reloj:inst6|contador[0]  ; Reloj:inst6|contador[8]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.955      ;
+; 0.809  ; Reloj:inst6|contador[21] ; Reloj:inst6|contador[24] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.961      ;
+; 0.813  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[23] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.965      ;
+; 0.816  ; Reloj:inst6|contador[2]  ; Reloj:inst6|contador[10] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.968      ;
+; 0.816  ; Reloj:inst6|contador[1]  ; Reloj:inst6|contador[9]  ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.968      ;
+; 0.828  ; Reloj:inst6|contador[15] ; Reloj:inst6|contador[18] ; Reloj                    ; Reloj       ; 0.000        ; 0.000      ; 0.980      ;
 +--------+--------------------------+--------------------------+--------------------------+-------------+--------------+------------+------------+
 
 
@@ -1082,8 +1078,8 @@ No paths to report.
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; 2.489 ; 2.489 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; 2.492 ; 2.492 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; 2.261 ; 2.261 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; 2.411 ; 2.411 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
@@ -1092,45 +1088,41 @@ No paths to report.
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; -2.333 ; -2.333 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; -2.370 ; -2.370 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; -2.136 ; -2.136 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; -2.284 ; -2.284 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                          ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 4.566 ; 4.566 ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 4.552 ; 4.552 ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 4.566 ; 4.566 ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 4.454 ; 4.454 ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 4.547 ; 4.547 ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 4.451 ; 4.451 ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 4.662 ; 4.662 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 4.581 ; 4.581 ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 1.811 ;       ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;       ; 1.811 ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
++----------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                        ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 4.184 ; 4.184 ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 4.419 ; 4.419 ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 4.533 ; 4.533 ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 4.634 ; 4.634 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 4.085 ; 4.085 ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 4.409 ; 4.409 ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 4.625 ; 4.625 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 4.626 ; 4.626 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 4.158 ; 4.158 ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 4.148 ; 4.148 ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 4.158 ; 4.158 ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 4.050 ; 4.050 ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 4.139 ; 4.139 ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 4.047 ; 4.047 ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 4.254 ; 4.254 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 4.177 ; 4.177 ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 1.811 ;       ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;       ; 1.811 ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 3.820 ; 3.820 ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 4.055 ; 4.055 ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 4.169 ; 4.169 ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 4.270 ; 4.270 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 3.676 ; 3.676 ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 4.000 ; 4.000 ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 4.216 ; 4.216 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 4.217 ; 4.217 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
 +----------------------------------------------------------+
@@ -1138,22 +1130,22 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; Sel0       ; B           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; BN          ; 6.529 ; 6.529 ; 6.529 ; 6.529 ;
-; Sel0       ; C           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; CN          ; 6.431 ; 6.431 ; 6.431 ; 6.431 ;
-; Sel0       ; D           ; 6.527 ; 6.527 ; 6.527 ; 6.527 ;
-; Sel0       ; DN          ; 6.428 ; 6.428 ; 6.428 ; 6.428 ;
-; Sel0       ; G           ; 6.642 ; 6.642 ; 6.642 ; 6.642 ;
-; Sel0       ; GN          ; 6.558 ; 6.558 ; 6.558 ; 6.558 ;
-; Sel1       ; B           ; 6.411 ; 6.411 ; 6.411 ; 6.411 ;
-; Sel1       ; BN          ; 6.543 ; 6.543 ; 6.543 ; 6.543 ;
-; Sel1       ; C           ; 6.411 ; 6.411 ; 6.411 ; 6.411 ;
-; Sel1       ; CN          ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
-; Sel1       ; D           ; 6.392 ; 6.392 ; 6.392 ; 6.392 ;
-; Sel1       ; DN          ; 6.442 ; 6.442 ; 6.442 ; 6.442 ;
-; Sel1       ; G           ; 6.507 ; 6.507 ; 6.507 ; 6.507 ;
-; Sel1       ; GN          ; 6.572 ; 6.572 ; 6.572 ; 6.572 ;
+; Sel0       ; A           ; 5.803 ; 5.803 ; 5.803 ; 5.803 ;
+; Sel0       ; D           ; 6.038 ; 6.038 ; 6.038 ; 6.038 ;
+; Sel0       ; E           ; 6.152 ; 6.152 ; 6.152 ; 6.152 ;
+; Sel0       ; F           ; 6.253 ; 6.253 ; 6.253 ; 6.253 ;
+; Sel0       ; NA          ; 5.576 ; 5.576 ; 5.576 ; 5.576 ;
+; Sel0       ; ND          ; 5.900 ; 5.900 ; 5.900 ; 5.900 ;
+; Sel0       ; NE          ; 6.116 ; 6.116 ; 6.116 ; 6.116 ;
+; Sel0       ; NF          ; 6.117 ; 6.117 ; 6.117 ; 6.117 ;
+; Sel1       ; A           ; 5.709 ; 5.709 ; 5.709 ; 5.709 ;
+; Sel1       ; D           ; 5.944 ; 5.944 ; 5.944 ; 5.944 ;
+; Sel1       ; E           ; 6.058 ; 6.058 ; 6.058 ; 6.058 ;
+; Sel1       ; F           ; 6.159 ; 6.159 ; 6.159 ; 6.159 ;
+; Sel1       ; NA          ; 5.696 ; 5.696 ; 5.696 ; 5.696 ;
+; Sel1       ; ND          ; 6.020 ; 6.020 ; 6.020 ; 6.020 ;
+; Sel1       ; NE          ; 6.236 ; 6.236 ; 6.236 ; 6.236 ;
+; Sel1       ; NF          ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -1162,22 +1154,22 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; Sel0       ; B           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; BN          ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
-; Sel0       ; C           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; CN          ; 6.139 ; 6.139 ; 6.139 ; 6.139 ;
-; Sel0       ; D           ; 6.527 ; 6.527 ; 6.527 ; 6.527 ;
-; Sel0       ; DN          ; 6.136 ; 6.136 ; 6.136 ; 6.136 ;
-; Sel0       ; G           ; 6.642 ; 6.642 ; 6.642 ; 6.642 ;
-; Sel0       ; GN          ; 6.266 ; 6.266 ; 6.266 ; 6.266 ;
-; Sel1       ; B           ; 6.255 ; 6.255 ; 6.255 ; 6.255 ;
-; Sel1       ; BN          ; 6.543 ; 6.543 ; 6.543 ; 6.543 ;
-; Sel1       ; C           ; 6.255 ; 6.255 ; 6.255 ; 6.255 ;
-; Sel1       ; CN          ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
-; Sel1       ; D           ; 6.236 ; 6.236 ; 6.236 ; 6.236 ;
-; Sel1       ; DN          ; 6.442 ; 6.442 ; 6.442 ; 6.442 ;
-; Sel1       ; G           ; 6.351 ; 6.351 ; 6.351 ; 6.351 ;
-; Sel1       ; GN          ; 6.572 ; 6.572 ; 6.572 ; 6.572 ;
+; Sel0       ; A           ; 5.803 ; 5.803 ; 5.803 ; 5.803 ;
+; Sel0       ; D           ; 6.038 ; 6.038 ; 6.038 ; 6.038 ;
+; Sel0       ; E           ; 6.152 ; 6.152 ; 6.152 ; 6.152 ;
+; Sel0       ; F           ; 6.253 ; 6.253 ; 6.253 ; 6.253 ;
+; Sel0       ; NA          ; 5.418 ; 5.418 ; 5.418 ; 5.418 ;
+; Sel0       ; ND          ; 5.742 ; 5.742 ; 5.742 ; 5.742 ;
+; Sel0       ; NE          ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; Sel0       ; NF          ; 5.959 ; 5.959 ; 5.959 ; 5.959 ;
+; Sel1       ; A           ; 5.376 ; 5.376 ; 5.376 ; 5.376 ;
+; Sel1       ; D           ; 5.611 ; 5.611 ; 5.611 ; 5.611 ;
+; Sel1       ; E           ; 5.725 ; 5.725 ; 5.725 ; 5.725 ;
+; Sel1       ; F           ; 5.826 ; 5.826 ; 5.826 ; 5.826 ;
+; Sel1       ; NA          ; 5.696 ; 5.696 ; 5.696 ; 5.696 ;
+; Sel1       ; ND          ; 6.020 ; 6.020 ; 6.020 ; 6.020 ;
+; Sel1       ; NE          ; 6.236 ; 6.236 ; 6.236 ; 6.236 ;
+; Sel1       ; NF          ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -1186,11 +1178,11 @@ No paths to report.
 +---------------------------+---------+--------+----------+---------+---------------------+
 ; Clock                     ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------+---------+--------+----------+---------+---------------------+
-; Worst-case Slack          ; -3.940  ; -2.559 ; N/A      ; N/A     ; -1.941              ;
-;  Reloj                    ; -3.940  ; -2.559 ; N/A      ; N/A     ; -1.941              ;
+; Worst-case Slack          ; -4.082  ; -2.554 ; N/A      ; N/A     ; -1.941              ;
+;  Reloj                    ; -4.082  ; -2.554 ; N/A      ; N/A     ; -1.941              ;
 ;  Reloj:inst6|salida_media ; 0.235   ; 0.215  ; N/A      ; N/A     ; -0.742              ;
-; Design-wide TNS           ; -67.061 ; -2.559 ; 0.0      ; 0.0     ; -47.945             ;
-;  Reloj                    ; -67.061 ; -2.559 ; N/A      ; N/A     ; -40.525             ;
+; Design-wide TNS           ; -66.142 ; -2.554 ; 0.0      ; 0.0     ; -47.945             ;
+;  Reloj                    ; -66.142 ; -2.554 ; N/A      ; N/A     ; -40.525             ;
 ;  Reloj:inst6|salida_media ; 0.000   ; 0.000  ; N/A      ; N/A     ; -7.420              ;
 +---------------------------+---------+--------+----------+---------+---------------------+
 
@@ -1200,8 +1192,8 @@ No paths to report.
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; 5.520 ; 5.520 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; 5.521 ; 5.521 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; 4.711 ; 4.711 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; 5.201 ; 5.201 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
@@ -1210,45 +1202,41 @@ No paths to report.
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 ; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
-; Data1     ; Reloj:inst6|salida_media ; -2.333 ; -2.333 ; Rise       ; Reloj:inst6|salida_media ;
-; Data2     ; Reloj:inst6|salida_media ; -2.370 ; -2.370 ; Rise       ; Reloj:inst6|salida_media ;
+; Data1     ; Reloj:inst6|salida_media ; -2.136 ; -2.136 ; Rise       ; Reloj:inst6|salida_media ;
+; Data2     ; Reloj:inst6|salida_media ; -2.284 ; -2.284 ; Rise       ; Reloj:inst6|salida_media ;
 +-----------+--------------------------+--------+--------+------------+--------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Clock to Output Times                                                                            ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 11.100 ; 11.100 ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 11.082 ; 11.082 ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 11.100 ; 11.100 ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 10.748 ; 10.748 ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 11.080 ; 11.080 ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 10.747 ; 10.747 ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 11.464 ; 11.464 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 11.145 ; 11.145 ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 4.171  ;        ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;        ; 4.171  ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+--------+--------+------------+--------------------------+
-
-
 +------------------------------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                                                  ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; Data Port   ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
-; B           ; Reloj:inst6|salida_media ; 4.158 ; 4.158 ; Rise       ; Reloj:inst6|salida_media ;
-; BN          ; Reloj:inst6|salida_media ; 4.148 ; 4.148 ; Rise       ; Reloj:inst6|salida_media ;
-; C           ; Reloj:inst6|salida_media ; 4.158 ; 4.158 ; Rise       ; Reloj:inst6|salida_media ;
-; CN          ; Reloj:inst6|salida_media ; 4.050 ; 4.050 ; Rise       ; Reloj:inst6|salida_media ;
-; D           ; Reloj:inst6|salida_media ; 4.139 ; 4.139 ; Rise       ; Reloj:inst6|salida_media ;
-; DN          ; Reloj:inst6|salida_media ; 4.047 ; 4.047 ; Rise       ; Reloj:inst6|salida_media ;
-; G           ; Reloj:inst6|salida_media ; 4.254 ; 4.254 ; Rise       ; Reloj:inst6|salida_media ;
-; GN          ; Reloj:inst6|salida_media ; 4.177 ; 4.177 ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ; 1.811 ;       ; Rise       ; Reloj:inst6|salida_media ;
-; SalidaReloj ; Reloj:inst6|salida_media ;       ; 1.811 ; Fall       ; Reloj:inst6|salida_media ;
-+-------------+--------------------------+-------+-------+------------+--------------------------+
+; Clock to Output Times                                                                          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise   ; Fall   ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 10.103 ; 10.103 ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 10.856 ; 10.856 ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 11.223 ; 11.223 ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 11.575 ; 11.575 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 9.746  ; 9.746  ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 10.835 ; 10.835 ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 11.553 ; 11.553 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 11.554 ; 11.554 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+--------+--------+------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; Data Port ; Clock Port               ; Rise  ; Fall  ; Clock Edge ; Clock Reference          ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
+; A         ; Reloj:inst6|salida_media ; 3.820 ; 3.820 ; Rise       ; Reloj:inst6|salida_media ;
+; D         ; Reloj:inst6|salida_media ; 4.055 ; 4.055 ; Rise       ; Reloj:inst6|salida_media ;
+; E         ; Reloj:inst6|salida_media ; 4.169 ; 4.169 ; Rise       ; Reloj:inst6|salida_media ;
+; F         ; Reloj:inst6|salida_media ; 4.270 ; 4.270 ; Rise       ; Reloj:inst6|salida_media ;
+; NA        ; Reloj:inst6|salida_media ; 3.676 ; 3.676 ; Rise       ; Reloj:inst6|salida_media ;
+; ND        ; Reloj:inst6|salida_media ; 4.000 ; 4.000 ; Rise       ; Reloj:inst6|salida_media ;
+; NE        ; Reloj:inst6|salida_media ; 4.216 ; 4.216 ; Rise       ; Reloj:inst6|salida_media ;
+; NF        ; Reloj:inst6|salida_media ; 4.217 ; 4.217 ; Rise       ; Reloj:inst6|salida_media ;
++-----------+--------------------------+-------+-------+------------+--------------------------+
 
 
 +--------------------------------------------------------------+
@@ -1256,22 +1244,22 @@ No paths to report.
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; Sel0       ; B           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; BN          ; 15.132 ; 15.132 ; 15.132 ; 15.132 ;
-; Sel0       ; C           ; 15.151 ; 15.151 ; 15.151 ; 15.151 ;
-; Sel0       ; CN          ; 14.798 ; 14.798 ; 14.798 ; 14.798 ;
-; Sel0       ; D           ; 15.131 ; 15.131 ; 15.131 ; 15.131 ;
-; Sel0       ; DN          ; 14.797 ; 14.797 ; 14.797 ; 14.797 ;
-; Sel0       ; G           ; 15.515 ; 15.515 ; 15.515 ; 15.515 ;
-; Sel0       ; GN          ; 15.195 ; 15.195 ; 15.195 ; 15.195 ;
-; Sel1       ; B           ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
-; Sel1       ; BN          ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
-; Sel1       ; C           ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
-; Sel1       ; CN          ; 14.845 ; 14.845 ; 14.845 ; 14.845 ;
-; Sel1       ; D           ; 14.668 ; 14.668 ; 14.668 ; 14.668 ;
-; Sel1       ; DN          ; 14.844 ; 14.844 ; 14.844 ; 14.844 ;
-; Sel1       ; G           ; 15.052 ; 15.052 ; 15.052 ; 15.052 ;
-; Sel1       ; GN          ; 15.242 ; 15.242 ; 15.242 ; 15.242 ;
+; Sel0       ; A           ; 13.080 ; 13.080 ; 13.080 ; 13.080 ;
+; Sel0       ; D           ; 13.833 ; 13.833 ; 13.833 ; 13.833 ;
+; Sel0       ; E           ; 14.200 ; 14.200 ; 14.200 ; 14.200 ;
+; Sel0       ; F           ; 14.552 ; 14.552 ; 14.552 ; 14.552 ;
+; Sel0       ; NA          ; 12.248 ; 12.248 ; 12.248 ; 12.248 ;
+; Sel0       ; ND          ; 13.337 ; 13.337 ; 13.337 ; 13.337 ;
+; Sel0       ; NE          ; 14.055 ; 14.055 ; 14.055 ; 14.055 ;
+; Sel0       ; NF          ; 14.056 ; 14.056 ; 14.056 ; 14.056 ;
+; Sel1       ; A           ; 12.822 ; 12.822 ; 12.822 ; 12.822 ;
+; Sel1       ; D           ; 13.575 ; 13.575 ; 13.575 ; 13.575 ;
+; Sel1       ; E           ; 13.942 ; 13.942 ; 13.942 ; 13.942 ;
+; Sel1       ; F           ; 14.294 ; 14.294 ; 14.294 ; 14.294 ;
+; Sel1       ; NA          ; 12.764 ; 12.764 ; 12.764 ; 12.764 ;
+; Sel1       ; ND          ; 13.853 ; 13.853 ; 13.853 ; 13.853 ;
+; Sel1       ; NE          ; 14.571 ; 14.571 ; 14.571 ; 14.571 ;
+; Sel1       ; NF          ; 14.572 ; 14.572 ; 14.572 ; 14.572 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
@@ -1280,22 +1268,22 @@ No paths to report.
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; Sel0       ; B           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; BN          ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
-; Sel0       ; C           ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
-; Sel0       ; CN          ; 6.139 ; 6.139 ; 6.139 ; 6.139 ;
-; Sel0       ; D           ; 6.527 ; 6.527 ; 6.527 ; 6.527 ;
-; Sel0       ; DN          ; 6.136 ; 6.136 ; 6.136 ; 6.136 ;
-; Sel0       ; G           ; 6.642 ; 6.642 ; 6.642 ; 6.642 ;
-; Sel0       ; GN          ; 6.266 ; 6.266 ; 6.266 ; 6.266 ;
-; Sel1       ; B           ; 6.255 ; 6.255 ; 6.255 ; 6.255 ;
-; Sel1       ; BN          ; 6.543 ; 6.543 ; 6.543 ; 6.543 ;
-; Sel1       ; C           ; 6.255 ; 6.255 ; 6.255 ; 6.255 ;
-; Sel1       ; CN          ; 6.445 ; 6.445 ; 6.445 ; 6.445 ;
-; Sel1       ; D           ; 6.236 ; 6.236 ; 6.236 ; 6.236 ;
-; Sel1       ; DN          ; 6.442 ; 6.442 ; 6.442 ; 6.442 ;
-; Sel1       ; G           ; 6.351 ; 6.351 ; 6.351 ; 6.351 ;
-; Sel1       ; GN          ; 6.572 ; 6.572 ; 6.572 ; 6.572 ;
+; Sel0       ; A           ; 5.803 ; 5.803 ; 5.803 ; 5.803 ;
+; Sel0       ; D           ; 6.038 ; 6.038 ; 6.038 ; 6.038 ;
+; Sel0       ; E           ; 6.152 ; 6.152 ; 6.152 ; 6.152 ;
+; Sel0       ; F           ; 6.253 ; 6.253 ; 6.253 ; 6.253 ;
+; Sel0       ; NA          ; 5.418 ; 5.418 ; 5.418 ; 5.418 ;
+; Sel0       ; ND          ; 5.742 ; 5.742 ; 5.742 ; 5.742 ;
+; Sel0       ; NE          ; 5.958 ; 5.958 ; 5.958 ; 5.958 ;
+; Sel0       ; NF          ; 5.959 ; 5.959 ; 5.959 ; 5.959 ;
+; Sel1       ; A           ; 5.376 ; 5.376 ; 5.376 ; 5.376 ;
+; Sel1       ; D           ; 5.611 ; 5.611 ; 5.611 ; 5.611 ;
+; Sel1       ; E           ; 5.725 ; 5.725 ; 5.725 ; 5.725 ;
+; Sel1       ; F           ; 5.826 ; 5.826 ; 5.826 ; 5.826 ;
+; Sel1       ; NA          ; 5.696 ; 5.696 ; 5.696 ; 5.696 ;
+; Sel1       ; ND          ; 6.020 ; 6.020 ; 6.020 ; 6.020 ;
+; Sel1       ; NE          ; 6.236 ; 6.236 ; 6.236 ; 6.236 ;
+; Sel1       ; NF          ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -1344,8 +1332,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
 ; Unconstrained Input Port Paths  ; 50    ; 50   ;
-; Unconstrained Output Ports      ; 9     ; 9    ;
-; Unconstrained Output Port Paths ; 49    ; 49   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
 +---------------------------------+-------+------+
 
 
@@ -1355,7 +1343,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Apr 02 11:41:21 2022
+    Info: Processing started: Wed Apr 06 12:20:56 2022
 Info: Command: quartus_sta Practica1 -c Practica1
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1369,15 +1357,15 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.940
+Info (332146): Worst-case setup slack is -4.082
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.940       -67.061 Reloj 
+    Info (332119):    -4.082       -66.142 Reloj 
     Info (332119):     0.235         0.000 Reloj:inst6|salida_media 
-Info (332146): Worst-case hold slack is -2.559
+Info (332146): Worst-case hold slack is -2.554
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.559        -2.559 Reloj 
+    Info (332119):    -2.554        -2.554 Reloj 
     Info (332119):     0.499         0.000 Reloj:inst6|salida_media 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -1389,15 +1377,15 @@ Info (332146): Worst-case minimum pulse width slack is -1.941
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.838
+Info (332146): Worst-case setup slack is -0.854
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.838        -8.548 Reloj 
+    Info (332119):    -0.854        -8.540 Reloj 
     Info (332119):     0.665         0.000 Reloj:inst6|salida_media 
-Info (332146): Worst-case hold slack is -1.364
+Info (332146): Worst-case hold slack is -1.360
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.364        -1.364 Reloj 
+    Info (332119):    -1.360        -1.360 Reloj 
     Info (332119):     0.215         0.000 Reloj:inst6|salida_media 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
@@ -1411,7 +1399,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4530 megabytes
-    Info: Processing ended: Sat Apr 02 11:41:22 2022
+    Info: Processing ended: Wed Apr 06 12:20:57 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
