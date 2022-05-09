@@ -1,0 +1,143 @@
+|Practica1
+Q <= Mux4:inst4.Q
+Data1 => FlipFlopD:inst.D
+Data1 => FlipFlopSR:inst2.S
+Data1 => FlipFlopT:inst3.T
+Data1 => FlipFlopJK:inst1.J
+Reloj => Reloj:inst6.clk
+ResetReloj => Reloj:inst6.reset
+Data2 => FlipFlopSR:inst2.R
+Data2 => FlipFlopJK:inst1.K
+Sel0 => Mux4:inst4.selector0
+Sel0 => Mux4:inst5.selector0
+Sel1 => Mux4:inst4.selector1
+Sel1 => Mux4:inst5.selector1
+QNegada <= Mux4:inst5.Q
+SalidaReloj <= Reloj:inst6.salida
+
+
+|Practica1|Mux4:inst4
+d0 => Q.DATAB
+d1 => Q.DATAB
+d2 => Q.DATAB
+d3 => Q.DATAA
+selector0 => Equal0.IN1
+selector0 => Equal1.IN0
+selector0 => Equal2.IN1
+selector0 => Equal3.IN1
+selector1 => Equal0.IN0
+selector1 => Equal1.IN1
+selector1 => Equal2.IN0
+selector1 => Equal3.IN0
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica1|FlipFlopD:inst
+D => Q~reg0.DATAIN
+CLK => Q~reg0.CLK
+Q <> Q~reg0
+QN <> QN
+
+
+|Practica1|Reloj:inst6
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+clk => salida_media.CLK
+reset => contador[0].ACLR
+reset => contador[1].ACLR
+reset => contador[2].ACLR
+reset => contador[3].ACLR
+reset => contador[4].ACLR
+reset => contador[5].ACLR
+reset => contador[6].ACLR
+reset => contador[7].ACLR
+reset => contador[8].ACLR
+reset => contador[9].ACLR
+reset => contador[10].ACLR
+reset => contador[11].ACLR
+reset => contador[12].ACLR
+reset => contador[13].ACLR
+reset => contador[14].ACLR
+reset => contador[15].ACLR
+reset => contador[16].ACLR
+reset => contador[17].ACLR
+reset => contador[18].ACLR
+reset => contador[19].ACLR
+reset => contador[20].ACLR
+reset => contador[21].ACLR
+reset => contador[22].ACLR
+reset => contador[23].ACLR
+reset => contador[24].ACLR
+reset => salida_media.ACLR
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica1|FlipFlopSR:inst2
+S => process_0.IN0
+S => process_0.IN0
+R => process_0.IN1
+R => process_0.IN1
+CLK => QN~reg0.CLK
+CLK => Q~reg0.CLK
+Q <> Q~reg0
+QN <> QN~reg0
+
+
+|Practica1|FlipFlopT:inst3
+T => Q.OUTPUTSELECT
+CLK => Q~reg0.CLK
+Q <> Q~reg0
+QN <> QN
+
+
+|Practica1|FlipFlopJK:inst1
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+CLK => Q~reg0.CLK
+Q <> Q~reg0
+QN <> QN
+
+
+|Practica1|Mux4:inst5
+d0 => Q.DATAB
+d1 => Q.DATAB
+d2 => Q.DATAB
+d3 => Q.DATAA
+selector0 => Equal0.IN1
+selector0 => Equal1.IN0
+selector0 => Equal2.IN1
+selector0 => Equal3.IN1
+selector1 => Equal0.IN0
+selector1 => Equal1.IN1
+selector1 => Equal2.IN0
+selector1 => Equal3.IN0
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
