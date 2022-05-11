@@ -1,43 +1,25 @@
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.std_logic_unsigned.ALL;
+use IEEE.numeric_std.all;
 
-ENTITY contador IS
-
+ENTITY Contador IS
 	PORT (
-		clk50Mhz : IN STD_LOGIC;
-		leds : OUT STD_LOGIC_VECTOR (3 DOWNTO 0));
+		CLK, RST : IN STD_LOGIC;
+		salida : INOUT STD_LOGIC_VECTOR(0 TO 7)
+	);
 
-END contador;
-ARCHITECTURE cuentabinario OF contador IS
-
-	SIGNAL numeros : STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000"; --se inicializa el vector en ceros.
-
-	SIGNAL reloj_divisor : STD_LOGIC;
-	COMPONENT Reloj IS --  el archivo divisor de frecuencia debe estar en la misma carpeta! 
-		-- aqui se va a incluir el programa divisor de frecuencia que ya se implementó para trabajar 
-		-- con una frecuencía mas baja en este caso 2Hz!!
-		PORT (
-			salida : OUT STD_LOGIC; -- se copia directamente de los puertos de entrada y salida, del programa reloj!
-			clk : IN STD_LOGIC;
-			reset : IN STD_LOGIC);
-
-	END COMPONENT;
-
+END Contador;
+ARCHITECTURE ContadorArch OF Contador IS
+	SIGNAL count : INTEGER RANGE 0 TO 255 := 0;
 BEGIN
-
-	Reloj1 : Reloj PORT MAP(reloj_divisor, Clk50Mhz, '1'); --  aqui se relaciona las entradas y salidas de los dos programas!
-	proceso_contador : PROCESS (reloj_divisor)
-
+	PROCESS (CLK, RST)
 	BEGIN
-
-		IF rising_edge(reloj_divisor)
-			THEN
-
-			numeros <= numeros + 1;
+		IF rising_edge(CLK) THEN
+			count <= count + 1;
+		ELSIF RST = '1' THEN
+			count <= 0;
 		END IF;
-
+		salida <= STD_LOGIC_VECTOR(to_unsigned(count, salida'length));
 	END PROCESS;
-	leds <= numeros; -- checar si son de ánodo común o de cátado común!
-END cuentabinario;
+END ContadorArch;

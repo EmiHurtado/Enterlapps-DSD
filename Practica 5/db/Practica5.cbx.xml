@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Practica5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|BUSMUX:inst5|lpm_mux:$00000" CBX_FILE_NAME="mux_smc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

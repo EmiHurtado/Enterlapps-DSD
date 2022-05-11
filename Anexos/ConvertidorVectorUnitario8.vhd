@@ -9,6 +9,7 @@ entity ConvertidorVectorUnitario8 is
 end ConvertidorVectorUnitario8; 
 
 architecture ConvVecUni8 of ConvertidorVectorUnitario8 is
+
 begin
 	a <= entradaVector(0);
 	b <= entradaVector(1);
@@ -18,4 +19,5 @@ begin
 	f <= entradaVector(5);
 	g <= entradaVector(6);
 	h <= entradaVector(7);
+	
 end ConvVecUni8;
