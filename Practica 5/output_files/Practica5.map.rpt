@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica5
-Sat May 07 19:49:47 2022
+Wed May 11 12:22:04 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,13 +14,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: BUSMUX:inst5
- 13. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst11
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst1
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May 07 19:49:47 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 11 12:22:04 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica5                                       ;
 ; Top-level Entity Name              ; Practica5                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 3                                               ;
-;     Total combinational functions  ; 3                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 20                                              ;
+; Total logic elements               ; 141                                             ;
+;     Total combinational functions  ; 134                                             ;
+;     Dedicated logic registers      ; 33                                              ;
+; Total registers                    ; 33                                              ;
+; Total pins                         ; 18                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,66 +162,57 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path         ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                   ; Library ;
 +------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
+; ../Anexos/DecodificadorDecimal.vhd       ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/DecodificadorDecimal.vhd       ;         ;
 ; convertidordisplay.vhd                   ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/convertidordisplay.vhd     ;         ;
 ; display.vhd                              ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/display.vhd                ;         ;
 ; Practica5.bdf                            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/Practica5.bdf              ;         ;
 ; ../Anexos/DivisorFrecuencia.vhd          ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd          ;         ;
 ; ContadorJhonson.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/ContadorJhonson.bdf        ;         ;
-; ContadorAnillo.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/ContadorAnillo.bdf         ;         ;
 ; ../Anexos/ConvertidorUnitarioVector8.vhd ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/ConvertidorUnitarioVector8.vhd ;         ;
 ; ../Anexos/ConvertidorVectorUnitario8.vhd ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/ConvertidorVectorUnitario8.vhd ;         ;
-; busmux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/busmux.tdf                                                   ;         ;
-; lpm_mux.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                  ;         ;
-; lpm_mux.tdf                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                  ;         ;
-; aglobal130.inc                           ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                               ;         ;
-; muxlut.inc                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                   ;         ;
-; bypassff.inc                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                 ;         ;
-; altshift.inc                             ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                 ;         ;
-; db/mux_smc.tdf                           ; yes             ; Auto-Generated Megafunction        ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 5/db/mux_smc.tdf             ;         ;
 +------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                       ;
-+---------------------------------------------+---------------------------------------------------------------------+
-; Resource                                    ; Usage                                                               ;
-+---------------------------------------------+---------------------------------------------------------------------+
-; Estimated Total logic elements              ; 3                                                                   ;
-;                                             ;                                                                     ;
-; Total combinational functions               ; 3                                                                   ;
-; Logic element usage by number of LUT inputs ;                                                                     ;
-;     -- 4 input functions                    ; 0                                                                   ;
-;     -- 3 input functions                    ; 2                                                                   ;
-;     -- <=2 input functions                  ; 1                                                                   ;
-;                                             ;                                                                     ;
-; Logic elements by mode                      ;                                                                     ;
-;     -- normal mode                          ; 3                                                                   ;
-;     -- arithmetic mode                      ; 0                                                                   ;
-;                                             ;                                                                     ;
-; Total registers                             ; 0                                                                   ;
-;     -- Dedicated logic registers            ; 0                                                                   ;
-;     -- I/O registers                        ; 0                                                                   ;
-;                                             ;                                                                     ;
-; I/O pins                                    ; 20                                                                  ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                   ;
-; Maximum fan-out node                        ; busmux:inst5|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]~0 ;
-; Maximum fan-out                             ; 5                                                                   ;
-; Total fan-out                               ; 13                                                                  ;
-; Average fan-out                             ; 0.57                                                                ;
-+---------------------------------------------+---------------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimated Total logic elements              ; 141                         ;
+;                                             ;                             ;
+; Total combinational functions               ; 134                         ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 66                          ;
+;     -- 3 input functions                    ; 24                          ;
+;     -- <=2 input functions                  ; 44                          ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 111                         ;
+;     -- arithmetic mode                      ; 23                          ;
+;                                             ;                             ;
+; Total registers                             ; 33                          ;
+;     -- Dedicated logic registers            ; 33                          ;
+;     -- I/O registers                        ; 0                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 18                          ;
+; Embedded Multiplier 9-bit elements          ; 0                           ;
+; Maximum fan-out node                        ; ContadorJhonson:inst|inst10 ;
+; Maximum fan-out                             ; 28                          ;
+; Total fan-out                               ; 536                         ;
+; Average fan-out                             ; 2.90                        ;
++---------------------------------------------+-----------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Library Name ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
-; |Practica5                        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |Practica5                                                    ; work         ;
-;    |ContadorAnillo:inst10|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|ContadorAnillo:inst10                              ; work         ;
-;    |busmux:inst5|                 ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|busmux:inst5                                       ; work         ;
-;       |lpm_mux:$00000|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|busmux:inst5|lpm_mux:$00000                        ; work         ;
-;          |mux_smc:auto_generated| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|busmux:inst5|lpm_mux:$00000|mux_smc:auto_generated ; work         ;
-+-----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                              ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |Practica5                     ; 134 (0)           ; 33 (0)       ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |Practica5                           ; work         ;
+;    |ContadorJhonson:inst|      ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|ContadorJhonson:inst      ; work         ;
+;    |DivisorDeFrecuencia:inst1| ; 40 (40)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|DivisorDeFrecuencia:inst1 ; work         ;
+;    |display:inst2|             ; 93 (93)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica5|display:inst2             ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -233,53 +222,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
 +----------------------------------------------------+---------------------+------------------------+
 ; display:inst2|DISPLAY[6]                           ; GND                 ; yes                    ;
+; display:inst2|DISPLAY[5]                           ; GND                 ; yes                    ;
+; display:inst2|DISPLAY[4]                           ; GND                 ; yes                    ;
+; display:inst2|DISPLAY[3]                           ; GND                 ; yes                    ;
 ; display:inst2|DISPLAY[2]                           ; GND                 ; yes                    ;
 ; display:inst2|DISPLAY[1]                           ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 3  ;                     ;                        ;
+; display:inst2|DISPLAY[0]                           ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
 +----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+--------------------------------------------+--------------------------------------+
-; Register name                              ; Reason for Removal                   ;
-+--------------------------------------------+--------------------------------------+
-; DivisorDeFrecuencia:inst11|contador[0]     ; Stuck at GND due to stuck port clear ;
-; DivisorDeFrecuencia:inst11|salida_media    ; Stuck at GND due to stuck port clear ;
-; DivisorDeFrecuencia:inst11|contador[1..24] ; Stuck at GND due to stuck port clear ;
-; ContadorJhonson:inst|inst                  ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst14                ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst13                ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst12                ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst10                ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst9                 ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst8                 ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst7                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst6                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst5                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst4                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst3                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst2                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst1                ; Stuck at GND due to stuck port clock ;
-; ContadorJhonson:inst|inst11                ; Stuck at GND due to stuck port clock ;
-; ContadorAnillo:inst10|inst~_emulated       ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 42     ;                                      ;
-+--------------------------------------------+--------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                               ;
-+-----------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
-; Register name                           ; Reason for Removal      ; Registers Removed due to This Register                                                ;
-+-----------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
-; DivisorDeFrecuencia:inst11|salida_media ; Stuck at GND            ; ContadorJhonson:inst|inst, ContadorJhonson:inst|inst14, ContadorJhonson:inst|inst13,  ;
-;                                         ; due to stuck port clear ; ContadorJhonson:inst|inst12, ContadorJhonson:inst|inst10, ContadorJhonson:inst|inst9, ;
-;                                         ;                         ; ContadorJhonson:inst|inst8, ContadorAnillo:inst10|inst7, ContadorAnillo:inst10|inst6, ;
-;                                         ;                         ; ContadorAnillo:inst10|inst5, ContadorAnillo:inst10|inst4,                             ;
-;                                         ;                         ; ContadorAnillo:inst10|inst3, ContadorAnillo:inst10|inst2,                             ;
-;                                         ;                         ; ContadorAnillo:inst10|inst1, ContadorJhonson:inst|inst11                              ;
-+-----------------------------------------+-------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -287,33 +238,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 33    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 33    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst5 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; WIDTH          ; 8     ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Practica5|display:inst2|DISPLAY[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst11 ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; frequency      ; 2.5   ; Signed Float                                   ;
-+----------------+-------+------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; frequency      ; 5     ; Signed Float                                  ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -332,9 +282,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 07 19:49:45 2022
+    Info: Processing started: Wed May 11 12:22:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica5 -c Practica5
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/axela/onedrive/documentos/escom/4to semestre/dcd/enterlapps-dsd/anexos/decodificadordecimal.vhd
+    Info (12022): Found design unit 1: DecodifiadorDecimal-DecoDec
+    Info (12023): Found entity 1: DecodifiadorDecimal
 Info (12021): Found 2 design units, including 1 entities, in source file convertidordisplay.vhd
     Info (12022): Found design unit 1: convertidordisplay-convdis
     Info (12023): Found entity 1: convertidordisplay
@@ -358,25 +311,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: ConvertidorVectorUnitario8
 Warning (12019): Can't analyze file -- file ../Anexos/Divisor2.5Hz.vhd is missing
 Info (12127): Elaborating entity "Practica5" for the top level hierarchy
-Warning (275011): Block or symbol "DivisorDeFrecuencia" of instance "inst11" overlaps another block or symbol
-Warning (275013): Port "clk" of type DivisorDeFrecuencia and instance "inst11" is missing source signal
-Warning (275009): Pin "CLK" not connected
-Warning (275009): Pin "ResetCLK" not connected
 Info (12128): Elaborating entity "ConvertidorVectorUnitario8" for hierarchy "ConvertidorVectorUnitario8:inst7"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst5"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst5"
-Info (12133): Instantiated megafunction "BUSMUX:inst5" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "8"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst5|lpm_mux:$00000"
-Info (12131): Elaborated megafunction instantiation "BUSMUX:inst5|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_smc.tdf
-    Info (12023): Found entity 1: mux_smc
-Info (12128): Elaborating entity "mux_smc" for hierarchy "BUSMUX:inst5|lpm_mux:$00000|mux_smc:auto_generated"
 Info (12128): Elaborating entity "ConvertidorUnitarioVector8" for hierarchy "ConvertidorUnitarioVector8:Convertidor"
 Info (12128): Elaborating entity "ContadorJhonson" for hierarchy "ContadorJhonson:inst"
-Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:inst11"
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:inst1"
 Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
-Info (12128): Elaborating entity "ContadorAnillo" for hierarchy "ContadorAnillo:inst10"
 Info (12128): Elaborating entity "convertidordisplay" for hierarchy "convertidordisplay:inst3"
 Info (12128): Elaborating entity "display" for hierarchy "display:inst2"
 Warning (10631): VHDL Process Statement warning at display.vhd(31): inferring latch(es) for signal or variable "DISPLAY", which holds its previous value in one or more paths through the process
@@ -387,33 +326,16 @@ Info (10041): Inferred latch for "DISPLAY[3]" at display.vhd(31)
 Info (10041): Inferred latch for "DISPLAY[4]" at display.vhd(31)
 Info (10041): Inferred latch for "DISPLAY[5]" at display.vhd(31)
 Info (10041): Inferred latch for "DISPLAY[6]" at display.vhd(31)
-Warning (14025): LATCH primitive "display:inst2|DISPLAY[5]" is permanently disabled
-Warning (14025): LATCH primitive "display:inst2|DISPLAY[4]" is permanently disabled
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "ContadorAnillo:inst10|inst" is converted into an equivalent circuit using register "ContadorAnillo:inst10|inst~_emulated" and latch "ContadorAnillo:inst10|inst~1"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED2" is stuck at GND
-    Warning (13410): Pin "LED3" is stuck at GND
-    Warning (13410): Pin "LED4" is stuck at GND
-    Warning (13410): Pin "LED5" is stuck at GND
-    Warning (13410): Pin "LED6" is stuck at GND
-    Warning (13410): Pin "LED7" is stuck at GND
-    Warning (13410): Pin "LED8" is stuck at GND
-    Warning (13410): Pin "b" is stuck at VCC
-    Warning (13410): Pin "c" is stuck at VCC
-    Warning (13410): Pin "g" is stuck at GND
+Info (12128): Elaborating entity "DecodifiadorDecimal" for hierarchy "DecodifiadorDecimal:inst4"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLK"
-    Warning (15610): No output dependent on input pin "ResetCLK"
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
+Info (21057): Implemented 159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 3 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4613 megabytes
-    Info: Processing ended: Sat May 07 19:49:47 2022
+    Info (21061): Implemented 141 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4615 megabytes
+    Info: Processing ended: Wed May 11 12:22:04 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
