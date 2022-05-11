@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pruebas
-Thu Mar 31 19:32:20 2022
+Sun May 01 22:02:02 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst1
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,15 +42,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar 31 19:32:20 2022           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 01 22:02:02 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; pruebas                                         ;
-; Top-level Entity Name              ; pruebas                                         ;
+; Top-level Entity Name              ; Pruebas                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 46                                              ;
-;     Total combinational functions  ; 46                                              ;
-;     Dedicated logic registers      ; 26                                              ;
-; Total registers                    ; 26                                              ;
+; Total logic elements               ; 50                                              ;
+;     Total combinational functions  ; 49                                              ;
+;     Dedicated logic registers      ; 29                                              ;
+; Total registers                    ; 29                                              ;
 ; Total pins                         ; 3                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -64,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C5T144C8        ;                    ;
-; Top-level entity name                                                      ; pruebas            ; pruebas            ;
+; Top-level entity name                                                      ; Pruebas            ; pruebas            ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,13 +155,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
-; pruebas.vhd                      ; yes             ; User VHDL File  ; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/pruebas.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../Anexos/DivisorFrecuencia.vhd  ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd ;         ;
+; Pruebas.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/Pruebas.bdf          ;         ;
+; Codigo.vhd                       ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/Codigo.vhd           ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -168,38 +171,40 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 46    ;
+; Estimated Total logic elements              ; 50    ;
 ;                                             ;       ;
-; Total combinational functions               ; 46    ;
+; Total combinational functions               ; 49    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 8     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 38    ;
+;     -- <=2 input functions                  ; 41    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 22    ;
-;     -- arithmetic mode                      ; 24    ;
+;     -- normal mode                          ; 24    ;
+;     -- arithmetic mode                      ; 25    ;
 ;                                             ;       ;
-; Total registers                             ; 26    ;
-;     -- Dedicated logic registers            ; 26    ;
+; Total registers                             ; 29    ;
+;     -- Dedicated logic registers            ; 29    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 3     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 26    ;
-; Total fan-out                               ; 186   ;
-; Average fan-out                             ; 2.48  ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 27    ;
+; Total fan-out                               ; 198   ;
+; Average fan-out                             ; 2.44  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |pruebas                   ; 46 (46)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |pruebas            ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
+; |Pruebas                       ; 49 (0)            ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |Pruebas                           ; work         ;
+;    |Codigo:inst|               ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pruebas|Codigo:inst               ; work         ;
+;    |DivisorDeFrecuencia:inst1| ; 48 (48)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Pruebas|DivisorDeFrecuencia:inst1 ; work         ;
++--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -208,14 +213,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 26    ;
+; Number of registers using Asynchronous Clear ; 27    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisorDeFrecuencia:inst1 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; frequency      ; 1     ; Signed Float                                  ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -233,22 +248,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 31 19:32:18 2022
+    Info: Processing started: Sun May 01 22:02:00 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pruebas -c pruebas
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file pruebas.vhd
-    Info (12022): Found design unit 1: pruebas-divisor
-    Info (12023): Found entity 1: pruebas
-Info (12127): Elaborating entity "pruebas" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/divisorfrecuencia.vhd
+    Info (12022): Found design unit 1: DivisorDeFrecuencia-DivFrec
+    Info (12023): Found entity 1: DivisorDeFrecuencia
+Info (12021): Found 1 design units, including 1 entities, in source file pruebas.bdf
+    Info (12023): Found entity 1: Pruebas
+Info (12021): Found 2 design units, including 1 entities, in source file codigo.vhd
+    Info (12022): Found design unit 1: Codigo-arch
+    Info (12023): Found entity 1: Codigo
+Info (12127): Elaborating entity "Pruebas" for the top level hierarchy
+Info (12128): Elaborating entity "Codigo" for hierarchy "Codigo:inst"
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:inst1"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 46 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Thu Mar 31 19:32:20 2022
+    Info (21061): Implemented 50 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4654 megabytes
+    Info: Processing ended: Sun May 01 22:02:02 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
