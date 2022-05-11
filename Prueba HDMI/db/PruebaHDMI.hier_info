@@ -1,0 +1,133 @@
+|PruebaHDMI
+CLK25MHz <= DivisorDeFrecuencia:inst3.salida
+CLK => DivisorDeFrecuencia:inst3.CLK
+CLK => MultiplicadorFrecuencia:inst.inclk0
+data2Red <= GeneradorVideo:inst2.redData2
+BTN => GeneradorVideo:inst2.BTN
+data1Green <= GeneradorVideo:inst2.greenData1
+data0Blue <= GeneradorVideo:inst2.blueData0
+NOT_CLK25MH <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+NOT_data2Red <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+NOT_data1Green <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+NOT_data0Blue <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PruebaHDMI|DivisorDeFrecuencia:inst3
+CLK => contador.CLK
+CLK => salida_media.CLK
+RESET => contador.ACLR
+RESET => salida_media.ACLR
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PruebaHDMI|GeneradorVideo:inst2
+CLK250MHz => contadorBit[0].CLK
+CLK250MHz => contadorBit[1].CLK
+CLK250MHz => contadorBit[2].CLK
+CLK250MHz => contadorBit[3].CLK
+CLK250MHz => blueData0~reg0.CLK
+CLK250MHz => greenData1~reg0.CLK
+CLK250MHz => redData2~reg0.CLK
+BTN => contadorColor[0].CLK
+BTN => contadorColor[1].CLK
+BTN => d0Blue[9].CLK
+BTN => d0Blue[8].CLK
+BTN => d0Blue[7].CLK
+BTN => d0Blue[6].CLK
+BTN => d0Blue[5].CLK
+BTN => d0Blue[4].CLK
+BTN => d0Blue[3].CLK
+BTN => d0Blue[2].CLK
+BTN => d0Blue[1].CLK
+BTN => d0Blue[0].CLK
+BTN => d1Green[9].CLK
+BTN => d1Green[8].CLK
+BTN => d1Green[7].CLK
+BTN => d1Green[6].CLK
+BTN => d1Green[5].CLK
+BTN => d1Green[4].CLK
+BTN => d1Green[3].CLK
+BTN => d1Green[2].CLK
+BTN => d1Green[1].CLK
+BTN => d1Green[0].CLK
+BTN => d2Red[9].CLK
+BTN => d2Red[8].CLK
+BTN => d2Red[7].CLK
+BTN => d2Red[6].CLK
+BTN => d2Red[5].CLK
+BTN => d2Red[4].CLK
+BTN => d2Red[3].CLK
+BTN => d2Red[2].CLK
+BTN => d2Red[1].CLK
+BTN => d2Red[0].CLK
+redData2 <= redData2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+greenData1 <= greenData1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+blueData0 <= blueData0~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PruebaHDMI|MultiplicadorFrecuencia:inst
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|PruebaHDMI|MultiplicadorFrecuencia:inst|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
