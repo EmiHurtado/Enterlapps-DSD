@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Practica5
-Sat May 07 19:49:53 2022
+Wed May 11 12:22:11 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,23 +16,36 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Propagation Delay
- 12. Minimum Propagation Delay
- 13. Fast Model Setup Summary
- 14. Fast Model Hold Summary
- 15. Fast Model Recovery Summary
- 16. Fast Model Removal Summary
- 17. Fast Model Minimum Pulse Width Summary
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Multicorner Timing Analysis Summary
- 21. Progagation Delay
- 22. Minimum Progagation Delay
- 23. Clock Transfers
- 24. Report TCCS
- 25. Report RSKM
- 26. Unconstrained Paths
- 27. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Setup: 'DivisorDeFrecuencia:inst1|salida_media'
+ 13. Slow Model Hold: 'CLK'
+ 14. Slow Model Hold: 'DivisorDeFrecuencia:inst1|salida_media'
+ 15. Slow Model Minimum Pulse Width: 'CLK'
+ 16. Slow Model Minimum Pulse Width: 'DivisorDeFrecuencia:inst1|salida_media'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'CLK'
+ 25. Fast Model Setup: 'DivisorDeFrecuencia:inst1|salida_media'
+ 26. Fast Model Hold: 'CLK'
+ 27. Fast Model Hold: 'DivisorDeFrecuencia:inst1|salida_media'
+ 28. Fast Model Minimum Pulse Width: 'CLK'
+ 29. Fast Model Minimum Pulse Width: 'DivisorDeFrecuencia:inst1|salida_media'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
 
 
 
@@ -79,28 +92,45 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                         ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; Clock Name                             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                    ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; CLK                                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK }                                    ;
+; DivisorDeFrecuencia:inst1|salida_media ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { DivisorDeFrecuencia:inst1|salida_media } ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                       ;
++------------+-----------------+----------------------------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                             ; Note                                                  ;
++------------+-----------------+----------------------------------------+-------------------------------------------------------+
+; 213.63 MHz ; 213.63 MHz      ; CLK                                    ;                                                       ;
+; 660.07 MHz ; 402.58 MHz      ; DivisorDeFrecuencia:inst1|salida_media ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+----------------------------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Slow Model Setup Summary                                        ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -3.681 ; -58.287       ;
+; DivisorDeFrecuencia:inst1|salida_media ; -0.515 ; -1.634        ;
++----------------------------------------+--------+---------------+
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Slow Model Hold Summary                                         ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -2.560 ; -2.560        ;
+; DivisorDeFrecuencia:inst1|salida_media ; 0.776  ; 0.000         ;
++----------------------------------------+--------+---------------+
 
 
 -------------------------------
@@ -115,68 +145,468 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                          ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -1.941 ; -39.041       ;
+; DivisorDeFrecuencia:inst1|salida_media ; -0.742 ; -11.872       ;
++----------------------------------------+--------+---------------+
 
 
-+----------------------------------------------------------------+
-; Propagation Delay                                              ;
-+--------------+-------------+--------+--------+--------+--------+
-; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+--------------+-------------+--------+--------+--------+--------+
-; INIT         ; LED1        ;        ; 13.567 ; 13.567 ;        ;
-; INIT         ; a           ; 13.066 ;        ;        ; 13.066 ;
-; INIT         ; d           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; e           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; f           ; 13.205 ;        ;        ; 13.205 ;
-; ResetCounter ; LED1        ; 13.866 ;        ;        ; 13.866 ;
-; ResetCounter ; a           ;        ; 13.365 ; 13.365 ;        ;
-; ResetCounter ; d           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; e           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; f           ;        ; 13.504 ; 13.504 ;        ;
-; Selector     ; LED1        ; 12.757 ;        ;        ; 12.757 ;
-; Selector     ; a           ;        ; 12.256 ; 12.256 ;        ;
-; Selector     ; d           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; e           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; f           ;        ; 12.395 ; 12.395 ;        ;
-+--------------+-------------+--------+--------+--------+--------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                                        ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.681 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.724      ;
+; -3.646 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.689      ;
+; -3.600 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.643      ;
+; -3.565 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.608      ;
+; -3.560 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.603      ;
+; -3.479 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.522      ;
+; -3.425 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.468      ;
+; -3.409 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.452      ;
+; -3.374 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.417      ;
+; -3.360 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.400      ;
+; -3.359 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.399      ;
+; -3.344 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.387      ;
+; -3.288 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.331      ;
+; -3.281 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.318      ;
+; -3.280 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.317      ;
+; -3.279 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.316      ;
+; -3.277 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.320      ;
+; -3.238 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.281      ;
+; -3.237 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.280      ;
+; -3.196 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.239      ;
+; -3.159 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.199      ;
+; -3.158 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.198      ;
+; -3.157 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.197      ;
+; -3.153 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.196      ;
+; -3.137 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.180      ;
+; -3.111 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.154      ;
+; -3.109 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.149      ;
+; -3.109 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.149      ;
+; -3.101 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.141      ;
+; -3.100 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.140      ;
+; -3.093 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.136      ;
+; -3.060 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.100      ;
+; -3.059 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.099      ;
+; -3.058 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.098      ;
+; -3.058 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.101      ;
+; -3.056 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.099      ;
+; -3.044 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.087      ;
+; -3.044 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.043 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.086      ;
+; -3.043 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.083      ;
+; -3.030 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.073      ;
+; -3.026 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.069      ;
+; -3.022 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.059      ;
+; -3.021 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.058      ;
+; -3.020 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.057      ;
+; -3.005 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.048      ;
+; -2.991 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.034      ;
+; -2.988 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.031      ;
+; -2.987 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.030      ;
+; -2.987 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.030      ;
+; -2.987 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.030      ;
+; -2.982 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.022      ;
+; -2.981 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.021      ;
+; -2.979 ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.022      ;
+; -2.972 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 4.015      ;
+; -2.965 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.005      ;
+; -2.965 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.002      ;
+; -2.964 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.004      ;
+; -2.964 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.001      ;
+; -2.963 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 4.003      ;
+; -2.963 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 4.000      ;
+; -2.940 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.983      ;
+; -2.939 ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.982      ;
+; -2.909 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.949      ;
+; -2.908 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.948      ;
+; -2.907 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.947      ;
+; -2.905 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.948      ;
+; -2.905 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.948      ;
+; -2.903 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.940      ;
+; -2.902 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.939      ;
+; -2.901 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.938      ;
+; -2.898 ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.941      ;
+; -2.892 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.935      ;
+; -2.865 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.908      ;
+; -2.861 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.904      ;
+; -2.858 ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.901      ;
+; -2.857 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.900      ;
+; -2.850 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.890      ;
+; -2.850 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.890      ;
+; -2.843 ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.883      ;
+; -2.842 ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.882      ;
+; -2.839 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.882      ;
+; -2.837 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.880      ;
+; -2.819 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.862      ;
+; -2.806 ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.846      ;
+; -2.805 ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.845      ;
+; -2.793 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.836      ;
+; -2.793 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.836      ;
+; -2.793 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.833      ;
+; -2.793 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.833      ;
+; -2.773 ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.813      ;
+; -2.771 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.814      ;
+; -2.770 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.813      ;
+; -2.766 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.806      ;
+; -2.764 ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.801      ;
+; -2.763 ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.800      ;
+; -2.762 ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 3.799      ;
+; -2.737 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 3.780      ;
+; -2.731 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.771      ;
+; -2.731 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.771      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------+
-; Minimum Propagation Delay                                      ;
-+--------------+-------------+--------+--------+--------+--------+
-; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+--------------+-------------+--------+--------+--------+--------+
-; INIT         ; LED1        ;        ; 13.567 ; 13.567 ;        ;
-; INIT         ; a           ; 13.066 ;        ;        ; 13.066 ;
-; INIT         ; d           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; e           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; f           ; 13.205 ;        ;        ; 13.205 ;
-; ResetCounter ; LED1        ; 13.866 ;        ;        ; 13.866 ;
-; ResetCounter ; a           ;        ; 13.365 ; 13.365 ;        ;
-; ResetCounter ; d           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; e           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; f           ;        ; 13.504 ; 13.504 ;        ;
-; Selector     ; LED1        ; 12.757 ;        ;        ; 12.757 ;
-; Selector     ; a           ;        ; 12.256 ; 12.256 ;        ;
-; Selector     ; d           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; e           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; f           ;        ; 12.395 ; 12.395 ;        ;
-+--------------+-------------+--------+--------+--------+--------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'DivisorDeFrecuencia:inst1|salida_media'                                                                                                                                    ;
++--------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock                           ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; -0.515 ; ContadorJhonson:inst|inst9  ; ContadorJhonson:inst|inst10 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.555      ;
+; -0.189 ; ContadorJhonson:inst|inst   ; ContadorJhonson:inst|inst8  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.229      ;
+; -0.180 ; ContadorJhonson:inst|inst13 ; ContadorJhonson:inst|inst14 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.220      ;
+; -0.179 ; ContadorJhonson:inst|inst11 ; ContadorJhonson:inst|inst12 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.219      ;
+; -0.177 ; ContadorJhonson:inst|inst8  ; ContadorJhonson:inst|inst9  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.217      ;
+; -0.176 ; ContadorJhonson:inst|inst10 ; ContadorJhonson:inst|inst11 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.216      ;
+; -0.176 ; ContadorJhonson:inst|inst12 ; ContadorJhonson:inst|inst13 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.216      ;
+; -0.042 ; ContadorJhonson:inst|inst14 ; ContadorJhonson:inst|inst   ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 1.082      ;
++--------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                                                                   ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; -2.560 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; CLK         ; 0.000        ; 2.755      ; 0.805      ;
+; -2.060 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; CLK         ; -0.500       ; 2.755      ; 0.805      ;
+; 1.171  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.477      ;
+; 1.175  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.481      ;
+; 1.176  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176  ; DivisorDeFrecuencia:inst1|contador[21] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.483      ;
+; 1.182  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[0]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.488      ;
+; 1.224  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.530      ;
+; 1.225  ; DivisorDeFrecuencia:inst1|contador[22] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.226  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.532      ;
+; 1.230  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.230  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.231  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[1]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.231  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.649  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.955      ;
+; 1.650  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.956      ;
+; 1.654  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.960      ;
+; 1.655  ; DivisorDeFrecuencia:inst1|contador[21] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.961      ;
+; 1.656  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.962      ;
+; 1.658  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.964      ;
+; 1.658  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.964      ;
+; 1.660  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[1]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.966      ;
+; 1.664  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 1.970      ;
+; 1.704  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.010      ;
+; 1.706  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.012      ;
+; 1.711  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.017      ;
+; 1.711  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.017      ;
+; 1.741  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.047      ;
+; 1.742  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.048      ;
+; 1.744  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.050      ;
+; 1.744  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.050      ;
+; 1.746  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.052      ;
+; 1.751  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.057      ;
+; 1.766  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.072      ;
+; 1.790  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.096      ;
+; 1.795  ; DivisorDeFrecuencia:inst1|contador[23] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.101      ;
+; 1.796  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.102      ;
+; 1.797  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.103      ;
+; 1.804  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.110      ;
+; 1.822  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.128      ;
+; 1.826  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.132      ;
+; 1.827  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.133      ;
+; 1.830  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.136      ;
+; 1.832  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.138      ;
+; 1.848  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.157      ;
+; 1.852  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.158      ;
+; 1.853  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.159      ;
+; 1.882  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.188      ;
+; 1.901  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.207      ;
+; 1.907  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.216      ;
+; 1.912  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.218      ;
+; 1.913  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.219      ;
+; 1.922  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.228      ;
+; 1.923  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.229      ;
+; 1.925  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.231      ;
+; 1.934  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.243      ;
+; 1.938  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.244      ;
+; 1.939  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.245      ;
+; 1.962  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.268      ;
+; 1.974  ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.280      ;
+; 1.982  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.288      ;
+; 1.987  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.293      ;
+; 1.987  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.293      ;
+; 1.993  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.302      ;
+; 1.998  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.304      ;
+; 2.022  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.328      ;
+; 2.054  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.360      ;
+; 2.060  ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.366      ;
+; 2.062  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.371      ;
+; 2.068  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.374      ;
+; 2.068  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.374      ;
+; 2.073  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.379      ;
+; 2.073  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.379      ;
+; 2.080  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.386      ;
+; 2.104  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.410      ;
+; 2.106  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.415      ;
+; 2.108  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.414      ;
+; 2.110  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.416      ;
+; 2.138  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.138  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.444      ;
+; 2.139  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.445      ;
+; 2.140  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.449      ;
+; 2.148  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.457      ;
+; 2.154  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.460      ;
+; 2.155  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.461      ;
+; 2.155  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.461      ;
+; 2.156  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.462      ;
+; 2.159  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.465      ;
+; 2.165  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.474      ;
+; 2.167  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.473      ;
+; 2.177  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.483      ;
+; 2.180  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.489      ;
+; 2.190  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.496      ;
+; 2.192  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 2.501      ;
+; 2.192  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.498      ;
+; 2.194  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 2.500      ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'DivisorDeFrecuencia:inst1|salida_media'                                                                                                                                    ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                           ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; 0.776 ; ContadorJhonson:inst|inst14 ; ContadorJhonson:inst|inst   ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.082      ;
+; 0.910 ; ContadorJhonson:inst|inst10 ; ContadorJhonson:inst|inst11 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.216      ;
+; 0.910 ; ContadorJhonson:inst|inst12 ; ContadorJhonson:inst|inst13 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.216      ;
+; 0.911 ; ContadorJhonson:inst|inst8  ; ContadorJhonson:inst|inst9  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.217      ;
+; 0.913 ; ContadorJhonson:inst|inst11 ; ContadorJhonson:inst|inst12 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.219      ;
+; 0.914 ; ContadorJhonson:inst|inst13 ; ContadorJhonson:inst|inst14 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.220      ;
+; 0.923 ; ContadorJhonson:inst|inst   ; ContadorJhonson:inst|inst8  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.229      ;
+; 1.249 ; ContadorJhonson:inst|inst9  ; ContadorJhonson:inst|inst10 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 1.555      ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; CLK   ; Rise       ; CLK                                    ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[10] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[10] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[11] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[11] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[12] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[12] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[13] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[13] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[14] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[14] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[15] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[15] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[16] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[16] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[17] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[17] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[18] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[18] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[19] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[19] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[20] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[20] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[21] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[21] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[22] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[22] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[23] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[23] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[16]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[16]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[17]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[17]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[18]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[18]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[19]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[19]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[20]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[20]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[21]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[21]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[22]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[22]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[23]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[23]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[7]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'DivisorDeFrecuencia:inst1|salida_media'                                                                              ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst10         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst10         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst11         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst11         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst12         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst12         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst13         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst13         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst14         ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst14         ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst8          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst8          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst9          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst9          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst10|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst10|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst11|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst11|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst12|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst12|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst13|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst13|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst14|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst14|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst8|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst8|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst9|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst9|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst|clk                       ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                    ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 7.557 ; 7.557 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 7.573 ; 7.573 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 7.538 ; 7.538 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 7.547 ; 7.547 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 7.202 ; 7.202 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 7.192 ; 7.192 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 8.281 ; 8.281 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 8.301 ; 8.301 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                            ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 7.557 ; 7.557 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 7.573 ; 7.573 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 7.538 ; 7.538 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 7.547 ; 7.547 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 7.202 ; 7.202 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 7.192 ; 7.192 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 8.281 ; 8.281 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 8.301 ; 8.301 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Fast Model Setup Summary                                        ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -0.723 ; -6.128        ;
+; DivisorDeFrecuencia:inst1|salida_media ; 0.445  ; 0.000         ;
++----------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------+
+; Fast Model Hold Summary                                         ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -1.365 ; -1.365        ;
+; DivisorDeFrecuencia:inst1|salida_media ; 0.278  ; 0.000         ;
++----------------------------------------+--------+---------------+
 
 
 -------------------------------
@@ -191,118 +621,518 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
-; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                          ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; CLK                                    ; -1.380 ; -26.380       ;
+; DivisorDeFrecuencia:inst1|salida_media ; -0.500 ; -8.000        ;
++----------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------+
-; Propagation Delay                                          ;
-+--------------+-------------+-------+-------+-------+-------+
-; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+--------------+-------------+-------+-------+-------+-------+
-; INIT         ; LED1        ;       ; 6.057 ; 6.057 ;       ;
-; INIT         ; a           ; 5.859 ;       ;       ; 5.859 ;
-; INIT         ; d           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; e           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; f           ; 5.957 ;       ;       ; 5.957 ;
-; ResetCounter ; LED1        ; 6.140 ;       ;       ; 6.140 ;
-; ResetCounter ; a           ;       ; 5.942 ; 5.942 ;       ;
-; ResetCounter ; d           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; e           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; f           ;       ; 6.040 ; 6.040 ;       ;
-; Selector     ; LED1        ; 5.801 ;       ;       ; 5.801 ;
-; Selector     ; a           ;       ; 5.603 ; 5.603 ;       ;
-; Selector     ; d           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; e           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; f           ;       ; 5.701 ; 5.701 ;       ;
-+--------------+-------------+-------+-------+-------+-------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                                        ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.723 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.758      ;
+; -0.703 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.738      ;
+; -0.696 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.731      ;
+; -0.676 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.711      ;
+; -0.668 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.703      ;
+; -0.641 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.676      ;
+; -0.614 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.649      ;
+; -0.601 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.636      ;
+; -0.587 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.622      ;
+; -0.581 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.616      ;
+; -0.546 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.581      ;
+; -0.536 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.571      ;
+; -0.523 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.558      ;
+; -0.509 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.544      ;
+; -0.503 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.538      ;
+; -0.492 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.527      ;
+; -0.488 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.523      ;
+; -0.484 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.519      ;
+; -0.468 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.503      ;
+; -0.468 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.503      ;
+; -0.467 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.502      ;
+; -0.457 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.492      ;
+; -0.440 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.475      ;
+; -0.433 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.468      ;
+; -0.430 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.465      ;
+; -0.422 ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.457      ;
+; -0.414 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.449      ;
+; -0.414 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.449      ;
+; -0.410 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.445      ;
+; -0.397 ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.432      ;
+; -0.395 ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.430      ;
+; -0.386 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.421      ;
+; -0.379 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.414      ;
+; -0.375 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.410      ;
+; -0.370 ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.405      ;
+; -0.367 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.402      ;
+; -0.366 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.401      ;
+; -0.362 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.397      ;
+; -0.345 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.380      ;
+; -0.340 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.375      ;
+; -0.336 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.371      ;
+; -0.335 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.367      ;
+; -0.334 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.366      ;
+; -0.331 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.366      ;
+; -0.328 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.363      ;
+; -0.327 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.362      ;
+; -0.324 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[18] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.359      ;
+; -0.321 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.356      ;
+; -0.312 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.341      ;
+; -0.311 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.340      ;
+; -0.311 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.340      ;
+; -0.309 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.344      ;
+; -0.305 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.337      ;
+; -0.304 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[18] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.339      ;
+; -0.304 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.336      ;
+; -0.304 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.336      ;
+; -0.301 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.336      ;
+; -0.300 ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.335      ;
+; -0.289 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[17] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.324      ;
+; -0.285 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.317      ;
+; -0.284 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.319      ;
+; -0.283 ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.315      ;
+; -0.281 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.316      ;
+; -0.279 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.314      ;
+; -0.278 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.310      ;
+; -0.278 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.313      ;
+; -0.277 ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.312      ;
+; -0.277 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.309      ;
+; -0.275 ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.310      ;
+; -0.272 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.307      ;
+; -0.271 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.303      ;
+; -0.271 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.303      ;
+; -0.269 ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[18] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.304      ;
+; -0.269 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[17] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.304      ;
+; -0.267 ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[22] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.302      ;
+; -0.267 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.299      ;
+; -0.266 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.298      ;
+; -0.266 ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.298      ;
+; -0.266 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.298      ;
+; -0.265 ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.297      ;
+; -0.260 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.292      ;
+; -0.259 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.291      ;
+; -0.259 ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.294      ;
+; -0.258 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.290      ;
+; -0.257 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.289      ;
+; -0.257 ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.289      ;
+; -0.256 ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.288      ;
+; -0.256 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.288      ;
+; -0.255 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.284      ;
+; -0.255 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.287      ;
+; -0.255 ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.287      ;
+; -0.254 ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[16] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.289      ;
+; -0.254 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.283      ;
+; -0.254 ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.283      ;
+; -0.249 ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[21] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.284      ;
+; -0.244 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.273      ;
+; -0.243 ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[12] ; CLK          ; CLK         ; 1.000        ; 0.003      ; 1.278      ;
+; -0.243 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.272      ;
+; -0.243 ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.272      ;
+; -0.237 ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.266      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------+
-; Minimum Propagation Delay                                  ;
-+--------------+-------------+-------+-------+-------+-------+
-; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+--------------+-------------+-------+-------+-------+-------+
-; INIT         ; LED1        ;       ; 6.057 ; 6.057 ;       ;
-; INIT         ; a           ; 5.859 ;       ;       ; 5.859 ;
-; INIT         ; d           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; e           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; f           ; 5.957 ;       ;       ; 5.957 ;
-; ResetCounter ; LED1        ; 6.140 ;       ;       ; 6.140 ;
-; ResetCounter ; a           ;       ; 5.942 ; 5.942 ;       ;
-; ResetCounter ; d           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; e           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; f           ;       ; 6.040 ; 6.040 ;       ;
-; Selector     ; LED1        ; 5.801 ;       ;       ; 5.801 ;
-; Selector     ; a           ;       ; 5.603 ; 5.603 ;       ;
-; Selector     ; d           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; e           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; f           ;       ; 5.701 ; 5.701 ;       ;
-+--------------+-------------+-------+-------+-------+-------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'DivisorDeFrecuencia:inst1|salida_media'                                                                                                                                   ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                           ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; 0.445 ; ContadorJhonson:inst|inst9  ; ContadorJhonson:inst|inst10 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.587      ;
+; 0.545 ; ContadorJhonson:inst|inst   ; ContadorJhonson:inst|inst8  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.487      ;
+; 0.548 ; ContadorJhonson:inst|inst11 ; ContadorJhonson:inst|inst12 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.484      ;
+; 0.548 ; ContadorJhonson:inst|inst13 ; ContadorJhonson:inst|inst14 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.484      ;
+; 0.550 ; ContadorJhonson:inst|inst8  ; ContadorJhonson:inst|inst9  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.482      ;
+; 0.551 ; ContadorJhonson:inst|inst10 ; ContadorJhonson:inst|inst11 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.481      ;
+; 0.551 ; ContadorJhonson:inst|inst12 ; ContadorJhonson:inst|inst13 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.481      ;
+; 0.602 ; ContadorJhonson:inst|inst14 ; ContadorJhonson:inst|inst   ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 1.000        ; 0.000      ; 0.430      ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                                                                   ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; -1.365 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; CLK         ; 0.000        ; 1.439      ; 0.367      ;
+; -0.865 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; CLK         ; -0.500       ; 1.439      ; 0.367      ;
+; 0.358  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; DivisorDeFrecuencia:inst1|contador[21] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[0]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.371  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371  ; DivisorDeFrecuencia:inst1|contador[22] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[1]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.496  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.497  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.649      ;
+; 0.498  ; DivisorDeFrecuencia:inst1|contador[21] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[1]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.504  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.656      ;
+; 0.511  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.513  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.665      ;
+; 0.516  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.530  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.682      ;
+; 0.533  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.534  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.686      ;
+; 0.535  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.688      ;
+; 0.536  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[2]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.688      ;
+; 0.537  ; DivisorDeFrecuencia:inst1|contador[23] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.689      ;
+; 0.548  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.549  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.551  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.554  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.706      ;
+; 0.556  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.708      ;
+; 0.566  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.567  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.720      ;
+; 0.571  ; DivisorDeFrecuencia:inst1|contador[15] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.723      ;
+; 0.571  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[3]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.723      ;
+; 0.578  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.733      ;
+; 0.584  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.736      ;
+; 0.589  ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.741      ;
+; 0.590  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.591  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.743      ;
+; 0.602  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[17] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.604  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[19] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.756      ;
+; 0.605  ; DivisorDeFrecuencia:inst1|contador[20] ; DivisorDeFrecuencia:inst1|contador[20] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.757      ;
+; 0.609  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.761      ;
+; 0.610  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.762      ;
+; 0.613  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.768      ;
+; 0.615  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.770      ;
+; 0.618  ; DivisorDeFrecuencia:inst1|contador[4]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.770      ;
+; 0.624  ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.776      ;
+; 0.625  ; DivisorDeFrecuencia:inst1|contador[19] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.777      ;
+; 0.626  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.778      ;
+; 0.637  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[18] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.641  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.645  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.645  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.648  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.648  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.648  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.648  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.649  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[10] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.801      ;
+; 0.650  ; DivisorDeFrecuencia:inst1|contador[10] ; DivisorDeFrecuencia:inst1|contador[14] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.805      ;
+; 0.650  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.650  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.654  ; DivisorDeFrecuencia:inst1|contador[6]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.654  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[7]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.665  ; DivisorDeFrecuencia:inst1|contador[14] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[4]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.666  ; DivisorDeFrecuencia:inst1|contador[23] ; DivisorDeFrecuencia:inst1|contador[12] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.818      ;
+; 0.669  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.670  ; DivisorDeFrecuencia:inst1|contador[23] ; DivisorDeFrecuencia:inst1|salida_media ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.671  ; DivisorDeFrecuencia:inst1|contador[5]  ; DivisorDeFrecuencia:inst1|contador[11] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.823      ;
+; 0.673  ; DivisorDeFrecuencia:inst1|contador[9]  ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.828      ;
+; 0.675  ; DivisorDeFrecuencia:inst1|contador[17] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.827      ;
+; 0.676  ; DivisorDeFrecuencia:inst1|contador[22] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.676  ; DivisorDeFrecuencia:inst1|contador[18] ; DivisorDeFrecuencia:inst1|contador[22] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.680  ; DivisorDeFrecuencia:inst1|contador[2]  ; DivisorDeFrecuencia:inst1|contador[6]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.680  ; DivisorDeFrecuencia:inst1|contador[1]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.683  ; DivisorDeFrecuencia:inst1|contador[11] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.838      ;
+; 0.694  ; DivisorDeFrecuencia:inst1|contador[12] ; DivisorDeFrecuencia:inst1|contador[16] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.846      ;
+; 0.696  ; DivisorDeFrecuencia:inst1|contador[3]  ; DivisorDeFrecuencia:inst1|contador[8]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.848      ;
+; 0.698  ; DivisorDeFrecuencia:inst1|contador[16] ; DivisorDeFrecuencia:inst1|contador[21] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.850      ;
+; 0.698  ; DivisorDeFrecuencia:inst1|contador[21] ; DivisorDeFrecuencia:inst1|contador[23] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.850      ;
+; 0.699  ; DivisorDeFrecuencia:inst1|contador[13] ; DivisorDeFrecuencia:inst1|contador[15] ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.851      ;
+; 0.700  ; DivisorDeFrecuencia:inst1|contador[0]  ; DivisorDeFrecuencia:inst1|contador[5]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.852      ;
+; 0.703  ; DivisorDeFrecuencia:inst1|contador[8]  ; DivisorDeFrecuencia:inst1|contador[13] ; CLK                                    ; CLK         ; 0.000        ; 0.003      ; 0.858      ;
+; 0.704  ; DivisorDeFrecuencia:inst1|contador[7]  ; DivisorDeFrecuencia:inst1|contador[9]  ; CLK                                    ; CLK         ; 0.000        ; 0.000      ; 0.856      ;
++--------+----------------------------------------+----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------+
-; Progagation Delay                                              ;
-+--------------+-------------+--------+--------+--------+--------+
-; Input Port   ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+--------------+-------------+--------+--------+--------+--------+
-; INIT         ; LED1        ;        ; 13.567 ; 13.567 ;        ;
-; INIT         ; a           ; 13.066 ;        ;        ; 13.066 ;
-; INIT         ; d           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; e           ; 12.476 ;        ;        ; 12.476 ;
-; INIT         ; f           ; 13.205 ;        ;        ; 13.205 ;
-; ResetCounter ; LED1        ; 13.866 ;        ;        ; 13.866 ;
-; ResetCounter ; a           ;        ; 13.365 ; 13.365 ;        ;
-; ResetCounter ; d           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; e           ;        ; 12.775 ; 12.775 ;        ;
-; ResetCounter ; f           ;        ; 13.504 ; 13.504 ;        ;
-; Selector     ; LED1        ; 12.757 ;        ;        ; 12.757 ;
-; Selector     ; a           ;        ; 12.256 ; 12.256 ;        ;
-; Selector     ; d           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; e           ;        ; 11.666 ; 11.666 ;        ;
-; Selector     ; f           ;        ; 12.395 ; 12.395 ;        ;
-+--------------+-------------+--------+--------+--------+--------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'DivisorDeFrecuencia:inst1|salida_media'                                                                                                                                    ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock                           ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
+; 0.278 ; ContadorJhonson:inst|inst14 ; ContadorJhonson:inst|inst   ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.430      ;
+; 0.329 ; ContadorJhonson:inst|inst10 ; ContadorJhonson:inst|inst11 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; ContadorJhonson:inst|inst12 ; ContadorJhonson:inst|inst13 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; ContadorJhonson:inst|inst8  ; ContadorJhonson:inst|inst9  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.482      ;
+; 0.332 ; ContadorJhonson:inst|inst11 ; ContadorJhonson:inst|inst12 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.484      ;
+; 0.332 ; ContadorJhonson:inst|inst13 ; ContadorJhonson:inst|inst14 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.484      ;
+; 0.335 ; ContadorJhonson:inst|inst   ; ContadorJhonson:inst|inst8  ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.487      ;
+; 0.435 ; ContadorJhonson:inst|inst9  ; ContadorJhonson:inst|inst10 ; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 0.000        ; 0.000      ; 0.587      ;
++-------+-----------------------------+-----------------------------+----------------------------------------+----------------------------------------+--------------+------------+------------+
 
 
-+------------------------------------------------------------+
-; Minimum Progagation Delay                                  ;
-+--------------+-------------+-------+-------+-------+-------+
-; Input Port   ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+--------------+-------------+-------+-------+-------+-------+
-; INIT         ; LED1        ;       ; 6.057 ; 6.057 ;       ;
-; INIT         ; a           ; 5.859 ;       ;       ; 5.859 ;
-; INIT         ; d           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; e           ; 5.596 ;       ;       ; 5.596 ;
-; INIT         ; f           ; 5.957 ;       ;       ; 5.957 ;
-; ResetCounter ; LED1        ; 6.140 ;       ;       ; 6.140 ;
-; ResetCounter ; a           ;       ; 5.942 ; 5.942 ;       ;
-; ResetCounter ; d           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; e           ;       ; 5.679 ; 5.679 ;       ;
-; ResetCounter ; f           ;       ; 6.040 ; 6.040 ;       ;
-; Selector     ; LED1        ; 5.801 ;       ;       ; 5.801 ;
-; Selector     ; a           ;       ; 5.603 ; 5.603 ;       ;
-; Selector     ; d           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; e           ;       ; 5.340 ; 5.340 ;       ;
-; Selector     ; f           ;       ; 5.701 ; 5.701 ;       ;
-+--------------+-------------+-------+-------+-------+-------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[10]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[11]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[12]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[13]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[14]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[15]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[16]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[16]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[17]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[17]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[18]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[18]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[19]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[19]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[20]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[20]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[21]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[21]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[22]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[22]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[23]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[23]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[2]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[3]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[4]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[5]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|contador[6]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|contador[7]|clk                  ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'DivisorDeFrecuencia:inst1|salida_media'                                                                              ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                                  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst10         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst10         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst11         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst11         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst12         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst12         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst13         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst13         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst14         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst14         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst8          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst8          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst9          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; ContadorJhonson:inst|inst9          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst10|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst10|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst11|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst11|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst12|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst12|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst13|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst13|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst14|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst14|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst8|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst8|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst9|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst9|clk                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; DivisorDeFrecuencia:inst1|salida_media ; Rise       ; inst|inst|clk                       ;
++--------+--------------+----------------+------------------+----------------------------------------+------------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                    ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 3.390 ; 3.390 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 3.401 ; 3.401 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 3.383 ; 3.383 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 3.386 ; 3.386 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 3.289 ; 3.289 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 3.279 ; 3.279 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 3.608 ; 3.608 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 3.619 ; 3.619 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                            ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 3.390 ; 3.390 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 3.401 ; 3.401 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 3.383 ; 3.383 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 3.386 ; 3.386 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 3.289 ; 3.289 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 3.279 ; 3.279 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 3.608 ; 3.608 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 3.619 ; 3.619 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                   ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                                   ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                        ; -3.681  ; -2.560 ; N/A      ; N/A     ; -1.941              ;
+;  CLK                                    ; -3.681  ; -2.560 ; N/A      ; N/A     ; -1.941              ;
+;  DivisorDeFrecuencia:inst1|salida_media ; -0.515  ; 0.278  ; N/A      ; N/A     ; -0.742              ;
+; Design-wide TNS                         ; -59.921 ; -2.56  ; 0.0      ; 0.0     ; -50.913             ;
+;  CLK                                    ; -58.287 ; -2.560 ; N/A      ; N/A     ; -39.041             ;
+;  DivisorDeFrecuencia:inst1|salida_media ; -1.634  ; 0.000  ; N/A      ; N/A     ; -11.872             ;
++-----------------------------------------+---------+--------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                    ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 7.557 ; 7.557 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 7.573 ; 7.573 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 7.538 ; 7.538 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 7.547 ; 7.547 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 7.202 ; 7.202 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 7.192 ; 7.192 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 8.281 ; 8.281 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 8.301 ; 8.301 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                            ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; Data Port ; Clock Port                             ; Rise  ; Fall  ; Clock Edge ; Clock Reference                        ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+; LED1      ; DivisorDeFrecuencia:inst1|salida_media ; 3.390 ; 3.390 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED2      ; DivisorDeFrecuencia:inst1|salida_media ; 3.401 ; 3.401 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED3      ; DivisorDeFrecuencia:inst1|salida_media ; 3.383 ; 3.383 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED4      ; DivisorDeFrecuencia:inst1|salida_media ; 3.386 ; 3.386 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED5      ; DivisorDeFrecuencia:inst1|salida_media ; 3.289 ; 3.289 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED6      ; DivisorDeFrecuencia:inst1|salida_media ; 3.279 ; 3.279 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED7      ; DivisorDeFrecuencia:inst1|salida_media ; 3.608 ; 3.608 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
+; LED8      ; DivisorDeFrecuencia:inst1|salida_media ; 3.619 ; 3.619 ; Rise       ; DivisorDeFrecuencia:inst1|salida_media ;
++-----------+----------------------------------------+-------+-------+------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                             ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; CLK                                    ; CLK                                    ; 516      ; 0        ; 0        ; 0        ;
+; DivisorDeFrecuencia:inst1|salida_media ; CLK                                    ; 1        ; 1        ; 0        ; 0        ;
+; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 8        ; 0        ; 0        ; 0        ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                              ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; CLK                                    ; CLK                                    ; 516      ; 0        ; 0        ; 0        ;
+; DivisorDeFrecuencia:inst1|salida_media ; CLK                                    ; 1        ; 1        ; 0        ; 0        ;
+; DivisorDeFrecuencia:inst1|salida_media ; DivisorDeFrecuencia:inst1|salida_media ; 8        ; 0        ; 0        ; 0        ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -324,10 +1154,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 17    ; 17   ;
-; Unconstrained Output Ports      ; 5     ; 5    ;
-; Unconstrained Output Port Paths ; 20    ; 20   ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 33    ; 33   ;
+; Unconstrained Output Ports      ; 15    ; 15   ;
+; Unconstrained Output Port Paths ; 15    ; 15   ;
 +---------------------------------+-------+------+
 
 
@@ -337,43 +1167,65 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat May 07 19:49:52 2022
+    Info: Processing started: Wed May 11 12:22:10 2022
 Info: Command: quartus_sta Practica5 -c Practica5
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 7 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name DivisorDeFrecuencia:inst1|salida_media DivisorDeFrecuencia:inst1|salida_media
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.681
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.681       -58.287 CLK 
+    Info (332119):    -0.515        -1.634 DivisorDeFrecuencia:inst1|salida_media 
+Info (332146): Worst-case hold slack is -2.560
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.560        -2.560 CLK 
+    Info (332119):     0.776         0.000 DivisorDeFrecuencia:inst1|salida_media 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -39.041 CLK 
+    Info (332119):    -0.742       -11.872 DivisorDeFrecuencia:inst1|salida_media 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.723
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.723        -6.128 CLK 
+    Info (332119):     0.445         0.000 DivisorDeFrecuencia:inst1|salida_media 
+Info (332146): Worst-case hold slack is -1.365
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.365        -1.365 CLK 
+    Info (332119):     0.278         0.000 DivisorDeFrecuencia:inst1|salida_media 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -26.380 CLK 
+    Info (332119):    -0.500        -8.000 DivisorDeFrecuencia:inst1|salida_media 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4510 megabytes
-    Info: Processing ended: Sat May 07 19:49:53 2022
+    Info: Peak virtual memory: 4514 megabytes
+    Info: Processing ended: Wed May 11 12:22:11 2022
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 
