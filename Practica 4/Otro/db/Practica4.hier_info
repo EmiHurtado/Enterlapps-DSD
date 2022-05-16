@@ -1,0 +1,68 @@
+|Practica4
+clk50Mhz => Reloj:Reloj1.clk
+leds[0] <= numeros[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= numeros[1].DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= numeros[2].DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= numeros[3].DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= numeros[4].DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= numeros[5].DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= numeros[6].DB_MAX_OUTPUT_PORT_TYPE
+leds[7] <= numeros[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica4|Reloj:Reloj1
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+clk => salida_media.CLK
+reset => contador[0].ACLR
+reset => contador[1].ACLR
+reset => contador[2].ACLR
+reset => contador[3].ACLR
+reset => contador[4].ACLR
+reset => contador[5].ACLR
+reset => contador[6].ACLR
+reset => contador[7].ACLR
+reset => contador[8].ACLR
+reset => contador[9].ACLR
+reset => contador[10].ACLR
+reset => contador[11].ACLR
+reset => contador[12].ACLR
+reset => contador[13].ACLR
+reset => contador[14].ACLR
+reset => contador[15].ACLR
+reset => contador[16].ACLR
+reset => contador[17].ACLR
+reset => contador[18].ACLR
+reset => contador[19].ACLR
+reset => contador[20].ACLR
+reset => contador[21].ACLR
+reset => contador[22].ACLR
+reset => contador[23].ACLR
+reset => contador[24].ACLR
+reset => salida_media.ACLR
+
+

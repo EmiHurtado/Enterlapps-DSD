@@ -2,13 +2,13 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity  contador8bits is
+entity Practica4 is
 
 	port(  clk50Mhz : in std_logic;
 			 leds : out std_logic_vector (7 downto 0)); 
-			 end contador8bits;
+			 end Practica4;
 	
-architecture cuentabinario of contador8bits is
+architecture cuentabinario of Practica4 is
 	
 signal numeros: std_logic_vector (7 downto 0) :="00000000"; --se inicializa el vector en ceros.
 	 

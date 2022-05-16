@@ -97,7 +97,7 @@ architecture funcion of Registros is
 	);
 	end component;
 	
---Declaracion de las seÃƒÂ±ales que realizan las interconexiones
+--Declaracion de las señales que realizan las interconexiones
 	signal Wire_CLK		: std_logic;
 	signal Entrada1,Entrada2,Entrada3,Entrada4,Entrada5,Entrada6,Entrada7: std_logic_vector(7 downto 0);
 		

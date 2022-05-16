@@ -1,0 +1,1348 @@
+TimeQuest Timing Analyzer report for Practica4
+Mon May 16 18:11:46 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk50Mhz'
+ 12. Slow Model Setup: 'Reloj:Reloj1|salida_media'
+ 13. Slow Model Hold: 'clk50Mhz'
+ 14. Slow Model Hold: 'Reloj:Reloj1|salida_media'
+ 15. Slow Model Minimum Pulse Width: 'clk50Mhz'
+ 16. Slow Model Minimum Pulse Width: 'Reloj:Reloj1|salida_media'
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'clk50Mhz'
+ 25. Fast Model Setup: 'Reloj:Reloj1|salida_media'
+ 26. Fast Model Hold: 'clk50Mhz'
+ 27. Fast Model Hold: 'Reloj:Reloj1|salida_media'
+ 28. Fast Model Minimum Pulse Width: 'clk50Mhz'
+ 29. Fast Model Minimum Pulse Width: 'Reloj:Reloj1|salida_media'
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Practica4                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                               ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+; Clock Name                ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                       ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+; clk50Mhz                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk50Mhz }                  ;
+; Reloj:Reloj1|salida_media ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Reloj:Reloj1|salida_media } ;
++---------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------------+
+
+
++-----------------------------------------------------------------+
+; Slow Model Fmax Summary                                         ;
++------------+-----------------+---------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                ; Note ;
++------------+-----------------+---------------------------+------+
+; 197.24 MHz ; 197.24 MHz      ; clk50Mhz                  ;      ;
+; 384.02 MHz ; 384.02 MHz      ; Reloj:Reloj1|salida_media ;      ;
++------------+-----------------+---------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------------+
+; Slow Model Setup Summary                           ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -4.070 ; -66.221       ;
+; Reloj:Reloj1|salida_media ; -1.604 ; -9.031        ;
++---------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow Model Hold Summary                            ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -2.555 ; -2.555        ;
+; Reloj:Reloj1|salida_media ; 0.499  ; 0.000         ;
++---------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary             ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -1.941 ; -40.525       ;
+; Reloj:Reloj1|salida_media ; -0.742 ; -11.872       ;
++---------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk50Mhz'                                                                                                         ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -4.070 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 5.107      ;
+; -4.038 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 5.075      ;
+; -3.948 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.985      ;
+; -3.937 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.975      ;
+; -3.905 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.943      ;
+; -3.816 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.853      ;
+; -3.815 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.853      ;
+; -3.814 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.851      ;
+; -3.784 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.821      ;
+; -3.715 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.752      ;
+; -3.694 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.731      ;
+; -3.683 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.720      ;
+; -3.681 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.719      ;
+; -3.670 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.707      ;
+; -3.593 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.630      ;
+; -3.560 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.597      ;
+; -3.537 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.575      ;
+; -3.531 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.568      ;
+; -3.507 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.549      ;
+; -3.507 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.549      ;
+; -3.503 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.540      ;
+; -3.467 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.507      ;
+; -3.467 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.507      ;
+; -3.459 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.496      ;
+; -3.454 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.491      ;
+; -3.451 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.493      ;
+; -3.451 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.493      ;
+; -3.422 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.459      ;
+; -3.417 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.457      ;
+; -3.417 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.457      ;
+; -3.416 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.453      ;
+; -3.403 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.441      ;
+; -3.398 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.436      ;
+; -3.388 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.428      ;
+; -3.388 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.428      ;
+; -3.385 ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.428      ;
+; -3.385 ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.428      ;
+; -3.374 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.414      ;
+; -3.374 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.414      ;
+; -3.371 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.409      ;
+; -3.370 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.408      ;
+; -3.359 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.396      ;
+; -3.332 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.369      ;
+; -3.327 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.364      ;
+; -3.320 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.360      ;
+; -3.320 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.360      ;
+; -3.315 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.352      ;
+; -3.293 ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.336      ;
+; -3.293 ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.336      ;
+; -3.292 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.329      ;
+; -3.281 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.319      ;
+; -3.277 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.314      ;
+; -3.275 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.312      ;
+; -3.260 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.297      ;
+; -3.249 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.286      ;
+; -3.243 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.280      ;
+; -3.238 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.278      ;
+; -3.238 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.278      ;
+; -3.226 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.264      ;
+; -3.216 ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.256      ;
+; -3.216 ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.256      ;
+; -3.205 ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.248      ;
+; -3.205 ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.003      ; 4.248      ;
+; -3.203 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.242      ;
+; -3.203 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.242      ;
+; -3.200 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.239      ;
+; -3.198 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.237      ;
+; -3.198 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.235      ;
+; -3.196 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.235      ;
+; -3.194 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.232      ;
+; -3.188 ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.225      ;
+; -3.177 ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.219      ;
+; -3.177 ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 4.219      ;
+; -3.176 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.213      ;
+; -3.170 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.207      ;
+; -3.163 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.200      ;
+; -3.163 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.200      ;
+; -3.160 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.197      ;
+; -3.158 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.195      ;
+; -3.156 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.193      ;
+; -3.153 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.190      ;
+; -3.150 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|salida_media ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.190      ;
+; -3.148 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.185      ;
+; -3.147 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.185      ;
+; -3.147 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.186      ;
+; -3.147 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.186      ;
+; -3.146 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.186      ;
+; -3.145 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.185      ;
+; -3.144 ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.184      ;
+; -3.144 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.183      ;
+; -3.142 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.181      ;
+; -3.140 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.001     ; 4.179      ;
+; -3.117 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.155      ;
+; -3.113 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.153      ;
+; -3.113 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 4.153      ;
+; -3.113 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.150      ;
+; -3.110 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[12] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.147      ;
+; -3.110 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.147      ;
+; -3.110 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|salida_media ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 4.148      ;
+; -3.108 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.003     ; 4.145      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Reloj:Reloj1|salida_media'                                                                                     ;
++--------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node    ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; -1.604 ; numeros[0] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.644      ;
+; -1.518 ; numeros[0] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.558      ;
+; -1.432 ; numeros[0] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.472      ;
+; -1.389 ; numeros[4] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.429      ;
+; -1.346 ; numeros[0] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.386      ;
+; -1.341 ; numeros[1] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.381      ;
+; -1.303 ; numeros[4] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.343      ;
+; -1.260 ; numeros[0] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.300      ;
+; -1.255 ; numeros[2] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.295      ;
+; -1.255 ; numeros[1] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.295      ;
+; -1.217 ; numeros[4] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.257      ;
+; -1.216 ; numeros[6] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.256      ;
+; -1.175 ; numeros[3] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.215      ;
+; -1.174 ; numeros[0] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.214      ;
+; -1.169 ; numeros[2] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.209      ;
+; -1.169 ; numeros[1] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.209      ;
+; -1.089 ; numeros[3] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.129      ;
+; -1.083 ; numeros[2] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.123      ;
+; -1.083 ; numeros[1] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.123      ;
+; -1.003 ; numeros[5] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.043      ;
+; -1.003 ; numeros[3] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.043      ;
+; -0.997 ; numeros[2] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.037      ;
+; -0.997 ; numeros[1] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 2.037      ;
+; -0.917 ; numeros[5] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.957      ;
+; -0.917 ; numeros[3] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.957      ;
+; -0.911 ; numeros[2] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.951      ;
+; -0.911 ; numeros[1] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.951      ;
+; -0.738 ; numeros[4] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.778      ;
+; -0.737 ; numeros[6] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.777      ;
+; -0.697 ; numeros[0] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.737      ;
+; -0.438 ; numeros[5] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.478      ;
+; -0.438 ; numeros[3] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.478      ;
+; -0.433 ; numeros[1] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.473      ;
+; -0.432 ; numeros[2] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.472      ;
+; -0.007 ; numeros[7] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 1.047      ;
+; 0.235  ; numeros[0] ; numeros[0] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.805      ;
++--------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk50Mhz'                                                                                                                       ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+; -2.555 ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; clk50Mhz    ; 0.000        ; 2.750      ; 0.805      ;
+; -2.055 ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; clk50Mhz    ; -0.500       ; 2.750      ; 0.805      ;
+; 1.163  ; Reloj:Reloj1|contador[23] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.469      ;
+; 1.176  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.482      ;
+; 1.176  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.483      ;
+; 1.177  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.483      ;
+; 1.181  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.487      ;
+; 1.182  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[0]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.488      ;
+; 1.221  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.527      ;
+; 1.221  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.527      ;
+; 1.228  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.534      ;
+; 1.229  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.535      ;
+; 1.230  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.536      ;
+; 1.234  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[1]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.540      ;
+; 1.484  ; Reloj:Reloj1|contador[24] ; Reloj:Reloj1|contador[24] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.790      ;
+; 1.655  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.961      ;
+; 1.656  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.962      ;
+; 1.660  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[1]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 1.966      ;
+; 1.708  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.014      ;
+; 1.709  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.015      ;
+; 1.710  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.016      ;
+; 1.713  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.019      ;
+; 1.714  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.020      ;
+; 1.741  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.047      ;
+; 1.741  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.047      ;
+; 1.746  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.052      ;
+; 1.766  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.072      ;
+; 1.787  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.093      ;
+; 1.795  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.101      ;
+; 1.799  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.105      ;
+; 1.800  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.106      ;
+; 1.827  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.133      ;
+; 1.827  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.133      ;
+; 1.832  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.138      ;
+; 1.852  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.158      ;
+; 1.880  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.186      ;
+; 1.885  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.191      ;
+; 1.900  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.206      ;
+; 1.908  ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[19] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.214      ;
+; 1.913  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.219      ;
+; 1.951  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.258      ;
+; 1.951  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.258      ;
+; 1.961  ; Reloj:Reloj1|contador[16] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.268      ;
+; 1.966  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.272      ;
+; 1.971  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.277      ;
+; 1.986  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.292      ;
+; 1.990  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.296      ;
+; 1.991  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.297      ;
+; 1.999  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.305      ;
+; 2.021  ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.327      ;
+; 2.022  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.328      ;
+; 2.022  ; Reloj:Reloj1|contador[22] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.329      ;
+; 2.024  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.330      ;
+; 2.032  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.336      ;
+; 2.039  ; Reloj:Reloj1|contador[21] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.346      ;
+; 2.052  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.358      ;
+; 2.076  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.382      ;
+; 2.095  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.399      ;
+; 2.108  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.414      ;
+; 2.110  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.416      ;
+; 2.123  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.430      ;
+; 2.123  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.430      ;
+; 2.132  ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.439      ;
+; 2.133  ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.440      ;
+; 2.138  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.444      ;
+; 2.158  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.464      ;
+; 2.177  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.481      ;
+; 2.185  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[11] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.491      ;
+; 2.196  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.502      ;
+; 2.204  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.508      ;
+; 2.235  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.541      ;
+; 2.244  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.550      ;
+; 2.248  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.554      ;
+; 2.266  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[13] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.572      ;
+; 2.267  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.571      ;
+; 2.280  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.586      ;
+; 2.282  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.588      ;
+; 2.305  ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.612      ;
+; 2.316  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.620      ;
+; 2.330  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.636      ;
+; 2.334  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.640      ;
+; 2.335  ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[18] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.641      ;
+; 2.337  ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[20] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.643      ;
+; 2.345  ; Reloj:Reloj1|contador[21] ; Reloj:Reloj1|contador[21] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.651      ;
+; 2.348  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.652      ;
+; 2.349  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.653      ;
+; 2.363  ; Reloj:Reloj1|contador[16] ; Reloj:Reloj1|contador[16] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.669      ;
+; 2.366  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.672      ;
+; 2.376  ; Reloj:Reloj1|contador[23] ; Reloj:Reloj1|contador[24] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.682      ;
+; 2.391  ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.001      ; 2.698      ;
+; 2.407  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.713      ;
+; 2.413  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.719      ;
+; 2.416  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.722      ;
+; 2.420  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.726      ;
+; 2.452  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.758      ;
+; 2.488  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.792      ;
+; 2.492  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 2.796      ;
+; 2.506  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.812      ;
+; 2.508  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[14] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 2.814      ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Reloj:Reloj1|salida_media'                                                                                     ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; 0.499 ; numeros[0] ; numeros[0] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.805      ;
+; 0.741 ; numeros[7] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.047      ;
+; 1.166 ; numeros[2] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.472      ;
+; 1.167 ; numeros[1] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.473      ;
+; 1.172 ; numeros[3] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.478      ;
+; 1.172 ; numeros[5] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.478      ;
+; 1.431 ; numeros[0] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.737      ;
+; 1.471 ; numeros[6] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.777      ;
+; 1.472 ; numeros[4] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.778      ;
+; 1.645 ; numeros[1] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.951      ;
+; 1.645 ; numeros[2] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.951      ;
+; 1.651 ; numeros[5] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.957      ;
+; 1.651 ; numeros[3] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 1.957      ;
+; 1.731 ; numeros[1] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.037      ;
+; 1.731 ; numeros[2] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.037      ;
+; 1.737 ; numeros[5] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.043      ;
+; 1.737 ; numeros[3] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.043      ;
+; 1.817 ; numeros[1] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.123      ;
+; 1.817 ; numeros[2] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.123      ;
+; 1.823 ; numeros[3] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.129      ;
+; 1.903 ; numeros[1] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.209      ;
+; 1.903 ; numeros[2] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.209      ;
+; 1.908 ; numeros[0] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.214      ;
+; 1.909 ; numeros[3] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.215      ;
+; 1.950 ; numeros[6] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.256      ;
+; 1.951 ; numeros[4] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.257      ;
+; 1.989 ; numeros[1] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.295      ;
+; 1.989 ; numeros[2] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.295      ;
+; 1.994 ; numeros[0] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.300      ;
+; 2.037 ; numeros[4] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.343      ;
+; 2.075 ; numeros[1] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.381      ;
+; 2.080 ; numeros[0] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.386      ;
+; 2.123 ; numeros[4] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.429      ;
+; 2.166 ; numeros[0] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.472      ;
+; 2.252 ; numeros[0] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.558      ;
+; 2.338 ; numeros[0] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 2.644      ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk50Mhz'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; clk50Mhz ; Rise       ; clk50Mhz                  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[0]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[10] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[10] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[11] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[11] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[12] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[12] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[13] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[13] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[14] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[14] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[15] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[15] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[16] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[16] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[17] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[17] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[18] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[18] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[19] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[19] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[1]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[20] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[20] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[21] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[21] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[22] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[22] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[23] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[23] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[24] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[24] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[2]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[3]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[4]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[5]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[6]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[7]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[8]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[9]  ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|salida_media ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|salida_media ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[0]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[0]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[10]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[10]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[11]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[11]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[12]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[12]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[13]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[13]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[14]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[14]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[15]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[15]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[16]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[16]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[17]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[17]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[18]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[18]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[19]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[19]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[1]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[1]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[20]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[20]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[21]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[21]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[22]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[22]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[23]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[23]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[24]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[24]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[2]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[2]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[3]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[3]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[4]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[4]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[5]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[5]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[6]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[6]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[7]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[7]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[8]|clk    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Reloj:Reloj1|salida_media'                                                                               ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                     ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]|clk                       ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                          ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 7.672 ; 7.672 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 7.386 ; 7.386 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 7.484 ; 7.484 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 7.672 ; 7.672 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 7.501 ; 7.501 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 7.671 ; 7.671 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 7.066 ; 7.066 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                  ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 7.066 ; 7.066 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 7.386 ; 7.386 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 7.484 ; 7.484 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 7.672 ; 7.672 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 7.501 ; 7.501 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 7.671 ; 7.671 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 7.066 ; 7.066 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++----------------------------------------------------+
+; Fast Model Setup Summary                           ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -0.850 ; -8.407        ;
+; Reloj:Reloj1|salida_media ; 0.128  ; 0.000         ;
++---------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Fast Model Hold Summary                            ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -1.360 ; -1.360        ;
+; Reloj:Reloj1|salida_media ; 0.215  ; 0.000         ;
++---------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary             ;
++---------------------------+--------+---------------+
+; Clock                     ; Slack  ; End Point TNS ;
++---------------------------+--------+---------------+
+; clk50Mhz                  ; -1.380 ; -27.380       ;
+; Reloj:Reloj1|salida_media ; -0.500 ; -8.000        ;
++---------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk50Mhz'                                                                                                         ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+; -0.850 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.880      ;
+; -0.838 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.868      ;
+; -0.830 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.860      ;
+; -0.818 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.848      ;
+; -0.795 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.825      ;
+; -0.783 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.813      ;
+; -0.741 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.771      ;
+; -0.740 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.770      ;
+; -0.729 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.759      ;
+; -0.720 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.750      ;
+; -0.696 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.726      ;
+; -0.685 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.715      ;
+; -0.676 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.706      ;
+; -0.664 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.694      ;
+; -0.652 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.682      ;
+; -0.641 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.671      ;
+; -0.631 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.661      ;
+; -0.615 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.645      ;
+; -0.603 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.633      ;
+; -0.603 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.633      ;
+; -0.600 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.630      ;
+; -0.588 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.618      ;
+; -0.587 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.617      ;
+; -0.583 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.613      ;
+; -0.574 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.604      ;
+; -0.563 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.593      ;
+; -0.554 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.584      ;
+; -0.554 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.584      ;
+; -0.548 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.578      ;
+; -0.545 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.575      ;
+; -0.543 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.573      ;
+; -0.533 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.563      ;
+; -0.526 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.556      ;
+; -0.519 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.549      ;
+; -0.514 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.544      ;
+; -0.510 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.540      ;
+; -0.509 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.539      ;
+; -0.509 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.539      ;
+; -0.508 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.538      ;
+; -0.505 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.535      ;
+; -0.494 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.524      ;
+; -0.490 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.520      ;
+; -0.489 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.519      ;
+; -0.489 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.519      ;
+; -0.476 ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.506      ;
+; -0.465 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.495      ;
+; -0.464 ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.494      ;
+; -0.461 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.491      ;
+; -0.454 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.484      ;
+; -0.454 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.484      ;
+; -0.454 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.484      ;
+; -0.446 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.476      ;
+; -0.443 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[12] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.473      ;
+; -0.441 ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.471      ;
+; -0.435 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.465      ;
+; -0.429 ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.459      ;
+; -0.423 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[12] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.453      ;
+; -0.421 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.453      ;
+; -0.421 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.453      ;
+; -0.417 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.447      ;
+; -0.416 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.446      ;
+; -0.407 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.439      ;
+; -0.407 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.439      ;
+; -0.404 ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.434      ;
+; -0.403 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.433      ;
+; -0.403 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.437      ;
+; -0.403 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.437      ;
+; -0.401 ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[22] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.433      ;
+; -0.400 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[14] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.430      ;
+; -0.400 ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.430      ;
+; -0.396 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.428      ;
+; -0.396 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.428      ;
+; -0.391 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.421      ;
+; -0.391 ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.421      ;
+; -0.389 ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[24] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.421      ;
+; -0.388 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.418      ;
+; -0.388 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[12] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.418      ;
+; -0.384 ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.414      ;
+; -0.382 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.412      ;
+; -0.381 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.411      ;
+; -0.379 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.409      ;
+; -0.377 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.407      ;
+; -0.377 ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[23] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.407      ;
+; -0.375 ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.405      ;
+; -0.372 ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.402      ;
+; -0.368 ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[19] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.398      ;
+; -0.367 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.397      ;
+; -0.366 ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[21] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.396      ;
+; -0.365 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.395      ;
+; -0.364 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[20] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.396      ;
+; -0.363 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[16] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.395      ;
+; -0.363 ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; -0.002     ; 1.393      ;
+; -0.361 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.393      ;
+; -0.361 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[13] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.393      ;
+; -0.360 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.394      ;
+; -0.360 ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.394      ;
+; -0.359 ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[6]  ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.393      ;
+; -0.359 ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[11] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.002      ; 1.393      ;
+; -0.359 ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[18] ; clk50Mhz     ; clk50Mhz    ; 1.000        ; 0.000      ; 1.391      ;
++--------+---------------------------+---------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Reloj:Reloj1|salida_media'                                                                                    ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; 0.128 ; numeros[0] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.904      ;
+; 0.163 ; numeros[0] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.869      ;
+; 0.198 ; numeros[0] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.834      ;
+; 0.212 ; numeros[1] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.820      ;
+; 0.230 ; numeros[4] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.802      ;
+; 0.233 ; numeros[0] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.799      ;
+; 0.247 ; numeros[2] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.785      ;
+; 0.247 ; numeros[1] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.785      ;
+; 0.265 ; numeros[4] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.767      ;
+; 0.268 ; numeros[0] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.764      ;
+; 0.279 ; numeros[3] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.753      ;
+; 0.282 ; numeros[2] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.750      ;
+; 0.282 ; numeros[1] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.750      ;
+; 0.300 ; numeros[6] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; numeros[4] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.732      ;
+; 0.303 ; numeros[0] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.729      ;
+; 0.314 ; numeros[3] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.718      ;
+; 0.317 ; numeros[2] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.715      ;
+; 0.317 ; numeros[1] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.715      ;
+; 0.349 ; numeros[5] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.683      ;
+; 0.349 ; numeros[3] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.683      ;
+; 0.352 ; numeros[2] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.680      ;
+; 0.352 ; numeros[1] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.680      ;
+; 0.384 ; numeros[5] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.648      ;
+; 0.384 ; numeros[3] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.648      ;
+; 0.387 ; numeros[2] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.645      ;
+; 0.387 ; numeros[1] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.645      ;
+; 0.438 ; numeros[6] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.594      ;
+; 0.438 ; numeros[4] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.594      ;
+; 0.443 ; numeros[0] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.589      ;
+; 0.522 ; numeros[5] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.510      ;
+; 0.522 ; numeros[3] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.510      ;
+; 0.522 ; numeros[1] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.510      ;
+; 0.525 ; numeros[2] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.507      ;
+; 0.642 ; numeros[7] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.390      ;
+; 0.665 ; numeros[0] ; numeros[0] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 1.000        ; 0.000      ; 0.367      ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk50Mhz'                                                                                                                       ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                   ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+; -1.360 ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; clk50Mhz    ; 0.000        ; 1.434      ; 0.367      ;
+; -0.860 ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; clk50Mhz    ; -0.500       ; 1.434      ; 0.367      ;
+; 0.356  ; Reloj:Reloj1|contador[23] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.508      ;
+; 0.362  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[0]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.369  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.374  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[1]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.481  ; Reloj:Reloj1|contador[24] ; Reloj:Reloj1|contador[24] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.633      ;
+; 0.500  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[1]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.653      ;
+; 0.514  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.520  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.672      ;
+; 0.535  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.687      ;
+; 0.535  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.687      ;
+; 0.536  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[2]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.688      ;
+; 0.544  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.696      ;
+; 0.551  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.703      ;
+; 0.555  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.707      ;
+; 0.556  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.708      ;
+; 0.570  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.570  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.722      ;
+; 0.571  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[3]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.723      ;
+; 0.578  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.730      ;
+; 0.584  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.736      ;
+; 0.584  ; Reloj:Reloj1|contador[16] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.736      ;
+; 0.590  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.742      ;
+; 0.591  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.598  ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[19] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.750      ;
+; 0.602  ; Reloj:Reloj1|contador[22] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.754      ;
+; 0.603  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.755      ;
+; 0.605  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.757      ;
+; 0.610  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.762      ;
+; 0.615  ; Reloj:Reloj1|contador[21] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.767      ;
+; 0.619  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.771      ;
+; 0.625  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.777      ;
+; 0.632  ; Reloj:Reloj1|contador[6]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.784      ;
+; 0.640  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.792      ;
+; 0.645  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.797      ;
+; 0.645  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.797      ;
+; 0.648  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.800      ;
+; 0.652  ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.804      ;
+; 0.654  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.806      ;
+; 0.655  ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.807      ;
+; 0.657  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[11] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.809      ;
+; 0.657  ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.809      ;
+; 0.657  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.807      ;
+; 0.661  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.813      ;
+; 0.665  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[4]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.817      ;
+; 0.673  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.825      ;
+; 0.680  ; Reloj:Reloj1|contador[13] ; Reloj:Reloj1|contador[13] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.832      ;
+; 0.680  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.832      ;
+; 0.682  ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[18] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.834      ;
+; 0.682  ; Reloj:Reloj1|contador[20] ; Reloj:Reloj1|contador[20] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.834      ;
+; 0.689  ; Reloj:Reloj1|contador[21] ; Reloj:Reloj1|contador[21] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.841      ;
+; 0.695  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.845      ;
+; 0.696  ; Reloj:Reloj1|contador[16] ; Reloj:Reloj1|contador[16] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.848      ;
+; 0.696  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.848      ;
+; 0.700  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[5]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.852      ;
+; 0.715  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.867      ;
+; 0.725  ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.877      ;
+; 0.727  ; Reloj:Reloj1|contador[11] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.877      ;
+; 0.730  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.880      ;
+; 0.731  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.883      ;
+; 0.734  ; Reloj:Reloj1|contador[23] ; Reloj:Reloj1|contador[24] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.886      ;
+; 0.743  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.895      ;
+; 0.750  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.902      ;
+; 0.750  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.902      ;
+; 0.752  ; Reloj:Reloj1|contador[5]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.904      ;
+; 0.754  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[18] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.906      ;
+; 0.759  ; Reloj:Reloj1|contador[15] ; Reloj:Reloj1|contador[16] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.911      ;
+; 0.760  ; Reloj:Reloj1|contador[14] ; Reloj:Reloj1|contador[14] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.912      ;
+; 0.765  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.915      ;
+; 0.766  ; Reloj:Reloj1|contador[3]  ; Reloj:Reloj1|contador[10] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.918      ;
+; 0.770  ; Reloj:Reloj1|contador[0]  ; Reloj:Reloj1|contador[7]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.922      ;
+; 0.771  ; Reloj:Reloj1|contador[12] ; Reloj:Reloj1|contador[12] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.923      ;
+; 0.774  ; Reloj:Reloj1|contador[18] ; Reloj:Reloj1|contador[23] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.926      ;
+; 0.780  ; Reloj:Reloj1|contador[8]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.930      ;
+; 0.783  ; Reloj:Reloj1|contador[17] ; Reloj:Reloj1|contador[19] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.935      ;
+; 0.784  ; Reloj:Reloj1|contador[22] ; Reloj:Reloj1|contador[22] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.936      ;
+; 0.785  ; Reloj:Reloj1|contador[2]  ; Reloj:Reloj1|contador[9]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.937      ;
+; 0.785  ; Reloj:Reloj1|contador[1]  ; Reloj:Reloj1|contador[8]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.937      ;
+; 0.790  ; Reloj:Reloj1|contador[19] ; Reloj:Reloj1|contador[20] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.942      ;
+; 0.793  ; Reloj:Reloj1|contador[10] ; Reloj:Reloj1|contador[11] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.945      ;
+; 0.799  ; Reloj:Reloj1|contador[7]  ; Reloj:Reloj1|contador[15] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.949      ;
+; 0.800  ; Reloj:Reloj1|contador[9]  ; Reloj:Reloj1|contador[17] ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; -0.002     ; 0.950      ;
+; 0.801  ; Reloj:Reloj1|contador[4]  ; Reloj:Reloj1|contador[6]  ; clk50Mhz                  ; clk50Mhz    ; 0.000        ; 0.000      ; 0.953      ;
++--------+---------------------------+---------------------------+---------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Reloj:Reloj1|salida_media'                                                                                     ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node    ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+; 0.215 ; numeros[0] ; numeros[0] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.367      ;
+; 0.238 ; numeros[7] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.390      ;
+; 0.355 ; numeros[2] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.507      ;
+; 0.358 ; numeros[1] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; numeros[3] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; numeros[5] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.510      ;
+; 0.437 ; numeros[0] ; numeros[1] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.589      ;
+; 0.442 ; numeros[4] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.594      ;
+; 0.442 ; numeros[6] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.594      ;
+; 0.493 ; numeros[1] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; numeros[2] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.645      ;
+; 0.496 ; numeros[3] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; numeros[5] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.648      ;
+; 0.528 ; numeros[1] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; numeros[2] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.680      ;
+; 0.531 ; numeros[5] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.683      ;
+; 0.531 ; numeros[3] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.683      ;
+; 0.563 ; numeros[1] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563 ; numeros[2] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.715      ;
+; 0.566 ; numeros[3] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.718      ;
+; 0.577 ; numeros[0] ; numeros[2] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.729      ;
+; 0.580 ; numeros[6] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; numeros[4] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.732      ;
+; 0.598 ; numeros[1] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.750      ;
+; 0.598 ; numeros[2] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.750      ;
+; 0.601 ; numeros[3] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.753      ;
+; 0.612 ; numeros[0] ; numeros[3] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.764      ;
+; 0.615 ; numeros[4] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.767      ;
+; 0.633 ; numeros[1] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.785      ;
+; 0.633 ; numeros[2] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.785      ;
+; 0.647 ; numeros[0] ; numeros[4] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.799      ;
+; 0.650 ; numeros[4] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.802      ;
+; 0.668 ; numeros[1] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.820      ;
+; 0.682 ; numeros[0] ; numeros[5] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.834      ;
+; 0.717 ; numeros[0] ; numeros[6] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.869      ;
+; 0.752 ; numeros[0] ; numeros[7] ; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 0.000        ; 0.000      ; 0.904      ;
++-------+------------+------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk50Mhz'                                                                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk50Mhz ; Rise       ; clk50Mhz                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[19] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[20] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[21] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[22] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[23] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[24] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|contador[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj:Reloj1|salida_media ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj:Reloj1|salida_media ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[0]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[0]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[10]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[10]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[11]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[11]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[12]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[12]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[13]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[13]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[14]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[14]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[15]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[15]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[16]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[16]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[17]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[17]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[18]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[18]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[19]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[19]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[1]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[1]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[20]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[20]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[21]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[21]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[22]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[22]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[23]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[23]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[24]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[24]|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[2]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[2]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[3]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[3]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[4]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[4]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[5]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[5]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[6]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[6]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[7]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk50Mhz ; Rise       ; Reloj1|contador[7]|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk50Mhz ; Rise       ; Reloj1|contador[8]|clk    ;
++--------+--------------+----------------+------------------+----------+------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Reloj:Reloj1|salida_media'                                                                               ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                     ; Clock Edge ; Target                               ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media|regout           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; Reloj1|salida_media~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[0]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[1]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[2]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[3]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[4]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[5]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[6]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]|clk                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Reloj:Reloj1|salida_media ; Rise       ; numeros[7]|clk                       ;
++--------+--------------+----------------+------------------+---------------------------+------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                          ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 3.520 ; 3.520 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 3.339 ; 3.339 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 3.388 ; 3.388 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 3.519 ; 3.519 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 3.407 ; 3.407 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 3.520 ; 3.520 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 3.251 ; 3.251 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                  ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 3.251 ; 3.251 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 3.339 ; 3.339 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 3.388 ; 3.388 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 3.519 ; 3.519 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 3.407 ; 3.407 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 3.520 ; 3.520 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 3.251 ; 3.251 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                      ;
++----------------------------+---------+--------+----------+---------+---------------------+
+; Clock                      ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack           ; -4.070  ; -2.555 ; N/A      ; N/A     ; -1.941              ;
+;  Reloj:Reloj1|salida_media ; -1.604  ; 0.215  ; N/A      ; N/A     ; -0.742              ;
+;  clk50Mhz                  ; -4.070  ; -2.555 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS            ; -75.252 ; -2.555 ; 0.0      ; 0.0     ; -52.397             ;
+;  Reloj:Reloj1|salida_media ; -9.031  ; 0.000  ; N/A      ; N/A     ; -11.872             ;
+;  clk50Mhz                  ; -66.221 ; -2.555 ; N/A      ; N/A     ; -40.525             ;
++----------------------------+---------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                          ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 7.672 ; 7.672 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 7.386 ; 7.386 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 7.484 ; 7.484 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 7.672 ; 7.672 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 7.501 ; 7.501 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 7.078 ; 7.078 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 7.671 ; 7.671 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 7.066 ; 7.066 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                  ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; Data Port ; Clock Port                ; Rise  ; Fall  ; Clock Edge ; Clock Reference           ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+; leds[*]   ; Reloj:Reloj1|salida_media ; 3.251 ; 3.251 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[0]  ; Reloj:Reloj1|salida_media ; 3.339 ; 3.339 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[1]  ; Reloj:Reloj1|salida_media ; 3.388 ; 3.388 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[2]  ; Reloj:Reloj1|salida_media ; 3.519 ; 3.519 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[3]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[4]  ; Reloj:Reloj1|salida_media ; 3.407 ; 3.407 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[5]  ; Reloj:Reloj1|salida_media ; 3.261 ; 3.261 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[6]  ; Reloj:Reloj1|salida_media ; 3.520 ; 3.520 ; Rise       ; Reloj:Reloj1|salida_media ;
+;  leds[7]  ; Reloj:Reloj1|salida_media ; 3.251 ; 3.251 ; Rise       ; Reloj:Reloj1|salida_media ;
++-----------+---------------------------+-------+-------+------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                   ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; clk50Mhz                  ; clk50Mhz                  ; 650      ; 0        ; 0        ; 0        ;
+; Reloj:Reloj1|salida_media ; clk50Mhz                  ; 1        ; 1        ; 0        ; 0        ;
+; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 36       ; 0        ; 0        ; 0        ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                    ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+; clk50Mhz                  ; clk50Mhz                  ; 650      ; 0        ; 0        ; 0        ;
+; Reloj:Reloj1|salida_media ; clk50Mhz                  ; 1        ; 1        ; 0        ; 0        ;
+; Reloj:Reloj1|salida_media ; Reloj:Reloj1|salida_media ; 36       ; 0        ; 0        ; 0        ;
++---------------------------+---------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon May 16 18:11:45 2022
+Info: Command: quartus_sta Practica4 -c Practica4
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica4.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Reloj:Reloj1|salida_media Reloj:Reloj1|salida_media
+    Info (332105): create_clock -period 1.000 -name clk50Mhz clk50Mhz
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.070
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.070       -66.221 clk50Mhz 
+    Info (332119):    -1.604        -9.031 Reloj:Reloj1|salida_media 
+Info (332146): Worst-case hold slack is -2.555
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.555        -2.555 clk50Mhz 
+    Info (332119):     0.499         0.000 Reloj:Reloj1|salida_media 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941       -40.525 clk50Mhz 
+    Info (332119):    -0.742       -11.872 Reloj:Reloj1|salida_media 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.850
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.850        -8.407 clk50Mhz 
+    Info (332119):     0.128         0.000 Reloj:Reloj1|salida_media 
+Info (332146): Worst-case hold slack is -1.360
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.360        -1.360 clk50Mhz 
+    Info (332119):     0.215         0.000 Reloj:Reloj1|salida_media 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -27.380 clk50Mhz 
+    Info (332119):    -0.500        -8.000 Reloj:Reloj1|salida_media 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4530 megabytes
+    Info: Processing ended: Mon May 16 18:11:46 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
