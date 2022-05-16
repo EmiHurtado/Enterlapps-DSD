@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Registros is
+	port(
+		 CLK, RESET,CARGA : in std_logic;
+		 OPCIONES 			: in std_logic_vector(2 downto 0);
+		 ENTRADA 			: in std_logic_vector(7 downto 0);
+		 SALIDA 				: out std_logic_vector(7 downto 0);
+		 LEDS					: out std_logic_vector(2 downto 0)
+	);
+end Registros;	
+
+architecture funcion of Registros is
+
+--Declaracion del componente "DivisorDeFrecuencia":
+	--Despues de component colocamos el nombre de la entidad no del archivo .vhd
+	--Copiamos todo su port
+	component DivisorDeFrecuencia							
+		port(
+			CLK, RESET : IN STD_LOGIC;
+			salida : OUT STD_LOGIC
+		);
+	end component;
+	
+--Declaracion del componente "RegistrosCorrimiento":
+	component RegistrosCorrimiento   
+	port (
+	   CLK, RESET, CARGA : in std_logic;
+		MUX					: in std_logic_vector(2 downto 0);
+		ENTRADA				: in std_logic_vector(7 downto 0);
+		SALIDA				: out std_logic_vector(7 downto 0)	
+	);
+	end component;
+	
+--Declaracion de las señales que realizan las interconexiones
+	signal Wire_CLK						: std_logic;
+	
+
+	
+begin
+-- Referencia al componente DivisorDeFrecuencia, la referencia se llamara Reloj
+	Reloj : DivisorDeFrecuencia
+		port map(
+			--(Puerto interno del componente) => (señal o puerto de la arquitectura)
+			CLK 		=>	CLK,
+			RESET		=>	RESET,
+			salida	=>	Wire_CLK
+		);
+		
+-- Referencia al componente RegistrosCorrimiento, la referencia se llamara RegCorrimiento
+	RegCorrimiento : RegistrosCorrimiento
+		port map(
+			ENTRADA		=> ENTRADA,
+			CLK			=> Wire_CLK,
+			RESET			=> RESET,
+			CARGA			=> CARGA,
+			SALIDA 		=> SALIDA,
+			MUX 			=> OPCIONES
+		);
+
+	LEDS <= Wire_CLK&Wire_CLK&Wire_CLK;
+end funcion;
