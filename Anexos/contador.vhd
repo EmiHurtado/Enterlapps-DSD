@@ -6,7 +6,7 @@ use IEEE.numeric_std.all;
 ENTITY Contador IS
 	PORT (
 		CLK, RST : IN STD_LOGIC;
-		salida : OUT STD_LOGIC_VECTOR(7 DOWNTO)
+		salida : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 
 END Contador;
