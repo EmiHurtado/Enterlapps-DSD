@@ -149,7 +149,7 @@ begin
 	videoaddress=0;
 	videoaddressout=0;
 	videobusout=0;
-	scanlineType=0;
+	scanlineType=2;
 	hSync=0;
 	vSync=0;
 	DrawArea=0;
