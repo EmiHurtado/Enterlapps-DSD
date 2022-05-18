@@ -1,5 +1,13 @@
 |Practica4
 clk50Mhz => Reloj:Reloj1.clk
+RST => numeros[0].ACLR
+RST => numeros[1].ACLR
+RST => numeros[2].ACLR
+RST => numeros[3].ACLR
+RST => numeros[4].ACLR
+RST => numeros[5].ACLR
+RST => numeros[6].ACLR
+RST => numeros[7].ACLR
 leds[0] <= numeros[0].DB_MAX_OUTPUT_PORT_TYPE
 leds[1] <= numeros[1].DB_MAX_OUTPUT_PORT_TYPE
 leds[2] <= numeros[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -35,8 +43,6 @@ clk => contador[19].CLK
 clk => contador[20].CLK
 clk => contador[21].CLK
 clk => contador[22].CLK
-clk => contador[23].CLK
-clk => contador[24].CLK
 clk => salida_media.CLK
 reset => contador[0].ACLR
 reset => contador[1].ACLR
@@ -61,8 +67,6 @@ reset => contador[19].ACLR
 reset => contador[20].ACLR
 reset => contador[21].ACLR
 reset => contador[22].ACLR
-reset => contador[23].ACLR
-reset => contador[24].ACLR
 reset => salida_media.ACLR
 
 
