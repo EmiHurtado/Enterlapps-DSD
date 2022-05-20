@@ -13,7 +13,7 @@ end Reloj;
 
 architecture divisor of Reloj is
 
-signal  contador: integer range 0 to 24999999 :=0;    --aquí se declara el wire!!
+signal  contador: integer range 0 to 4999999 :=0;    --aquí se declara el wire!!
 signal  salida_media: std_logic;  --aqui se declara el wire!
 
 begin
@@ -28,7 +28,7 @@ begin
 				  
 		elsif rising_edge(clk) then -- puede ser clk'event 
 				  
-			if contador = 24999999  then
+			if contador = 4999999  then
 				  
 				contador<=0;
 					  
