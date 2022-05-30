@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica8
-Thu May 19 18:19:43 2022
+Sun May 29 17:11:21 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component
+ 11. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1
+ 12. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2
+ 13. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3
+ 14. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4
+ 15. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor2
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +48,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu May 19 18:19:42 2022               ;
+; Analysis & Synthesis Status        ; Successful - Sun May 29 17:11:21 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; N/A until Partition Merge                       ;
-;     Total combinational functions  ; N/A until Partition Merge                       ;
-;     Dedicated logic registers      ; N/A until Partition Merge                       ;
-; Total registers                    ; N/A until Partition Merge                       ;
-; Total pins                         ; N/A until Partition Merge                       ;
-; Total virtual pins                 ; N/A until Partition Merge                       ;
-; Total memory bits                  ; N/A until Partition Merge                       ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
-; Total PLLs                         ; N/A until Partition Merge                       ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -61,6 +73,8 @@ applicable agreement for further details.
 ; Device                                                                     ; EP2C5T144C8        ;                    ;
 ; Top-level entity name                                                      ; Practica8          ; Practica8          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                    ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -69,7 +83,6 @@ applicable agreement for further details.
 ; Preserve fewer node names                                                  ; On                 ; On                 ;
 ; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
 ; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                   ; Auto               ; Auto               ;
 ; Safe State Machine                                                         ; Off                ; Off                ;
 ; Extract Verilog State Machines                                             ; On                 ; On                 ;
@@ -149,15 +162,188 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                       ;
++-------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                    ; Library ;
++-------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../Anexos/DecodificadorDecimalInteger.vhd ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DecodificadorDecimalInteger.vhd     ;         ;
+; GameManager/RandomGenerator.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/RandomGenerator.vhd ;         ;
+; GameManager/StageManager.vhd              ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/StageManager.vhd    ;         ;
+; GeneradorVideo.vhd                        ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorVideo.vhd              ;         ;
+; ../Anexos/Coder2.vhd                      ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/Coder2.vhd                          ;         ;
+; ../Anexos/DivisorFrecuencia.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd               ;         ;
+; Practica8.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/Practica8.bdf                   ;         ;
+; MultiplexorRelojes.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd          ;         ;
+; GeneradorRelojJuego.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorRelojJuego.bdf         ;         ;
+; GameManager.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager.bdf                 ;         ;
+; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                   ;         ;
+; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                                                ;         ;
+; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                                                    ;         ;
+; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                                                  ;         ;
+; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                                                  ;         ;
+; db/mux_33e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/db/mux_33e.tdf                  ;         ;
++-------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |Practica8                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |Practica8          ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                  ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                        ;
+; LPM_WIDTH              ; 1          ; Signed Integer                                                                        ;
+; LPM_SIZE               ; 4          ; Signed Integer                                                                        ;
+; LPM_WIDTHS             ; 2          ; Signed Integer                                                                        ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                        ;
+; CBXI_PARAMETER         ; mux_33e    ; Untyped                                                                               ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                               ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; frequency      ; 5.0   ; Signed Float                                                                ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; frequency      ; 6     ; Signed Float                                                                ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; frequency      ; 7     ; Signed Float                                                                ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; frequency      ; 10    ; Signed Float                                                                ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor2 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; frequency      ; 1000  ; Signed Float                                     ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 19 18:19:41 2022
+    Info: Processing started: Sun May 29 17:11:18 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica8 -c Practica8
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/decodificadordecimalinteger.vhd
+    Info (12022): Found design unit 1: DecodifiadorDecimalInteger-DecoDecInt
+    Info (12023): Found entity 1: DecodifiadorDecimalInteger
+Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/randomgenerator.vhd
+    Info (12022): Found design unit 1: RandomGenerator-RG
+    Info (12023): Found entity 1: RandomGenerator
+Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/stagemanager.vhd
+    Info (12022): Found design unit 1: StageManager-BC
+    Info (12023): Found entity 1: StageManager
+Info (12021): Found 2 design units, including 1 entities, in source file generadorvideo.vhd
+    Info (12022): Found design unit 1: GeneradorVideo-GV
+    Info (12023): Found entity 1: GeneradorVideo
 Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/coder2.vhd
     Info (12022): Found design unit 1: Coder2-c2
     Info (12023): Found entity 1: Coder2
@@ -171,13 +357,54 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
     Info (12023): Found entity 1: MultiplexorRelojes
 Info (12021): Found 1 design units, including 1 entities, in source file generadorrelojjuego.bdf
     Info (12023): Found entity 1: GeneradorRelojJuego
+Info (12021): Found 1 design units, including 1 entities, in source file gamemanager.bdf
+    Info (12023): Found entity 1: GameManager
 Info (12127): Elaborating entity "Practica8" for the top level hierarchy
-Warning (12158): Entity "Practica8" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4620 megabytes
-    Error: Processing ended: Thu May 19 18:19:43 2022
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12128): Elaborating entity "GeneradorRelojJuego" for hierarchy "GeneradorRelojJuego:Divisor1"
+Info (12128): Elaborating entity "MultiplexorRelojes" for hierarchy "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component"
+Info (12130): Elaborated megafunction instantiation "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component"
+Info (12133): Instantiated megafunction "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "1"
+    Info (12134): Parameter "LPM_SIZE" = "4"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_MUX"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_33e.tdf
+    Info (12023): Found entity 1: mux_33e
+Info (12128): Elaborating entity "mux_33e" for hierarchy "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component|mux_33e:auto_generated"
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
+Info (12128): Elaborating entity "Coder2" for hierarchy "GeneradorRelojJuego:Divisor1|Coder2:CodificadorEntradas"
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:Divisor2"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
+Info (12128): Elaborating entity "GeneradorVideo" for hierarchy "GeneradorVideo:GeneradorVideo"
+Info (12128): Elaborating entity "GameManager" for hierarchy "GameManager:Juego"
+Info (12128): Elaborating entity "StageManager" for hierarchy "GameManager:Juego|StageManager:inst"
+Warning (10541): VHDL Signal Declaration warning at StageManager.vhd(11): used implicit default value for signal "rst" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10027): Verilog HDL or VHDL warning at the StageManager.vhd(63): index expression is not wide enough to address all of the elements in the array
+Warning (10027): Verilog HDL or VHDL warning at the StageManager.vhd(121): index expression is not wide enough to address all of the elements in the array
+Info (12128): Elaborating entity "RandomGenerator" for hierarchy "GameManager:Juego|RandomGenerator:inst1"
+Info (12128): Elaborating entity "DecodifiadorDecimalInteger" for hierarchy "DecodifiadorDecimalInteger:Puntuacion1"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK"
+    Warning (15610): No output dependent on input pin "PauseBTN"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4639 megabytes
+    Info: Processing ended: Sun May 29 17:11:21 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
