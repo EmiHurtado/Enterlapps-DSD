@@ -55,7 +55,7 @@ BEGIN
                     matrixData(posPlayer2 + 1)(15) <= '1';
                     state <= 4;
                 WHEN 1 => -- Jugando
-                    IF (pause = '1') THEN -- Leer pausa
+                    IF (pause = '0') THEN -- Leer pausa
                         state <= 2; -- Pasar a pausa
                     END IF;
 
@@ -128,7 +128,7 @@ BEGIN
                         state <= 3;
                     END IF;
                 WHEN 2 => -- Pausado
-                    IF (pause = '1') THEN
+                    IF (pause = '0') THEN
                         state <= 1; -- Pasar a estado jugando
                     END IF;
                 WHEN 3 => -- Anotación
@@ -141,12 +141,12 @@ BEGIN
                     matrixData(5) <= "0000010000100000";
                     matrixData(6) <= "0000001001000000";
                     matrixData(7) <= "0000000110000000";
-                    IF (pause = '1') THEN
+                    IF (pause = '0') THEN
                         state <= 4; -- Pasar a estado esperandoLanzamiento
                     END IF;
                 WHEN 4 =>
                     -- Permitir movimiento
-                    IF (pause = '1') THEN
+                    IF (pause = '0') THEN
                         state <= 1; -- Pasar a estado jugando
                     END IF;
                 WHEN OTHERS => NULL;
