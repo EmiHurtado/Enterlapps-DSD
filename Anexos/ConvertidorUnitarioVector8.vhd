@@ -9,7 +9,7 @@ entity ConvertidorUnitarioVector8 is
 end ConvertidorUnitarioVector8; 
 
 architecture ConvUniVect8 of ConvertidorUnitarioVector8 is
-begin
+begin	
 	salidaVector(0) <= a;
 	salidaVector(1) <= b;
 	salidaVector(2) <= c;
@@ -18,4 +18,5 @@ begin
 	salidaVector(5) <= f;
 	salidaVector(6) <= g;
 	salidaVector(7) <= h;
+
 end ConvUniVect8;

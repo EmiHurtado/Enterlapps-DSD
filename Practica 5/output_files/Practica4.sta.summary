@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'CLK'
+Slack : -3.945
+TNS   : -62.464
+
+Type  : Slow Model Setup 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : -0.483
+TNS   : -3.010
+
+Type  : Slow Model Hold 'CLK'
+Slack : -2.555
+TNS   : -2.555
+
+Type  : Slow Model Hold 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : 0.743
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK'
+Slack : -1.941
+TNS   : -40.525
+
+Type  : Slow Model Minimum Pulse Width 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : -0.742
+TNS   : -23.744
+
+Type  : Fast Model Setup 'CLK'
+Slack : -0.840
+TNS   : -7.425
+
+Type  : Fast Model Setup 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : 0.465
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLK'
+Slack : -1.360
+TNS   : -1.360
+
+Type  : Fast Model Hold 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK'
+Slack : -1.380
+TNS   : -27.380
+
+Type  : Fast Model Minimum Pulse Width 'DivisorDeFrecuencia:inst11|salida_media'
+Slack : -0.500
+TNS   : -16.000
+
+------------------------------------------------------------

@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Multiplexor is
+	port (
+		MUX			: in std_logic_vector(2 downto 0);
+		Salida		: out std_logic_vector(1 downto 0);	
+		Entrada		: in std_logic_vector(7 downto 0)
+	);
+end Multiplexor;  
+
+architecture funcion of Multiplexor is 
+
+begin	 
+	Multiplexor: process(MUX, Entrada)
+	begin
+		case(MUX) is
+			when "00" =>
+				salida	<=	Entrada(7)&Entrada(6);
+			when "01" =>
+				salida	<=	Entrada(5)&Entrada(4);
+			when "10" =>
+				salida	<=	Entrada(3)&Entrada(2);
+			when "11" => 
+				salida	<=	Entrada(1)&Entrada(0);
+		end case;
+	end process;
+end funcion;

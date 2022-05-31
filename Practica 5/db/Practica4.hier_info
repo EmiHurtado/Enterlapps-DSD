@@ -1,0 +1,288 @@
+|Practica4
+LED1 <= ConvertidorVectorUnitario8:inst7.a
+Selector => BUSMUX:inst5.sel
+CLK => DivisorDeFrecuencia:inst11.clk
+ResetCLK => DivisorDeFrecuencia:inst11.reset
+ResetCounter => ContadorJhonson:inst.Clear
+ResetCounter => ContadorAnillo:inst10.Reset
+INIT => ContadorAnillo:inst10.PRE
+LED2 <= ConvertidorVectorUnitario8:inst7.b
+LED3 <= ConvertidorVectorUnitario8:inst7.c
+LED4 <= ConvertidorVectorUnitario8:inst7.d
+LED5 <= ConvertidorVectorUnitario8:inst7.e
+LED6 <= ConvertidorVectorUnitario8:inst7.f
+LED7 <= ConvertidorVectorUnitario8:inst7.g
+LED8 <= ConvertidorVectorUnitario8:inst7.h
+
+
+|Practica4|ConvertidorVectorUnitario8:inst7
+a <= entradaVector[0].DB_MAX_OUTPUT_PORT_TYPE
+b <= entradaVector[1].DB_MAX_OUTPUT_PORT_TYPE
+c <= entradaVector[2].DB_MAX_OUTPUT_PORT_TYPE
+d <= entradaVector[3].DB_MAX_OUTPUT_PORT_TYPE
+e <= entradaVector[4].DB_MAX_OUTPUT_PORT_TYPE
+f <= entradaVector[5].DB_MAX_OUTPUT_PORT_TYPE
+g <= entradaVector[6].DB_MAX_OUTPUT_PORT_TYPE
+h <= entradaVector[7].DB_MAX_OUTPUT_PORT_TYPE
+entradaVector[7] => h.DATAIN
+entradaVector[6] => g.DATAIN
+entradaVector[5] => f.DATAIN
+entradaVector[4] => e.DATAIN
+entradaVector[3] => d.DATAIN
+entradaVector[2] => c.DATAIN
+entradaVector[1] => b.DATAIN
+entradaVector[0] => a.DATAIN
+
+
+|Practica4|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+dataa[4] => lpm_mux:$00000.data[0][4]
+dataa[5] => lpm_mux:$00000.data[0][5]
+dataa[6] => lpm_mux:$00000.data[0][6]
+dataa[7] => lpm_mux:$00000.data[0][7]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+datab[4] => lpm_mux:$00000.data[1][4]
+datab[5] => lpm_mux:$00000.data[1][5]
+datab[6] => lpm_mux:$00000.data[1][6]
+datab[7] => lpm_mux:$00000.data[1][7]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+result[4] <= lpm_mux:$00000.result[4]
+result[5] <= lpm_mux:$00000.result[5]
+result[6] <= lpm_mux:$00000.result[6]
+result[7] <= lpm_mux:$00000.result[7]
+
+
+|Practica4|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_smc:auto_generated.data[0]
+data[0][1] => mux_smc:auto_generated.data[1]
+data[0][2] => mux_smc:auto_generated.data[2]
+data[0][3] => mux_smc:auto_generated.data[3]
+data[0][4] => mux_smc:auto_generated.data[4]
+data[0][5] => mux_smc:auto_generated.data[5]
+data[0][6] => mux_smc:auto_generated.data[6]
+data[0][7] => mux_smc:auto_generated.data[7]
+data[1][0] => mux_smc:auto_generated.data[8]
+data[1][1] => mux_smc:auto_generated.data[9]
+data[1][2] => mux_smc:auto_generated.data[10]
+data[1][3] => mux_smc:auto_generated.data[11]
+data[1][4] => mux_smc:auto_generated.data[12]
+data[1][5] => mux_smc:auto_generated.data[13]
+data[1][6] => mux_smc:auto_generated.data[14]
+data[1][7] => mux_smc:auto_generated.data[15]
+sel[0] => mux_smc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_smc:auto_generated.result[0]
+result[1] <= mux_smc:auto_generated.result[1]
+result[2] <= mux_smc:auto_generated.result[2]
+result[3] <= mux_smc:auto_generated.result[3]
+result[4] <= mux_smc:auto_generated.result[4]
+result[5] <= mux_smc:auto_generated.result[5]
+result[6] <= mux_smc:auto_generated.result[6]
+result[7] <= mux_smc:auto_generated.result[7]
+
+
+|Practica4|BUSMUX:inst5|lpm_mux:$00000|mux_smc:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[4].IN1
+data[5] => result_node[5].IN1
+data[6] => result_node[6].IN1
+data[7] => result_node[7].IN1
+data[8] => result_node[0].IN1
+data[9] => result_node[1].IN1
+data[10] => result_node[2].IN1
+data[11] => result_node[3].IN1
+data[12] => result_node[4].IN1
+data[13] => result_node[5].IN1
+data[14] => result_node[6].IN1
+data[15] => result_node[7].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[7].IN0
+sel[0] => _.IN0
+sel[0] => result_node[6].IN0
+sel[0] => _.IN0
+sel[0] => result_node[5].IN0
+sel[0] => _.IN0
+sel[0] => result_node[4].IN0
+sel[0] => _.IN0
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
+
+
+|Practica4|ConvertidorUnitarioVector8:Convertidor
+a => salidaVector[0].DATAIN
+b => salidaVector[1].DATAIN
+c => salidaVector[2].DATAIN
+d => salidaVector[3].DATAIN
+e => salidaVector[4].DATAIN
+f => salidaVector[5].DATAIN
+g => salidaVector[6].DATAIN
+h => salidaVector[7].DATAIN
+salidaVector[7] <= h.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[5] <= f.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[4] <= e.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica4|ContadorJhonson:inst
+FF0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Clear => inst.ACLR
+Clear => inst14.ACLR
+Clear => inst13.ACLR
+Clear => inst12.ACLR
+Clear => inst11.ACLR
+Clear => inst10.ACLR
+Clear => inst9.ACLR
+Clear => inst8.ACLR
+Clear => inst11.PRESET
+Reloj => inst.CLK
+Reloj => inst14.CLK
+Reloj => inst13.CLK
+Reloj => inst12.CLK
+Reloj => inst11.CLK
+Reloj => inst10.CLK
+Reloj => inst9.CLK
+Reloj => inst8.CLK
+FF1 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+FF2 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+FF3 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+FF4 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+FF5 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+FF6 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+FF7 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica4|DivisorDeFrecuencia:inst11
+CLK => contador[0].CLK
+CLK => contador[1].CLK
+CLK => contador[2].CLK
+CLK => contador[3].CLK
+CLK => contador[4].CLK
+CLK => contador[5].CLK
+CLK => contador[6].CLK
+CLK => contador[7].CLK
+CLK => contador[8].CLK
+CLK => contador[9].CLK
+CLK => contador[10].CLK
+CLK => contador[11].CLK
+CLK => contador[12].CLK
+CLK => contador[13].CLK
+CLK => contador[14].CLK
+CLK => contador[15].CLK
+CLK => contador[16].CLK
+CLK => contador[17].CLK
+CLK => contador[18].CLK
+CLK => contador[19].CLK
+CLK => contador[20].CLK
+CLK => contador[21].CLK
+CLK => contador[22].CLK
+CLK => contador[23].CLK
+CLK => contador[24].CLK
+CLK => salida_media.CLK
+RESET => contador[0].ACLR
+RESET => contador[1].ACLR
+RESET => contador[2].ACLR
+RESET => contador[3].ACLR
+RESET => contador[4].ACLR
+RESET => contador[5].ACLR
+RESET => contador[6].ACLR
+RESET => contador[7].ACLR
+RESET => contador[8].ACLR
+RESET => contador[9].ACLR
+RESET => contador[10].ACLR
+RESET => contador[11].ACLR
+RESET => contador[12].ACLR
+RESET => contador[13].ACLR
+RESET => contador[14].ACLR
+RESET => contador[15].ACLR
+RESET => contador[16].ACLR
+RESET => contador[17].ACLR
+RESET => contador[18].ACLR
+RESET => contador[19].ACLR
+RESET => contador[20].ACLR
+RESET => contador[21].ACLR
+RESET => contador[22].ACLR
+RESET => contador[23].ACLR
+RESET => contador[24].ACLR
+RESET => salida_media.ACLR
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica4|ConvertidorUnitarioVector8:inst8
+a => salidaVector[0].DATAIN
+b => salidaVector[1].DATAIN
+c => salidaVector[2].DATAIN
+d => salidaVector[3].DATAIN
+e => salidaVector[4].DATAIN
+f => salidaVector[5].DATAIN
+g => salidaVector[6].DATAIN
+h => salidaVector[7].DATAIN
+salidaVector[7] <= h.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[5] <= f.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[4] <= e.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[2] <= c.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+salidaVector[0] <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica4|ContadorAnillo:inst10
+FF0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst.ACLR
+Reset => inst7.ACLR
+Reset => inst6.ACLR
+Reset => inst5.ACLR
+Reset => inst4.ACLR
+Reset => inst3.ACLR
+Reset => inst2.ACLR
+Reset => inst1.ACLR
+Clock => inst.CLK
+Clock => inst7.CLK
+Clock => inst6.CLK
+Clock => inst5.CLK
+Clock => inst4.CLK
+Clock => inst3.CLK
+Clock => inst2.CLK
+Clock => inst1.CLK
+PRE => inst.PRESET
+FF1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+FF2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+FF3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+FF4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+FF5 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+FF6 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+FF7 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+

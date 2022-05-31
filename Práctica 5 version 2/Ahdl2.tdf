@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+
+entity Ahdl2 is 
+
+ port(
+        CLK : in    std_logic;
+        EN: in  std_logic;
+        RST : in    std_logic;
+        Q: out  std_logic_vector(7 downto 0)
+    );
+
+end eightRC;
+
+architecture behavior of eightRC is
+signal qs: std_logic_vector(7 downto 0);
+begin
+    process(CLK, RST, EN)
+    begin 
+        if(RST = '1') then
+            QS <= "11111110";       --initial state for QS
+      elsif (CLK'EVENT AND CLK = '1' and EN = '1') then     --enable starts the shifting
+         QS(0) <= QS(7);            --shift '0' to the left each clock edge, Q(0) gets Q(0) bit value
+         QS(7 downto 1) <= QS(6 downto 0);
+      end if;                      
+    Q <= QS;
+    end process;

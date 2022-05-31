@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Practica8">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_33e.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

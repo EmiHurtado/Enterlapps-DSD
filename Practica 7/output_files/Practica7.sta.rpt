@@ -1,0 +1,519 @@
+TimeQuest Timing Analyzer report for Practica7
+Wed May 04 13:00:32 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Detector'
+ 12. Slow Model Hold: 'Detector'
+ 13. Slow Model Minimum Pulse Width: 'Detector'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'Detector'
+ 22. Fast Model Hold: 'Detector'
+ 23. Fast Model Minimum Pulse Width: 'Detector'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Practica7                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C5T144C8                                                       ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Detector   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Detector } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 664.01 MHz ; 360.1 MHz       ; Detector   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------+
+; Slow Model Setup Summary          ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; Detector ; -0.506 ; -1.038        ;
++----------+--------+---------------+
+
+
++----------------------------------+
+; Slow Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; Detector ; 0.499 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; Detector ; -1.777 ; -7.713             ;
++----------+--------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Detector'                                                                                                                 ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.506 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.546      ;
+; -0.503 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.543      ;
+; -0.481 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.521      ;
+; -0.080 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.120      ;
+; -0.077 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.117      ;
+; -0.029 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 1.069      ;
+; 0.235  ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[0]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Contador:inst2|salida[3]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.805      ;
++--------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Detector'                                                                                                                 ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[0]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; Contador:inst2|salida[3]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.763 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.069      ;
+; 0.811 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.117      ;
+; 0.814 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.120      ;
+; 1.215 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.521      ;
+; 1.237 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.543      ;
+; 1.240 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 1.546      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Detector'                                                                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+; -1.777 ; 1.000        ; 2.777          ; Port Rate        ; Detector ; Rise       ; Detector                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[0]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[0]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[1]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[1]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[2]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[2]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[3]~reg0 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[3]~reg0 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; Detector|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; Detector|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[0]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[0]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[1]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[1]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[2]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[2]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[3]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[3]~reg0|clk      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; A         ; Detector   ; 10.365 ; 10.365 ; Rise       ; Detector        ;
+; B         ; Detector   ; 10.406 ; 10.406 ; Rise       ; Detector        ;
+; C         ; Detector   ; 9.324  ; 9.324  ; Rise       ; Detector        ;
+; D         ; Detector   ; 9.664  ; 9.664  ; Rise       ; Detector        ;
+; E         ; Detector   ; 9.654  ; 9.654  ; Rise       ; Detector        ;
+; F         ; Detector   ; 10.024 ; 10.024 ; Rise       ; Detector        ;
+; G         ; Detector   ; 9.668  ; 9.668  ; Rise       ; Detector        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; Detector   ; 9.654 ; 9.654 ; Rise       ; Detector        ;
+; B         ; Detector   ; 9.694 ; 9.694 ; Rise       ; Detector        ;
+; C         ; Detector   ; 8.618 ; 8.618 ; Rise       ; Detector        ;
+; D         ; Detector   ; 8.951 ; 8.951 ; Rise       ; Detector        ;
+; E         ; Detector   ; 8.943 ; 8.943 ; Rise       ; Detector        ;
+; F         ; Detector   ; 9.319 ; 9.319 ; Rise       ; Detector        ;
+; G         ; Detector   ; 8.949 ; 8.949 ; Rise       ; Detector        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------+
+; Fast Model Setup Summary         ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; Detector ; 0.502 ; 0.000         ;
++----------+-------+---------------+
+
+
++----------------------------------+
+; Fast Model Hold Summary          ;
++----------+-------+---------------+
+; Clock    ; Slack ; End Point TNS ;
++----------+-------+---------------+
+; Detector ; 0.215 ; 0.000         ;
++----------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++----------+--------+--------------------+
+; Clock    ; Slack  ; End Point TNS      ;
++----------+--------+--------------------+
+; Detector ; -1.222 ; -5.222             ;
++----------+--------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Detector'                                                                                                                ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.502 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.530      ;
+; 0.502 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.530      ;
+; 0.505 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.527      ;
+; 0.605 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.427      ;
+; 0.607 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.425      ;
+; 0.630 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.402      ;
+; 0.665 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[0]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Contador:inst2|salida[3]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Detector'                                                                                                                 ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                     ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[0]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Contador:inst2|salida[3]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.250 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[1]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.402      ;
+; 0.273 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.425      ;
+; 0.275 ; Contador:inst2|salida[1]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.427      ;
+; 0.375 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.378 ; Contador:inst2|salida[0]~reg0 ; Contador:inst2|salida[2]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; Contador:inst2|salida[2]~reg0 ; Contador:inst2|salida[3]~reg0 ; Detector     ; Detector    ; 0.000        ; 0.000      ; 0.530      ;
++-------+-------------------------------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Detector'                                                                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                        ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; Detector ; Rise       ; Detector                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Detector ; Rise       ; Contador:inst2|salida[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Detector ; Rise       ; Contador:inst2|salida[3]~reg0 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; Detector|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; Detector|combout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[0]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[0]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[1]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[1]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[2]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[2]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; Detector ; Rise       ; inst2|salida[3]~reg0|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; Detector ; Rise       ; inst2|salida[3]~reg0|clk      ;
++--------+--------------+----------------+------------------+----------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; Detector   ; 4.212 ; 4.212 ; Rise       ; Detector        ;
+; B         ; Detector   ; 4.237 ; 4.237 ; Rise       ; Detector        ;
+; C         ; Detector   ; 3.917 ; 3.917 ; Rise       ; Detector        ;
+; D         ; Detector   ; 4.011 ; 4.011 ; Rise       ; Detector        ;
+; E         ; Detector   ; 4.012 ; 4.012 ; Rise       ; Detector        ;
+; F         ; Detector   ; 4.116 ; 4.116 ; Rise       ; Detector        ;
+; G         ; Detector   ; 4.005 ; 4.005 ; Rise       ; Detector        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; Detector   ; 4.005 ; 4.005 ; Rise       ; Detector        ;
+; B         ; Detector   ; 4.030 ; 4.030 ; Rise       ; Detector        ;
+; C         ; Detector   ; 3.714 ; 3.714 ; Rise       ; Detector        ;
+; D         ; Detector   ; 3.804 ; 3.804 ; Rise       ; Detector        ;
+; E         ; Detector   ; 3.798 ; 3.798 ; Rise       ; Detector        ;
+; F         ; Detector   ; 3.914 ; 3.914 ; Rise       ; Detector        ;
+; G         ; Detector   ; 3.798 ; 3.798 ; Rise       ; Detector        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.506 ; 0.215 ; N/A      ; N/A     ; -1.777              ;
+;  Detector        ; -0.506 ; 0.215 ; N/A      ; N/A     ; -1.777              ;
+; Design-wide TNS  ; -1.038 ; 0.0   ; 0.0      ; 0.0     ; -7.713              ;
+;  Detector        ; -1.038 ; 0.000 ; N/A      ; N/A     ; -7.713              ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; A         ; Detector   ; 10.365 ; 10.365 ; Rise       ; Detector        ;
+; B         ; Detector   ; 10.406 ; 10.406 ; Rise       ; Detector        ;
+; C         ; Detector   ; 9.324  ; 9.324  ; Rise       ; Detector        ;
+; D         ; Detector   ; 9.664  ; 9.664  ; Rise       ; Detector        ;
+; E         ; Detector   ; 9.654  ; 9.654  ; Rise       ; Detector        ;
+; F         ; Detector   ; 10.024 ; 10.024 ; Rise       ; Detector        ;
+; G         ; Detector   ; 9.668  ; 9.668  ; Rise       ; Detector        ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; Detector   ; 4.005 ; 4.005 ; Rise       ; Detector        ;
+; B         ; Detector   ; 4.030 ; 4.030 ; Rise       ; Detector        ;
+; C         ; Detector   ; 3.714 ; 3.714 ; Rise       ; Detector        ;
+; D         ; Detector   ; 3.804 ; 3.804 ; Rise       ; Detector        ;
+; E         ; Detector   ; 3.798 ; 3.798 ; Rise       ; Detector        ;
+; F         ; Detector   ; 3.914 ; 3.914 ; Rise       ; Detector        ;
+; G         ; Detector   ; 3.798 ; 3.798 ; Rise       ; Detector        ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Detector   ; Detector ; 10       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Detector   ; Detector ; 10       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 04 13:00:32 2022
+Info: Command: quartus_sta Practica7 -c Practica7
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica7.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Detector Detector
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.506
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.506        -1.038 Detector 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 Detector 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.777
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.777        -7.713 Detector 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.502
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.502         0.000 Detector 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 Detector 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -5.222 Detector 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4510 megabytes
+    Info: Processing ended: Wed May 04 13:00:32 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

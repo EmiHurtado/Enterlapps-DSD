@@ -1,5 +1,5 @@
 EDA Netlist Writer report for pruebas
-Thu Mar 31 19:32:28 2022
+Sun May 01 22:02:10 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,9 +36,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Mar 31 19:32:28 2022 ;
+; EDA Netlist Writer Status ; Successful - Sun May 01 22:02:10 2022 ;
 ; Revision Name             ; pruebas                               ;
-; Top-level Entity Name     ; pruebas                               ;
+; Top-level Entity Name     ; Pruebas                               ;
 ; Family                    ; Cyclone II                            ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+-------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                        ;
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                   ;
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas.vho          ;
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_fast.vho     ;
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_vhd.sdo      ;
-; C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_vhd_fast.sdo ;
-+-----------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                        ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas.vho          ;
+; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_fast.vho     ;
+; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_vhd.sdo      ;
+; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/pruebas_vhd_fast.sdo ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Mar 31 19:32:28 2022
+    Info: Processing started: Sun May 01 22:02:10 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off pruebas -c pruebas
-Info (204026): Generated files "pruebas.vho", "pruebas_fast.vho", "pruebas_vhd.sdo" and "pruebas_vhd_fast.sdo" in directory "C:/Users/cafe_/Documents/4_Semestre/Diseno_de_Sistemas_Digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/" for EDA simulation tool
+Info (204026): Generated files "pruebas.vho", "pruebas_fast.vho", "pruebas_vhd.sdo" and "pruebas_vhd_fast.sdo" in directory "C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Pruebas/simulation/activehdl/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4519 megabytes
-    Info: Processing ended: Thu Mar 31 19:32:29 2022
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sun May 01 22:02:10 2022
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
