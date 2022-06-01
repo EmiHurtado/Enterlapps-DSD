@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica8
-Tue May 31 11:58:09 2022
+Tue May 31 20:17:56 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,14 +17,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component
- 13. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1
- 14. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2
- 15. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3
- 16. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4
- 17. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor2
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component
+ 15. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1
+ 16. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2
+ 17. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3
+ 18. Parameter Settings for User Entity Instance: GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4
+ 19. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor3
+ 20. Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor2
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -50,16 +53,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue May 31 11:58:09 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 31 20:17:56 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 39                                              ;
-;     Total combinational functions  ; 39                                              ;
-;     Dedicated logic registers      ; 28                                              ;
-; Total registers                    ; 28                                              ;
-; Total pins                         ; 51                                              ;
+; Total logic elements               ; 566                                             ;
+;     Total combinational functions  ; 450                                             ;
+;     Dedicated logic registers      ; 345                                             ;
+; Total registers                    ; 345                                             ;
+; Total pins                         ; 53                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -164,544 +167,188 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                    ; Library ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
-; ../Anexos/DecodificadorDecimalInteger.vhd ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Anexos/DecodificadorDecimalInteger.vhd     ;         ;
-; GameManager/RandomGenerator.vhd           ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/GameManager/RandomGenerator.vhd ;         ;
-; GameManager/StageManager.vhd              ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/GameManager/StageManager.vhd    ;         ;
-; GeneradorVideo.vhd                        ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/GeneradorVideo.vhd              ;         ;
-; ../Anexos/Coder2.vhd                      ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Anexos/Coder2.vhd                          ;         ;
-; ../Anexos/DivisorFrecuencia.vhd           ; yes             ; User VHDL File                     ; C:/projects/escom/dsd/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd               ;         ;
-; Practica8.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/Practica8.bdf                   ;         ;
-; MultiplexorRelojes.vhd                    ; yes             ; User Wizard-Generated File         ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd          ;         ;
-; GeneradorRelojJuego.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/GeneradorRelojJuego.bdf         ;         ;
-; GameManager.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/GameManager.bdf                 ;         ;
-; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                   ;         ;
-; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                ;         ;
-; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                    ;         ;
-; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                  ;         ;
-; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                  ;         ;
-; db/mux_33e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/db/mux_33e.tdf                  ;         ;
-+-------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                        ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                     ; Library ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GameManager/PlayerController.vhd          ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/PlayerController.vhd ;         ;
+; EvitaRebote.vhd                           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/EvitaRebote.vhd                  ;         ;
+; ../Anexos/DecodificadorDecimalInteger.vhd ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DecodificadorDecimalInteger.vhd      ;         ;
+; GameManager/RandomGenerator.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/RandomGenerator.vhd  ;         ;
+; GameManager/StageManager.vhd              ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/StageManager.vhd     ;         ;
+; GeneradorVideo.vhd                        ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorVideo.vhd               ;         ;
+; ../Anexos/Coder2.vhd                      ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/Coder2.vhd                           ;         ;
+; ../Anexos/DivisorFrecuencia.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd                ;         ;
+; Practica8.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/Practica8.bdf                    ;         ;
+; MultiplexorRelojes.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd           ;         ;
+; GeneradorRelojJuego.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorRelojJuego.bdf          ;         ;
+; GameManager.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager.bdf                  ;         ;
+; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                    ;         ;
+; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                                                 ;         ;
+; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                                                     ;         ;
+; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                                                   ;         ;
+; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                                                   ;         ;
+; db/mux_33e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/db/mux_33e.tdf                   ;         ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 39    ;
-;                                             ;       ;
-; Total combinational functions               ; 39    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 5     ;
-;     -- 3 input functions                    ; 9     ;
-;     -- <=2 input functions                  ; 25    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 24    ;
-;     -- arithmetic mode                      ; 15    ;
-;                                             ;       ;
-; Total registers                             ; 28    ;
-;     -- Dedicated logic registers            ; 28    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 51    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 17    ;
-; Total fan-out                               ; 168   ;
-; Average fan-out                             ; 1.42  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                        ;
++---------------------------------------------+----------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                ;
++---------------------------------------------+----------------------------------------------------------------------+
+; Estimated Total logic elements              ; 566                                                                  ;
+;                                             ;                                                                      ;
+; Total combinational functions               ; 450                                                                  ;
+; Logic element usage by number of LUT inputs ;                                                                      ;
+;     -- 4 input functions                    ; 269                                                                  ;
+;     -- 3 input functions                    ; 89                                                                   ;
+;     -- <=2 input functions                  ; 92                                                                   ;
+;                                             ;                                                                      ;
+; Logic elements by mode                      ;                                                                      ;
+;     -- normal mode                          ; 394                                                                  ;
+;     -- arithmetic mode                      ; 56                                                                   ;
+;                                             ;                                                                      ;
+; Total registers                             ; 345                                                                  ;
+;     -- Dedicated logic registers            ; 345                                                                  ;
+;     -- I/O registers                        ; 0                                                                    ;
+;                                             ;                                                                      ;
+; I/O pins                                    ; 53                                                                   ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                    ;
+; Maximum fan-out node                        ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media ;
+; Maximum fan-out                             ; 258                                                                  ;
+; Total fan-out                               ; 2445                                                                 ;
+; Average fan-out                             ; 2.88                                                                 ;
++---------------------------------------------+----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
-; |Practica8                         ; 39 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |Practica8                               ; work         ;
-;    |DivisorDeFrecuencia:Divisor2|  ; 28 (28)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor2  ; work         ;
-;    |GeneradorVideo:GeneradorVideo| ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorVideo:GeneradorVideo ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
+; |Practica8                                  ; 450 (0)           ; 345 (0)      ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |Practica8                                                         ; work         ;
+;    |DecodifiadorDecimalInteger:Puntuacion1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1                  ; work         ;
+;    |DecodifiadorDecimalInteger:Puntuacion2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2                  ; work         ;
+;    |DivisorDeFrecuencia:Divisor2|           ; 28 (28)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor2                            ; work         ;
+;    |DivisorDeFrecuencia:Divisor3|           ; 44 (44)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor3                            ; work         ;
+;    |GameManager:Juego|                      ; 242 (2)           ; 259 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego                                       ; work         ;
+;       |EvitaRebote:inst10|                  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst10                    ; work         ;
+;       |RandomGenerator:inst1|               ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|RandomGenerator:inst1                 ; work         ;
+;       |StageManager:inst|                   ; 236 (236)         ; 247 (247)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|StageManager:inst                     ; work         ;
+;    |GeneradorRelojJuego:Divisor1|           ; 36 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1                            ; work         ;
+;       |DivisorDeFrecuencia:Reloj1|          ; 36 (36)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1 ; work         ;
+;    |GeneradorVideo:GeneradorVideo|          ; 86 (86)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorVideo:GeneradorVideo                           ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                    ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                                        ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------+
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst ; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                               ;
-+-------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                           ; Reason for Removal                     ;
-+-------------------------------------------------------------------------+----------------------------------------+
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[0]     ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|salida_media    ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[1..22] ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[0]     ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|salida_media    ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[1..22] ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[0]     ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|salida_media    ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[1..22] ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0]     ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media    ; Stuck at GND due to stuck port clear   ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[1..23] ; Stuck at GND due to stuck port clear   ;
-; GameManager:Juego|StageManager:inst|d5[13..15]                          ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d6[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d7[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d5[0..12]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d4[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d3[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d2[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d1[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|d0[0..15]                           ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|alreadyMoved                        ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|posY[0,1]                           ; Stuck at VCC due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|posY[2]                             ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|posX[0]                             ; Stuck at VCC due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|posX[1..3]                          ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|state[0..2]                         ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|ScoreP2[0..3]                                         ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|ScoreP1[0..3]                                         ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[7][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[6][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[5][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[4][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[3][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[2][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[1][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][15]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][14]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][13]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][12]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][11]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][10]                   ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][9]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][8]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][7]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][6]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][5]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][4]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][3]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][2]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][1]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|matrixData[0][0]                    ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|downUp                              ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|tempDir[0,1]                        ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|StageManager:inst|derIzq                              ; Stuck at GND due to stuck port clock   ;
-; GameManager:Juego|RandomGenerator:inst1|value[1]~reg0                   ; Lost fanout                            ;
-; GameManager:Juego|RandomGenerator:inst1|value[0]~reg0                   ; Lost fanout                            ;
-; GeneradorVideo:GeneradorVideo|column[0..15]                             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 394                                 ;                                        ;
-+-------------------------------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                         ;
++-------------------------------------------------------------------------+------------------------------------------------------------------+
+; Register name                                                           ; Reason for Removal                                               ;
++-------------------------------------------------------------------------+------------------------------------------------------------------+
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[0]     ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|salida_media    ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[1..23] ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[0]     ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|salida_media    ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[1..22] ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[0]     ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|salida_media    ; Lost fanout                                                      ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[1..22] ; Lost fanout                                                      ;
+; GameManager:Juego|StageManager:inst|rst                                 ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|PlayerController:inst5|pos[2]~reg0                    ; Stuck at VCC due to stuck port preset                            ;
+; GameManager:Juego|PlayerController:inst5|pos[0]~reg0                    ; Stuck at GND due to stuck port clear                             ;
+; GameManager:Juego|PlayerController:inst5|pos[1]~reg0                    ; Stuck at GND due to stuck port clear                             ;
+; GameManager:Juego|PlayerController:inst6|pos[2]~reg0                    ; Stuck at VCC due to stuck port preset                            ;
+; GameManager:Juego|PlayerController:inst6|pos[0]~reg0                    ; Stuck at GND due to stuck port clear                             ;
+; GameManager:Juego|PlayerController:inst6|pos[1]~reg0                    ; Stuck at GND due to stuck port clear                             ;
+; GameManager:Juego|StageManager:inst|matrixData[6][0]                    ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|matrixData[7][0]                    ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|matrixData[0][15]                   ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|matrixData[6][15]                   ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|matrixData[7][15]                   ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|d6[0]                               ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|d7[0]                               ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|d0[15]                              ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|d6[15]                              ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|d7[15]                              ; Stuck at VCC due to stuck port data_in                           ;
+; GameManager:Juego|StageManager:inst|matrixData[1][0]                    ; Merged with GameManager:Juego|StageManager:inst|matrixData[0][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[2][0]                    ; Merged with GameManager:Juego|StageManager:inst|matrixData[0][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[1][15]                   ; Merged with GameManager:Juego|StageManager:inst|matrixData[0][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[2][15]                   ; Merged with GameManager:Juego|StageManager:inst|matrixData[0][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[4][0]                    ; Merged with GameManager:Juego|StageManager:inst|matrixData[3][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[3][15]                   ; Merged with GameManager:Juego|StageManager:inst|matrixData[3][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[4][15]                   ; Merged with GameManager:Juego|StageManager:inst|matrixData[3][0] ;
+; GameManager:Juego|StageManager:inst|matrixData[5][15]                   ; Merged with GameManager:Juego|StageManager:inst|matrixData[5][0] ;
+; GameManager:Juego|StageManager:inst|d1[0]                               ; Merged with GameManager:Juego|StageManager:inst|d0[0]            ;
+; GameManager:Juego|StageManager:inst|d2[0]                               ; Merged with GameManager:Juego|StageManager:inst|d0[0]            ;
+; GameManager:Juego|StageManager:inst|d1[15]                              ; Merged with GameManager:Juego|StageManager:inst|d0[0]            ;
+; GameManager:Juego|StageManager:inst|d2[15]                              ; Merged with GameManager:Juego|StageManager:inst|d0[0]            ;
+; GameManager:Juego|StageManager:inst|d4[0]                               ; Merged with GameManager:Juego|StageManager:inst|d3[0]            ;
+; GameManager:Juego|StageManager:inst|d3[15]                              ; Merged with GameManager:Juego|StageManager:inst|d3[0]            ;
+; GameManager:Juego|StageManager:inst|d4[15]                              ; Merged with GameManager:Juego|StageManager:inst|d3[0]            ;
+; GameManager:Juego|StageManager:inst|d5[15]                              ; Merged with GameManager:Juego|StageManager:inst|d5[0]            ;
+; DivisorDeFrecuencia:Divisor3|contador[0]                                ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]             ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0]     ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]             ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[1]     ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]             ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[2]     ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]             ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[3]     ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]             ;
+; Total Number of Removed Registers = 111                                 ;                                                                  ;
++-------------------------------------------------------------------------+------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                          ;
-+----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
-; Register name                                                        ; Reason for Removal      ; Registers Removed due to This Register                                              ;
-+----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|salida_media ; Stuck at GND            ; GameManager:Juego|StageManager:inst|d5[13],                                         ;
-;                                                                      ; due to stuck port clear ; GameManager:Juego|StageManager:inst|d5[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d6[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d7[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d5[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d4[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d3[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d2[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d1[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[15],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[14],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[13],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[12],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[11],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[10],                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[9],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[8],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[7],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[6],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[5],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[4],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[3],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[2],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[1],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|d0[0],                                          ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|alreadyMoved,                                   ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posY[0],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posY[1],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posY[2],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posX[0],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posX[1],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posX[2],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|posX[3],                                        ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|state[0],                                       ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|state[1],                                       ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|state[2], GameManager:Juego|ScoreP2[0],         ;
-;                                                                      ;                         ; GameManager:Juego|ScoreP2[1], GameManager:Juego|ScoreP2[2],                         ;
-;                                                                      ;                         ; GameManager:Juego|ScoreP2[3], GameManager:Juego|ScoreP1[0],                         ;
-;                                                                      ;                         ; GameManager:Juego|ScoreP1[1], GameManager:Juego|ScoreP1[2],                         ;
-;                                                                      ;                         ; GameManager:Juego|ScoreP1[3],                                                       ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[7][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[6][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[5][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[4][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[3][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[2][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[1][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][15],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][14],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][13],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][12],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][11],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][10],                              ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][9],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][8],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][7],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][6],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][5],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][4],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][3],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][2],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][1],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|matrixData[0][0],                               ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|downUp,                                         ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|tempDir[0],                                     ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|tempDir[1],                                     ;
-;                                                                      ;                         ; GameManager:Juego|StageManager:inst|derIzq,                                         ;
-;                                                                      ;                         ; GameManager:Juego|RandomGenerator:inst1|value[1]~reg0,                              ;
-;                                                                      ;                         ; GameManager:Juego|RandomGenerator:inst1|value[0]~reg0,                              ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[15], GeneradorVideo:GeneradorVideo|column[14], ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[13], GeneradorVideo:GeneradorVideo|column[12], ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[11], GeneradorVideo:GeneradorVideo|column[10], ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[9], GeneradorVideo:GeneradorVideo|column[8],   ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[7], GeneradorVideo:GeneradorVideo|column[6],   ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[5], GeneradorVideo:GeneradorVideo|column[4],   ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[3], GeneradorVideo:GeneradorVideo|column[2],   ;
-;                                                                      ;                         ; GeneradorVideo:GeneradorVideo|column[1], GeneradorVideo:GeneradorVideo|column[0]    ;
-+----------------------------------------------------------------------+-------------------------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                             ;
++---------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name                                                       ; Reason for Removal        ; Registers Removed due to This Register                                ;
++---------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
+; GameManager:Juego|StageManager:inst|rst                             ; Stuck at VCC              ; GameManager:Juego|PlayerController:inst5|pos[2]~reg0,                 ;
+;                                                                     ; due to stuck port data_in ; GameManager:Juego|PlayerController:inst5|pos[0]~reg0,                 ;
+;                                                                     ;                           ; GameManager:Juego|PlayerController:inst5|pos[1]~reg0,                 ;
+;                                                                     ;                           ; GameManager:Juego|PlayerController:inst6|pos[2]~reg0,                 ;
+;                                                                     ;                           ; GameManager:Juego|PlayerController:inst6|pos[0]~reg0,                 ;
+;                                                                     ;                           ; GameManager:Juego|PlayerController:inst6|pos[1]~reg0,                 ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|matrixData[6][0],                 ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|matrixData[7][0],                 ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|matrixData[6][15],                ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|matrixData[7][15],                ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|d6[0],                            ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|d7[0],                            ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|d6[15],                           ;
+;                                                                     ;                           ; GameManager:Juego|StageManager:inst|d7[15]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[0] ; Lost Fanouts              ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[22], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[21], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[18], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[17], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[16], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[14]  ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[0] ; Lost Fanouts              ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[15], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[14], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[12], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[10], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[9],  ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[8]   ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[0] ; Lost Fanouts              ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[20], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[17], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[16], ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[9],  ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[5],  ;
+;                                                                     ;                           ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[4]   ;
+; GameManager:Juego|StageManager:inst|matrixData[0][15]               ; Stuck at VCC              ; GameManager:Juego|StageManager:inst|d0[15]                            ;
+;                                                                     ; due to stuck port data_in ;                                                                       ;
++---------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -709,14 +356,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 345   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 51    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 125   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------+
+; Inverted Register Statistics                            ;
++-----------------------------------------------+---------+
+; Inverted Register                             ; Fan out ;
++-----------------------------------------------+---------+
+; GameManager:Juego|StageManager:inst|posX[0]   ; 24      ;
+; GameManager:Juego|StageManager:inst|golJug[0] ; 6       ;
+; GameManager:Juego|EvitaRebote:inst10|isUp     ; 1       ;
+; GameManager:Juego|StageManager:inst|posY[0]   ; 61      ;
+; GameManager:Juego|StageManager:inst|posY[1]   ; 60      ;
+; Total number of inverted registers = 5        ;         ;
++-----------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |Practica8|GeneradorVideo:GeneradorVideo|column[1]              ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP1[3]                         ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP2[0]                         ;
+; 8:1                ; 108 bits  ; 540 LEs       ; 324 LEs              ; 216 LEs                ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[0][6] ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[7][2] ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posX[2]          ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posY[1]          ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Practica8|GameManager:Juego|StageManager:inst|Mux1             ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2|salidaVector  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1|salidaVector  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -743,7 +422,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 5.0   ; Signed Float                                                                ;
+; frequency      ; 20    ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -753,7 +432,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 6     ; Signed Float                                                                ;
+; frequency      ; 7     ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -763,7 +442,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 7     ; Signed Float                                                                ;
+; frequency      ; 6     ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -773,8 +452,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 10    ; Signed Float                                                                ;
+; frequency      ; 5     ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisorDeFrecuencia:Divisor3 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; frequency      ; 7.1   ; Signed Float                                     ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -793,7 +482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -803,13 +492,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 31 11:58:06 2022
+    Info: Processing started: Tue May 31 20:17:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica8 -c Practica8
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/playercontroller.vhd
+    Info (12022): Found design unit 1: PlayerController-PC
+    Info (12023): Found entity 1: PlayerController
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/flip-flop sr.vhd
+    Info (12022): Found design unit 1: FlipFlopSR-FFSR
+    Info (12023): Found entity 1: FlipFlopSR
+Info (12021): Found 2 design units, including 1 entities, in source file evitarebote.vhd
+    Info (12022): Found design unit 1: EvitaRebote-ER
+    Info (12023): Found entity 1: EvitaRebote
 Info (12021): Found 2 design units, including 1 entities, in source file testmatrix.vhd
     Info (12022): Found design unit 1: TestMatrix-TM
     Info (12023): Found entity 1: TestMatrix
-Info (12021): Found 2 design units, including 1 entities, in source file /projects/escom/dsd/enterlapps-dsd/anexos/decodificadordecimalinteger.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/decodificadordecimalinteger.vhd
     Info (12022): Found design unit 1: DecodifiadorDecimalInteger-DecoDecInt
     Info (12023): Found entity 1: DecodifiadorDecimalInteger
 Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/randomgenerator.vhd
@@ -821,10 +519,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file gameman
 Info (12021): Found 2 design units, including 1 entities, in source file generadorvideo.vhd
     Info (12022): Found design unit 1: GeneradorVideo-GV
     Info (12023): Found entity 1: GeneradorVideo
-Info (12021): Found 2 design units, including 1 entities, in source file /projects/escom/dsd/enterlapps-dsd/anexos/coder2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/coder2.vhd
     Info (12022): Found design unit 1: Coder2-c2
     Info (12023): Found entity 1: Coder2
-Info (12021): Found 2 design units, including 1 entities, in source file /projects/escom/dsd/enterlapps-dsd/anexos/divisorfrecuencia.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/divisorfrecuencia.vhd
     Info (12022): Found design unit 1: DivisorDeFrecuencia-DivFrec
     Info (12023): Found entity 1: DivisorDeFrecuencia
 Info (12021): Found 1 design units, including 1 entities, in source file practica8.bdf
@@ -837,15 +535,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file generad
 Info (12021): Found 1 design units, including 1 entities, in source file gamemanager.bdf
     Info (12023): Found entity 1: GameManager
 Info (12127): Elaborating entity "Practica8" for the top level hierarchy
-Warning (275008): Primitive "VCC" of instance "inst1" not used
 Info (12128): Elaborating entity "DecodifiadorDecimalInteger" for hierarchy "DecodifiadorDecimalInteger:Puntuacion2"
 Info (12128): Elaborating entity "GameManager" for hierarchy "GameManager:Juego"
 Info (12128): Elaborating entity "StageManager" for hierarchy "GameManager:Juego|StageManager:inst"
-Warning (10541): VHDL Signal Declaration warning at StageManager.vhd(11): used implicit default value for signal "rst" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10027): Verilog HDL or VHDL warning at the StageManager.vhd(63): index expression is not wide enough to address all of the elements in the array
-Warning (10027): Verilog HDL or VHDL warning at the StageManager.vhd(121): index expression is not wide enough to address all of the elements in the array
+Info (12128): Elaborating entity "EvitaRebote" for hierarchy "GameManager:Juego|EvitaRebote:inst10"
 Info (12128): Elaborating entity "RandomGenerator" for hierarchy "GameManager:Juego|RandomGenerator:inst1"
+Info (12128): Elaborating entity "PlayerController" for hierarchy "GameManager:Juego|PlayerController:inst5"
 Info (12128): Elaborating entity "GeneradorRelojJuego" for hierarchy "GeneradorRelojJuego:Divisor1"
+Warning (275011): Block or symbol "DivisorDeFrecuencia" of instance "Reloj1" overlaps another block or symbol
 Info (12128): Elaborating entity "MultiplexorRelojes" for hierarchy "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst"
 Info (12128): Elaborating entity "LPM_MUX" for hierarchy "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component"
 Info (12130): Elaborated megafunction instantiation "GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|LPM_MUX:LPM_MUX_component"
@@ -868,53 +565,25 @@ Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): u
 Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4"
 Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
 Info (12128): Elaborating entity "Coder2" for hierarchy "GeneradorRelojJuego:Divisor1|Coder2:CodificadorEntradas"
+Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:Divisor3"
+Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
 Info (12128): Elaborating entity "GeneradorVideo" for hierarchy "GeneradorVideo:GeneradorVideo"
 Info (12128): Elaborating entity "DivisorDeFrecuencia" for hierarchy "DivisorDeFrecuencia:Divisor2"
 Warning (10540): VHDL Signal Declaration warning at DivisorFrecuencia.vhd(18): used explicit default value for signal "limite" because signal was never assigned a value
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "a2" is stuck at VCC
-    Warning (13410): Pin "a1" is stuck at VCC
-    Warning (13410): Pin "b1" is stuck at VCC
-    Warning (13410): Pin "c1" is stuck at VCC
-    Warning (13410): Pin "d1" is stuck at VCC
-    Warning (13410): Pin "e1" is stuck at VCC
-    Warning (13410): Pin "f1" is stuck at VCC
-    Warning (13410): Pin "g1" is stuck at GND
     Warning (13410): Pin "h1" is stuck at GND
-    Warning (13410): Pin "b2" is stuck at VCC
-    Warning (13410): Pin "c2" is stuck at VCC
-    Warning (13410): Pin "d2" is stuck at VCC
-    Warning (13410): Pin "e2" is stuck at VCC
-    Warning (13410): Pin "f2" is stuck at VCC
     Warning (13410): Pin "h2" is stuck at GND
-    Warning (13410): Pin "g2" is stuck at GND
-    Warning (13410): Pin "column[0]" is stuck at GND
-    Warning (13410): Pin "column[1]" is stuck at GND
-    Warning (13410): Pin "column[2]" is stuck at GND
-    Warning (13410): Pin "column[3]" is stuck at GND
-    Warning (13410): Pin "column[4]" is stuck at GND
-    Warning (13410): Pin "column[5]" is stuck at GND
-    Warning (13410): Pin "column[6]" is stuck at GND
-    Warning (13410): Pin "column[7]" is stuck at GND
-    Warning (13410): Pin "column[8]" is stuck at GND
-    Warning (13410): Pin "column[9]" is stuck at GND
-    Warning (13410): Pin "column[10]" is stuck at GND
-    Warning (13410): Pin "column[11]" is stuck at GND
-    Warning (13410): Pin "column[12]" is stuck at GND
-    Warning (13410): Pin "column[13]" is stuck at GND
-    Warning (13410): Pin "column[14]" is stuck at GND
-    Warning (13410): Pin "column[15]" is stuck at GND
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 73 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 90 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 620 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 49 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 4653 megabytes
-    Info: Processing ended: Tue May 31 11:58:09 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21059): Implemented 51 output pins
+    Info (21061): Implemented 567 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4639 megabytes
+    Info: Processing ended: Tue May 31 20:17:56 2022
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

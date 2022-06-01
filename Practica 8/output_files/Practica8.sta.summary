@@ -2,52 +2,100 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : -4.561
+TNS   : -706.411
+
 Type  : Slow Model Setup 'CLK'
-Slack : -3.015
-TNS   : -32.626
+Slack : -4.449
+TNS   : -179.729
 
 Type  : Slow Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
-Slack : -0.540
-TNS   : -4.647
+Slack : -2.927
+TNS   : -53.516
+
+Type  : Slow Model Setup 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : -0.012
+TNS   : -0.012
 
 Type  : Slow Model Hold 'CLK'
-Slack : -2.539
-TNS   : -2.539
+Slack : -2.549
+TNS   : -7.616
 
 Type  : Slow Model Hold 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : 0.499
 TNS   : 0.000
 
+Type  : Slow Model Hold 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : 0.499
+TNS   : 0.000
+
 Type  : Slow Model Minimum Pulse Width 'CLK'
 Slack : -1.941
-TNS   : -27.169
+TNS   : -89.497
+
+Type  : Slow Model Minimum Pulse Width 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : -0.742
+TNS   : -381.388
 
 Type  : Slow Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : -0.742
-TNS   : -16.324
+TNS   : -40.068
+
+Type  : Slow Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : -0.742
+TNS   : -2.968
 
 Type  : Fast Model Setup 'CLK'
-Slack : -0.402
-TNS   : -1.752
+Slack : -0.960
+TNS   : -22.643
+
+Type  : Fast Model Setup 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : -0.846
+TNS   : -90.019
 
 Type  : Fast Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
-Slack : 0.459
+Slack : -0.305
+TNS   : -3.229
+
+Type  : Fast Model Setup 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : 0.639
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.341
-TNS   : -1.341
+Slack : -1.356
+TNS   : -4.037
 
 Type  : Fast Model Hold 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : 0.215
 TNS   : 0.000
 
+Type  : Fast Model Hold 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : 0.215
+TNS   : 0.000
+
 Type  : Fast Model Minimum Pulse Width 'CLK'
 Slack : -1.380
-TNS   : -18.380
+TNS   : -60.380
+
+Type  : Fast Model Minimum Pulse Width 'GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media'
+Slack : -0.500
+TNS   : -257.000
 
 Type  : Fast Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : -0.500
-TNS   : -11.000
+TNS   : -27.000
+
+Type  : Fast Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor3|salida_media'
+Slack : -0.500
+TNS   : -2.000
 
 ------------------------------------------------------------

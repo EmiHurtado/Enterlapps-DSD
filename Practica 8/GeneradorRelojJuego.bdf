@@ -86,150 +86,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 448 64 608 144)
-	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
-	(text "Reloj1" (rect 8 64 38 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "salida" (rect 0 0 28 12)(font "Arial" ))
-		(text "salida" (rect 116 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(parameter
-		"frequency"
-		"5.0"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-	(annotation_block (parameter)(rect 608 32 736 64))
-	(fill (color 255 255 127))
-)
-(symbol
-	(rect 448 144 608 224)
-	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
-	(text "Reloj2" (rect 8 64 38 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "salida" (rect 0 0 28 12)(font "Arial" ))
-		(text "salida" (rect 116 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(parameter
-		"frequency"
-		"6"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-	(annotation_block (parameter)(rect 608 112 736 140))
-	(fill (color 255 255 127))
-)
-(symbol
-	(rect 448 224 608 304)
-	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
-	(text "Reloj3" (rect 8 64 38 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "salida" (rect 0 0 28 12)(font "Arial" ))
-		(text "salida" (rect 116 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(parameter
-		"frequency"
-		"7"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-	(annotation_block (parameter)(rect 608 192 736 220))
-	(fill (color 255 255 127))
-)
-(symbol
-	(rect 448 304 608 384)
-	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
-	(text "Reloj4" (rect 8 64 38 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "salida" (rect 0 0 28 12)(font "Arial" ))
-		(text "salida" (rect 116 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(parameter
-		"frequency"
-		"10"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-	(annotation_block (parameter)(rect 608 272 736 300))
-	(fill (color 255 255 127))
-)
-(symbol
 	(rect 848 136 928 248)
 	(text "MultiplexorRelojes" (rect 4 0 129 16)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 96 25 108)(font "Arial" ))
@@ -320,9 +176,145 @@ applicable agreement for further details.
 	)
 	(rotate90)
 )
-(connector
-	(pt 448 96)
-	(pt 368 96)
+(symbol
+	(rect 448 72 608 152)
+	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
+	(text "Reloj1" (rect 8 64 38 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 116 27 144 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"frequency"
+		"20"
+		""
+		(type "PARAMETER_SIGNED_FLOAT")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 608 40 736 68))
+)
+(symbol
+	(rect 448 144 608 224)
+	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
+	(text "Reloj2" (rect 8 64 38 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 116 27 144 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"frequency"
+		"7"
+		""
+		(type "PARAMETER_SIGNED_FLOAT")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 608 112 736 140))
+)
+(symbol
+	(rect 448 224 608 304)
+	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
+	(text "Reloj3" (rect 8 64 38 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 116 27 144 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"frequency"
+		"6"
+		""
+		(type "PARAMETER_SIGNED_FLOAT")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 608 192 736 220))
+)
+(symbol
+	(rect 448 304 608 384)
+	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
+	(text "Reloj4" (rect 8 64 38 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 116 27 144 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"frequency"
+		"5"
+		""
+		(type "PARAMETER_SIGNED_FLOAT")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 608 272 736 300))
 )
 (connector
 	(pt 448 176)
@@ -339,14 +331,6 @@ applicable agreement for further details.
 (connector
 	(pt 368 216)
 	(pt 336 216)
-)
-(connector
-	(pt 608 96)
-	(pt 840 96)
-)
-(connector
-	(pt 840 176)
-	(pt 840 96)
 )
 (connector
 	(pt 840 176)
@@ -394,14 +378,6 @@ applicable agreement for further details.
 	(pt 976 200)
 )
 (connector
-	(pt 368 96)
-	(pt 368 176)
-)
-(connector
-	(pt 368 176)
-	(pt 368 216)
-)
-(connector
 	(pt 368 216)
 	(pt 368 256)
 )
@@ -412,6 +388,26 @@ applicable agreement for further details.
 (connector
 	(pt 832 208)
 	(pt 832 256)
+)
+(connector
+	(pt 368 104)
+	(pt 448 104)
+)
+(connector
+	(pt 840 104)
+	(pt 608 104)
+)
+(connector
+	(pt 840 176)
+	(pt 840 104)
+)
+(connector
+	(pt 368 104)
+	(pt 368 176)
+)
+(connector
+	(pt 368 176)
+	(pt 368 216)
 )
 (junction (pt 368 176))
 (junction (pt 368 216))

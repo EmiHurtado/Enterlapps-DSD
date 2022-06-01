@@ -21,7 +21,7 @@ ARCHITECTURE DivFrec OF DivisorDeFrecuencia IS
 BEGIN
 	PROCESS (CLK, RESET)
 	BEGIN
-		IF RESET = '0' THEN
+		IF RESET = '1' THEN
 			salida_media <= '0';
 			contador <= 0;
 		ELSIF rising_edge(CLK) THEN

@@ -1,10 +1,12 @@
 |Practica8
 a2 <= DecodifiadorDecimalInteger:Puntuacion2.a
 CLK => GeneradorRelojJuego:Divisor1.Reloj
-CLK => GameManager:Juego.CLK50MHz
+CLK => DivisorDeFrecuencia:Divisor3.CLK
 CLK => DivisorDeFrecuencia:Divisor2.CLK
 PauseBTN => GameManager:Juego.PauseBTN
 PauseBTN => PauseLed.DATAIN
+PauseBTN => PauseLed4.DATAIN
+PauseBTN => PauseLed5.DATAIN
 a1 <= DecodifiadorDecimalInteger:Puntuacion1.a
 b1 <= DecodifiadorDecimalInteger:Puntuacion1.b
 c1 <= DecodifiadorDecimalInteger:Puntuacion1.c
@@ -21,6 +23,8 @@ f2 <= DecodifiadorDecimalInteger:Puntuacion2.f
 h2 <= DecodifiadorDecimalInteger:Puntuacion2.h
 g2 <= DecodifiadorDecimalInteger:Puntuacion2.g
 PauseLed <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
+PauseLed4 <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
+PauseLed5 <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
 column[15] <= GeneradorVideo:GeneradorVideo.column[15]
 column[14] <= GeneradorVideo:GeneradorVideo.column[14]
 column[13] <= GeneradorVideo:GeneradorVideo.column[13]
@@ -132,8 +136,15 @@ d0[2] <= StageManager:inst.d0[2]
 d0[1] <= StageManager:inst.d0[1]
 d0[0] <= StageManager:inst.d0[0]
 CLKGame => StageManager:inst.CLK
-PauseBTN => StageManager:inst.pause
-CLK50MHz => RandomGenerator:inst1.CLK
+CLKGame => EvitaRebote:inst10.clk
+CLKGame => PlayerController:inst5.clk
+CLKGame => PlayerController:inst6.clk
+PauseBTN => EvitaRebote:inst10.input
+CLK7Hz => RandomGenerator:inst1.CLK
+upP1 => PlayerController:inst5.up
+downP1 => PlayerController:inst5.down
+upP2 => PlayerController:inst6.up
+downP2 => PlayerController:inst6.down
 d1[15] <= StageManager:inst.d1[15]
 d1[14] <= StageManager:inst.d1[14]
 d1[13] <= StageManager:inst.d1[13]
@@ -385,6 +396,9 @@ CLK => d0[3]~reg0.CLK
 CLK => d0[2]~reg0.CLK
 CLK => d0[1]~reg0.CLK
 CLK => d0[0]~reg0.CLK
+CLK => rst~reg0.CLK
+CLK => golJug[0].CLK
+CLK => golJug[1].CLK
 CLK => alreadyMoved.CLK
 CLK => posY[0].CLK
 CLK => posY[1].CLK
@@ -537,36 +551,45 @@ CLK => tempDir[0].CLK
 CLK => tempDir[1].CLK
 CLK => derIzq.CLK
 pause => state.OUTPUTSELECT
+pause => rst.OUTPUTSELECT
 pause => state.OUTPUTSELECT
+pause => tempDir.OUTPUTSELECT
+pause => tempDir.OUTPUTSELECT
 pause => state.OUTPUTSELECT
 pause => state.OUTPUTSELECT
 pause => state.OUTPUTSELECT
 pause => state.OUTPUTSELECT
 posPlayer1[0] => Add0.IN6
-posPlayer1[0] => Decoder3.IN2
+posPlayer1[0] => Decoder1.IN2
 posPlayer1[0] => Add1.IN6
 posPlayer1[1] => Add0.IN5
-posPlayer1[1] => Decoder3.IN1
+posPlayer1[1] => Decoder1.IN1
 posPlayer1[1] => Add1.IN5
 posPlayer1[2] => Add0.IN4
-posPlayer1[2] => Decoder3.IN0
+posPlayer1[2] => Decoder1.IN0
 posPlayer1[2] => Add1.IN4
 posPlayer2[0] => Add2.IN6
-posPlayer2[0] => Decoder6.IN2
+posPlayer2[0] => Decoder4.IN2
 posPlayer2[0] => Add3.IN6
 posPlayer2[1] => Add2.IN5
-posPlayer2[1] => Decoder6.IN1
+posPlayer2[1] => Decoder4.IN1
 posPlayer2[1] => Add3.IN5
 posPlayer2[2] => Add2.IN4
-posPlayer2[2] => Decoder6.IN0
+posPlayer2[2] => Decoder4.IN0
 posPlayer2[2] => Add3.IN4
 direction[0] => tempDir.DATAB
 direction[0] => tempDir.DATAB
-direction[0] => Mux10.IN1
+direction[0] => tempDir.DATAB
+direction[0] => tempDir.DATAB
+direction[0] => tempDir.DATAB
+direction[0] => Mux15.IN4
 direction[1] => tempDir.DATAB
 direction[1] => tempDir.DATAB
-direction[1] => Mux9.IN1
-direction[1] => Mux11.IN1
+direction[1] => tempDir.DATAB
+direction[1] => tempDir.DATAB
+direction[1] => tempDir.DATAB
+direction[1] => Mux14.IN4
+direction[1] => Mux16.IN3
 d0[15] <= d0[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d0[14] <= d0[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d0[13] <= d0[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -703,7 +726,15 @@ scoreP2[0] <> scoreP2[0]~reg0
 scoreP2[1] <> scoreP2[1]~reg0
 scoreP2[2] <> scoreP2[2]~reg0
 scoreP2[3] <> scoreP2[3]~reg0
-rst <= comb.DB_MAX_OUTPUT_PORT_TYPE
+rst <= rst~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica8|GameManager:Juego|EvitaRebote:inst10
+clk => isUp.CLK
+clk => output~reg0.CLK
+input => output.IN1
+input => isUp.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica8|GameManager:Juego|RandomGenerator:inst1
@@ -711,6 +742,34 @@ CLK => value[0]~reg0.CLK
 CLK => value[1]~reg0.CLK
 value[0] <> value[0]~reg0
 value[1] <> value[1]~reg0
+
+
+|Practica8|GameManager:Juego|PlayerController:inst5
+clk => pos[0]~reg0.CLK
+clk => pos[1]~reg0.CLK
+clk => pos[2]~reg0.CLK
+rst => pos[0]~reg0.ACLR
+rst => pos[1]~reg0.ACLR
+rst => pos[2]~reg0.PRESET
+up => MoveBars.IN1
+down => MoveBars.IN1
+pos[0] <> pos[0]~reg0
+pos[1] <> pos[1]~reg0
+pos[2] <> pos[2]~reg0
+
+
+|Practica8|GameManager:Juego|PlayerController:inst6
+clk => pos[0]~reg0.CLK
+clk => pos[1]~reg0.CLK
+clk => pos[2]~reg0.CLK
+rst => pos[0]~reg0.ACLR
+rst => pos[1]~reg0.ACLR
+rst => pos[2]~reg0.PRESET
+up => MoveBars.IN1
+down => MoveBars.IN1
+pos[0] <> pos[0]~reg0
+pos[1] <> pos[1]~reg0
+pos[2] <> pos[2]~reg0
 
 
 |Practica8|GeneradorRelojJuego:Divisor1
@@ -789,8 +848,6 @@ CLK => contador[18].CLK
 CLK => contador[19].CLK
 CLK => contador[20].CLK
 CLK => contador[21].CLK
-CLK => contador[22].CLK
-CLK => contador[23].CLK
 CLK => salida_media.CLK
 RESET => contador[0].ACLR
 RESET => contador[1].ACLR
@@ -814,8 +871,6 @@ RESET => contador[18].ACLR
 RESET => contador[19].ACLR
 RESET => contador[20].ACLR
 RESET => contador[21].ACLR
-RESET => contador[22].ACLR
-RESET => contador[23].ACLR
 RESET => salida_media.ACLR
 salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -948,6 +1003,67 @@ CLK => contador[19].CLK
 CLK => contador[20].CLK
 CLK => contador[21].CLK
 CLK => contador[22].CLK
+CLK => contador[23].CLK
+CLK => salida_media.CLK
+RESET => contador[0].ACLR
+RESET => contador[1].ACLR
+RESET => contador[2].ACLR
+RESET => contador[3].ACLR
+RESET => contador[4].ACLR
+RESET => contador[5].ACLR
+RESET => contador[6].ACLR
+RESET => contador[7].ACLR
+RESET => contador[8].ACLR
+RESET => contador[9].ACLR
+RESET => contador[10].ACLR
+RESET => contador[11].ACLR
+RESET => contador[12].ACLR
+RESET => contador[13].ACLR
+RESET => contador[14].ACLR
+RESET => contador[15].ACLR
+RESET => contador[16].ACLR
+RESET => contador[17].ACLR
+RESET => contador[18].ACLR
+RESET => contador[19].ACLR
+RESET => contador[20].ACLR
+RESET => contador[21].ACLR
+RESET => contador[22].ACLR
+RESET => contador[23].ACLR
+RESET => salida_media.ACLR
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica8|GeneradorRelojJuego:Divisor1|Coder2:CodificadorEntradas
+A => output[0].DATAIN
+B => output[1].DATAIN
+output[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica8|DivisorDeFrecuencia:Divisor3
+CLK => contador[0].CLK
+CLK => contador[1].CLK
+CLK => contador[2].CLK
+CLK => contador[3].CLK
+CLK => contador[4].CLK
+CLK => contador[5].CLK
+CLK => contador[6].CLK
+CLK => contador[7].CLK
+CLK => contador[8].CLK
+CLK => contador[9].CLK
+CLK => contador[10].CLK
+CLK => contador[11].CLK
+CLK => contador[12].CLK
+CLK => contador[13].CLK
+CLK => contador[14].CLK
+CLK => contador[15].CLK
+CLK => contador[16].CLK
+CLK => contador[17].CLK
+CLK => contador[18].CLK
+CLK => contador[19].CLK
+CLK => contador[20].CLK
+CLK => contador[21].CLK
+CLK => contador[22].CLK
 CLK => salida_media.CLK
 RESET => contador[0].ACLR
 RESET => contador[1].ACLR
@@ -974,13 +1090,6 @@ RESET => contador[21].ACLR
 RESET => contador[22].ACLR
 RESET => salida_media.ACLR
 salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Practica8|GeneradorRelojJuego:Divisor1|Coder2:CodificadorEntradas
-A => output[0].DATAIN
-B => output[1].DATAIN
-output[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica8|DecodifiadorDecimalInteger:Puntuacion1
