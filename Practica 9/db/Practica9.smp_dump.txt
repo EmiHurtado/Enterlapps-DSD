@@ -1,0 +1,13 @@
+
+State Machine - |MaquinaMealy|pr_state
+Name pr_state.estado9 pr_state.estado8 pr_state.estado7 pr_state.estado6 pr_state.estado5 pr_state.estado4 pr_state.estado3 pr_state.estado2 pr_state.estado1 pr_state.estado0 
+pr_state.estado0 0 0 0 0 0 0 0 0 0 0 
+pr_state.estado1 0 0 0 0 0 0 0 0 1 1 
+pr_state.estado2 0 0 0 0 0 0 0 1 0 1 
+pr_state.estado3 0 0 0 0 0 0 1 0 0 1 
+pr_state.estado4 0 0 0 0 0 1 0 0 0 1 
+pr_state.estado5 0 0 0 0 1 0 0 0 0 1 
+pr_state.estado6 0 0 0 1 0 0 0 0 0 1 
+pr_state.estado7 0 0 1 0 0 0 0 0 0 1 
+pr_state.estado8 0 1 0 0 0 0 0 0 0 1 
+pr_state.estado9 1 0 0 0 0 0 0 0 0 1 
