@@ -30,6 +30,7 @@ BEGIN
             -- Verificar si el juego ha sido iniciado
             CASE state IS
                 WHEN 0 => -- No iniciado
+                    rst <= '0';
                     derIzq <= 0;
                     tempDir <= direction;
                     CASE direction IS
@@ -68,6 +69,7 @@ BEGIN
                     IF (pause = '1') THEN -- Leer pausa
                         state <= 2; -- Pasar a pausa
                     END IF;
+                    rst <= '0';
 
                     IF posX > 0 AND posX < 15 THEN -- Verificamos que no esté tocando los bordes (Perder)
                         -- Encendemos los focos de las barras del jugador
@@ -95,6 +97,9 @@ BEGIN
                         -- ? END IF;
 
                         -- ! Este es el bueno, pero necesitamos más jumpers
+                        IF posX = 1 OR posX = 14 THEN
+                            tempDir <= 0;
+                        END IF;
                         CASE tempDir IS
                             WHEN 3 =>
                                 IF (posX = 1 AND matrixData(posY)(0) = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
@@ -161,10 +166,10 @@ BEGIN
                         matrixData(posY)(posX) <= '0'; -- Encendemos led donde está actualmente la pelota
                     ELSE
                         IF posX = 0 THEN
-                            scoreP1 <= scoreP1 + 1;
+                            scoreP2 <= scoreP2 + 1;
                             golJug <= 2;
                         ELSE
-                            scoreP2 <= scoreP1 + 1;
+                            scoreP1 <= scoreP1 + 1;
                             golJug <= 1;
                         END IF;
                         state <= 3;
@@ -174,7 +179,7 @@ BEGIN
                         state <= 1; -- Pasar a estado jugando
                     END IF;
                 WHEN 3 => -- Anotación
-                    IF scoreP1 = 9 OR scoreP2 = 0 THEN
+                    IF scoreP1 = 9 OR scoreP2 = 9 THEN
                         state <= 5;
                     ELSE
                         -- Festejar hasta la pausa
@@ -207,13 +212,13 @@ BEGIN
                             state <= 4; -- Pasar a estado esperandoLanzamiento
                         END IF;
                     END IF;
-                WHEN 4 =>
+                WHEN 4 => -- EsperandoLanzamiento
                     -- Permitir movimiento
                     IF (pause = '1') THEN
                         tempDir <= direction;
                         state <= 1; -- Pasar a estado jugando
                     END IF;
-                WHEN 5 =>
+                WHEN 5 => -- Jugador gana
                     matrixData(0) <= "0001101101101101";
                     matrixData(1) <= "0111010100101010";
                     matrixData(2) <= "0001000100001000";

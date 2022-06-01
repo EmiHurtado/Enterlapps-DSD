@@ -3,10 +3,16 @@ a2 <= DecodifiadorDecimalInteger:Puntuacion2.a
 CLK => GeneradorRelojJuego:Divisor1.Reloj
 CLK => DivisorDeFrecuencia:Divisor3.CLK
 CLK => DivisorDeFrecuencia:Divisor2.CLK
+A => GeneradorRelojJuego:Divisor1.A
+B => GeneradorRelojJuego:Divisor1.B
 PauseBTN => GameManager:Juego.PauseBTN
-PauseBTN => PauseLed.DATAIN
 PauseBTN => PauseLed4.DATAIN
 PauseBTN => PauseLed5.DATAIN
+upP1 => GameManager:Juego.upP1
+upP1 => PauseLed.DATAIN
+downP1 => GameManager:Juego.downP1
+upP2 => GameManager:Juego.upP2
+downP2 => GameManager:Juego.downP2
 a1 <= DecodifiadorDecimalInteger:Puntuacion1.a
 b1 <= DecodifiadorDecimalInteger:Puntuacion1.b
 c1 <= DecodifiadorDecimalInteger:Puntuacion1.c
@@ -22,7 +28,7 @@ e2 <= DecodifiadorDecimalInteger:Puntuacion2.e
 f2 <= DecodifiadorDecimalInteger:Puntuacion2.f
 h2 <= DecodifiadorDecimalInteger:Puntuacion2.h
 g2 <= DecodifiadorDecimalInteger:Puntuacion2.g
-PauseLed <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
+PauseLed <= upP1.DB_MAX_OUTPUT_PORT_TYPE
 PauseLed4 <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
 PauseLed5 <= PauseBTN.DB_MAX_OUTPUT_PORT_TYPE
 column[15] <= GeneradorVideo:GeneradorVideo.column[15]
@@ -138,13 +144,17 @@ d0[0] <= StageManager:inst.d0[0]
 CLKGame => StageManager:inst.CLK
 CLKGame => EvitaRebote:inst10.clk
 CLKGame => PlayerController:inst5.clk
+CLKGame => EvitaRebote:inst2.clk
+CLKGame => EvitaRebote:inst3.clk
 CLKGame => PlayerController:inst6.clk
+CLKGame => EvitaRebote:inst4.clk
+CLKGame => EvitaRebote:inst7.clk
 PauseBTN => EvitaRebote:inst10.input
 CLK7Hz => RandomGenerator:inst1.CLK
-upP1 => PlayerController:inst5.up
-downP1 => PlayerController:inst5.down
-upP2 => PlayerController:inst6.up
-downP2 => PlayerController:inst6.down
+upP1 => EvitaRebote:inst2.input
+downP1 => EvitaRebote:inst3.input
+upP2 => EvitaRebote:inst4.input
+downP2 => EvitaRebote:inst7.input
 d1[15] <= StageManager:inst.d1[15]
 d1[14] <= StageManager:inst.d1[14]
 d1[13] <= StageManager:inst.d1[13]
@@ -396,7 +406,6 @@ CLK => d0[3]~reg0.CLK
 CLK => d0[2]~reg0.CLK
 CLK => d0[1]~reg0.CLK
 CLK => d0[0]~reg0.CLK
-CLK => rst~reg0.CLK
 CLK => golJug[0].CLK
 CLK => golJug[1].CLK
 CLK => alreadyMoved.CLK
@@ -550,6 +559,7 @@ CLK => downUp.CLK
 CLK => tempDir[0].CLK
 CLK => tempDir[1].CLK
 CLK => derIzq.CLK
+CLK => rst~reg0.CLK
 pause => state.OUTPUTSELECT
 pause => rst.OUTPUTSELECT
 pause => state.OUTPUTSELECT
@@ -582,14 +592,14 @@ direction[0] => tempDir.DATAB
 direction[0] => tempDir.DATAB
 direction[0] => tempDir.DATAB
 direction[0] => tempDir.DATAB
-direction[0] => Mux15.IN4
+direction[0] => Mux16.IN4
 direction[1] => tempDir.DATAB
 direction[1] => tempDir.DATAB
 direction[1] => tempDir.DATAB
 direction[1] => tempDir.DATAB
 direction[1] => tempDir.DATAB
-direction[1] => Mux14.IN4
-direction[1] => Mux16.IN3
+direction[1] => Mux15.IN4
+direction[1] => Mux17.IN3
 d0[15] <= d0[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d0[14] <= d0[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d0[13] <= d0[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -751,11 +761,27 @@ clk => pos[2]~reg0.CLK
 rst => pos[0]~reg0.ACLR
 rst => pos[1]~reg0.ACLR
 rst => pos[2]~reg0.PRESET
-up => MoveBars.IN1
-down => MoveBars.IN1
+up => process_0.IN1
+down => process_0.IN1
 pos[0] <> pos[0]~reg0
 pos[1] <> pos[1]~reg0
 pos[2] <> pos[2]~reg0
+
+
+|Practica8|GameManager:Juego|EvitaRebote:inst2
+clk => isUp.CLK
+clk => output~reg0.CLK
+input => output.IN1
+input => isUp.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica8|GameManager:Juego|EvitaRebote:inst3
+clk => isUp.CLK
+clk => output~reg0.CLK
+input => output.IN1
+input => isUp.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica8|GameManager:Juego|PlayerController:inst6
@@ -765,11 +791,27 @@ clk => pos[2]~reg0.CLK
 rst => pos[0]~reg0.ACLR
 rst => pos[1]~reg0.ACLR
 rst => pos[2]~reg0.PRESET
-up => MoveBars.IN1
-down => MoveBars.IN1
+up => process_0.IN1
+down => process_0.IN1
 pos[0] <> pos[0]~reg0
 pos[1] <> pos[1]~reg0
 pos[2] <> pos[2]~reg0
+
+
+|Practica8|GameManager:Juego|EvitaRebote:inst4
+clk => isUp.CLK
+clk => output~reg0.CLK
+input => output.IN1
+input => isUp.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica8|GameManager:Juego|EvitaRebote:inst7
+clk => isUp.CLK
+clk => output~reg0.CLK
+input => output.IN1
+input => isUp.DATAIN
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica8|GeneradorRelojJuego:Divisor1

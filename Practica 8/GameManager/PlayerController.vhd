@@ -11,7 +11,7 @@ END ENTITY PlayerController;
 
 ARCHITECTURE PC OF PlayerController IS
 BEGIN
-    MoveBars : PROCESS (clk, rst)
+    PROCESS (clk, rst)
     BEGIN
         IF rst = '1' THEN
             pos <= 4;
@@ -22,5 +22,5 @@ BEGIN
                 pos <= pos + 1;
             END IF;
         END IF;
-    END PROCESS MoveBars;
+    END PROCESS;
 END ARCHITECTURE PC;

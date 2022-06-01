@@ -110,4 +110,10 @@ set_global_assignment -name BDF_FILE GeneradorRelojJuego.bdf
 set_global_assignment -name BDF_FILE GameManager.bdf
 set_location_assignment PIN_7 -to PauseLed4
 set_location_assignment PIN_9 -to PauseLed5
+set_location_assignment PIN_103 -to downP1
+set_location_assignment PIN_4 -to downP2
+set_location_assignment PIN_100 -to upP1
+set_location_assignment PIN_8 -to upP2
+set_location_assignment PIN_24 -to A
+set_location_assignment PIN_26 -to B
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
