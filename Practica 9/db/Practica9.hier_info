@@ -1,0 +1,67 @@
+|MaquinaMealy
+reset => pr_state~3.DATAIN
+clk_100MHz => Reloj:Reloj1.clk
+display[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= display[4].DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= display.DB_MAX_OUTPUT_PORT_TYPE
+led_out <= Reloj:Reloj1.salida
+
+
+|MaquinaMealy|Reloj:Reloj1
+salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => salida_media.CLK
+reset => contador[0].ACLR
+reset => contador[1].ACLR
+reset => contador[2].ACLR
+reset => contador[3].ACLR
+reset => contador[4].ACLR
+reset => contador[5].ACLR
+reset => contador[6].ACLR
+reset => contador[7].ACLR
+reset => contador[8].ACLR
+reset => contador[9].ACLR
+reset => contador[10].ACLR
+reset => contador[11].ACLR
+reset => contador[12].ACLR
+reset => contador[13].ACLR
+reset => contador[14].ACLR
+reset => contador[15].ACLR
+reset => contador[16].ACLR
+reset => contador[17].ACLR
+reset => contador[18].ACLR
+reset => contador[19].ACLR
+reset => contador[20].ACLR
+reset => contador[21].ACLR
+reset => contador[22].ACLR
+reset => contador[23].ACLR
+reset => salida_media.ACLR
+
+
