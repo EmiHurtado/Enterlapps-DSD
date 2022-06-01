@@ -2,29 +2,29 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
-Slack : -6.276
-TNS   : -105.797
-
 Type  : Slow Model Setup 'A'
-Slack : -5.178
-TNS   : -828.130
+Slack : -5.988
+TNS   : -865.969
 
 Type  : Slow Model Setup 'CLK'
-Slack : -4.885
-TNS   : -386.683
+Slack : -4.478
+TNS   : -379.652
+
+Type  : Slow Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
+Slack : -4.293
+TNS   : -72.363
 
 Type  : Slow Model Setup 'DivisorDeFrecuencia:Divisor3|salida_media'
-Slack : -0.026
-TNS   : -0.026
+Slack : -0.010
+TNS   : -0.010
 
 Type  : Slow Model Hold 'CLK'
-Slack : -2.527
-TNS   : -5.053
+Slack : -2.553
+TNS   : -5.092
 
 Type  : Slow Model Hold 'A'
-Slack : -2.460
-TNS   : -6.259
+Slack : -0.925
+TNS   : -1.907
 
 Type  : Slow Model Hold 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : 0.499
@@ -35,11 +35,11 @@ Slack : 0.499
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'A'
-Slack : -0.921
-TNS   : -5.526
+Slack : -1.007
+TNS   : -6.042
 
 Type  : Slow Model Removal 'A'
-Slack : 1.035
+Slack : 0.953
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK'
@@ -48,7 +48,7 @@ TNS   : -190.409
 
 Type  : Slow Model Minimum Pulse Width 'A'
 Slack : -1.777
-TNS   : -628.769
+TNS   : -678.833
 
 Type  : Slow Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : -0.742
@@ -58,29 +58,29 @@ Type  : Slow Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor3|salida_medi
 Slack : -0.742
 TNS   : -2.968
 
-Type  : Fast Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
-Slack : -1.443
-TNS   : -21.774
+Type  : Fast Model Setup 'A'
+Slack : -1.157
+TNS   : -125.499
 
 Type  : Fast Model Setup 'CLK'
-Slack : -1.115
-TNS   : -50.722
+Slack : -0.980
+TNS   : -50.523
 
-Type  : Fast Model Setup 'A'
-Slack : -0.978
-TNS   : -113.616
+Type  : Fast Model Setup 'DivisorDeFrecuencia:Divisor2|salida_media'
+Slack : -0.836
+TNS   : -11.315
 
 Type  : Fast Model Setup 'DivisorDeFrecuencia:Divisor3|salida_media'
-Slack : 0.633
+Slack : 0.640
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLK'
-Slack : -1.334
-TNS   : -2.666
+Slack : -1.356
+TNS   : -2.705
 
 Type  : Fast Model Hold 'A'
-Slack : -0.980
-TNS   : -2.589
+Slack : -0.467
+TNS   : -1.128
 
 Type  : Fast Model Hold 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : 0.215
@@ -91,11 +91,11 @@ Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'A'
-Slack : 0.197
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Fast Model Removal 'A'
-Slack : 0.497
+Slack : 0.478
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK'
@@ -104,7 +104,7 @@ TNS   : -128.380
 
 Type  : Fast Model Minimum Pulse Width 'A'
 Slack : -1.222
-TNS   : -354.650
+TNS   : -365.974
 
 Type  : Fast Model Minimum Pulse Width 'DivisorDeFrecuencia:Divisor2|salida_media'
 Slack : -0.500
