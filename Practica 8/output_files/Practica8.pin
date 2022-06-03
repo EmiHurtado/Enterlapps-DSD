@@ -66,13 +66,13 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
-PauseLed                     : 3         : output : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 3         :        :                   :         : 1         :                
 downP2                       : 4         : input  : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
 GND                          : 6         : gnd    :                   :         :           :                
-PauseLed4                    : 7         : output : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 7         :        :                   :         : 1         :                
 upP2                         : 8         : input  : 3.3-V LVTTL       :         : 1         : Y              
-PauseLed5                    : 9         : output : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 9         :        :                   :         : 1         :                
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
 TCK                          : 12        : input  :                   :         : 1         :                
@@ -126,7 +126,7 @@ column[0]                    : 59        : output : 3.3-V LVTTL       :         
 column[15]                   : 60        : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
-h2                           : 63        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 63        :        :                   :         : 4         :                
 b2                           : 64        : output : 3.3-V LVTTL       :         : 4         : Y              
 row1[1]                      : 65        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 66        : power  :                   : 3.3V    : 4         :                
@@ -135,7 +135,7 @@ GND                          : 68        : gnd    :                   :         
 column[6]                    : 69        : output : 3.3-V LVTTL       :         : 4         : Y              
 g1                           : 70        : output : 3.3-V LVTTL       :         : 4         : Y              
 column[7]                    : 71        : output : 3.3-V LVTTL       :         : 4         : Y              
-GND*                         : 72        :        :                   :         : 4         :                
+h2                           : 72        : output : 3.3-V LVTTL       :         : 4         : N              
 e1                           : 73        : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : 74        :        :                   :         : 3         :                
 d1                           : 75        : output : 3.3-V LVTTL       :         : 3         : Y              

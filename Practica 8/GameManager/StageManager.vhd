@@ -97,23 +97,23 @@ BEGIN
                         -- ? END IF;
 
                         -- ! Este es el bueno, pero necesitamos más jumpers
-                        IF posX = 1 OR posX = 14 THEN
+                        IF posX = 2 OR posX = 13 THEN
                             tempDir <= 0;
                         END IF;
                         CASE tempDir IS
                             WHEN 3 =>
-                                IF (posX = 1 AND matrixData(posY)(0) = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
+                                IF (posX = 1 AND (matrixData(posY)(0) = '0' OR matrixData(posY - 1 + (2 * downUp))(0) = '0')) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
                                     derIzq <= 0;
                                     tempDir <= direction;
-                                ELSIF (posX = 14 AND matrixData(posY)(15) = '0') THEN -- Cuando va a la derecha
+                                ELSIF (posX = 14 AND (matrixData(posY)(15) = '0' OR matrixData(posY - 1 + (2 * downUp))(15) = '0')) THEN -- Cuando va a la derecha
                                     derIzq <= 1;
                                     tempDir <= direction;
                                 END IF;
                             WHEN OTHERS =>
-                                IF (posX = 2 AND matrixData(posY)(0) = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
+                                IF (posX = 2 AND (matrixData(posY)(0) = '0' OR matrixData(posY - 1 + (2 * downUp))(0) = '0')) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
                                     derIzq <= 0;
                                     tempDir <= direction;
-                                ELSIF (posX = 13 AND matrixData(posY)(15) = '0') THEN -- Cuando va a la derecha
+                                ELSIF (posX = 13 AND (matrixData(posY)(15) = '0' OR matrixData(posY - 1 + (2 * downUp))(15) = '0')) THEN -- Cuando va a la derecha
                                     derIzq <= 1;
                                     tempDir <= direction;
                                 END IF;

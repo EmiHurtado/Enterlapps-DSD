@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica8
-Wed Jun 01 13:24:30 2022
+Thu Jun 02 22:55:05 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -52,16 +52,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 01 13:24:30 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 22:55:05 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 788                                             ;
-;     Total combinational functions  ; 655                                             ;
-;     Dedicated logic registers      ; 454                                             ;
-; Total registers                    ; 454                                             ;
-; Total pins                         ; 59                                              ;
+; Total logic elements               ; 791                                             ;
+;     Total combinational functions  ; 658                                             ;
+;     Dedicated logic registers      ; 447                                             ;
+; Total registers                    ; 447                                             ;
+; Total pins                         ; 56                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -166,30 +166,30 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                         ; Library ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; GameManager/PlayerController.vhd          ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GameManager/PlayerController.vhd ;         ;
-; EvitaRebote.vhd                           ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/EvitaRebote.vhd                  ;         ;
-; ../Anexos/DecodificadorDecimalInteger.vhd ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/DecodificadorDecimalInteger.vhd      ;         ;
-; GameManager/RandomGenerator.vhd           ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GameManager/RandomGenerator.vhd  ;         ;
-; GameManager/StageManager.vhd              ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GameManager/StageManager.vhd     ;         ;
-; GeneradorVideo.vhd                        ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GeneradorVideo.vhd               ;         ;
-; ../Anexos/Coder2.vhd                      ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/Coder2.vhd                           ;         ;
-; ../Anexos/DivisorFrecuencia.vhd           ; yes             ; User VHDL File                     ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd                ;         ;
-; Practica8.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/Practica8.bdf                    ;         ;
-; MultiplexorRelojes.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd           ;         ;
-; GeneradorRelojJuego.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GeneradorRelojJuego.bdf          ;         ;
-; GameManager.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/GameManager.bdf                  ;         ;
-; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                        ;         ;
-; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                     ;         ;
-; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                         ;         ;
-; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                       ;         ;
-; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                       ;         ;
-; db/mux_33e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/db/mux_33e.tdf                   ;         ;
-+-------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                        ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path          ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                     ; Library ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; GameManager/PlayerController.vhd          ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/PlayerController.vhd ;         ;
+; EvitaRebote.vhd                           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/EvitaRebote.vhd                  ;         ;
+; ../Anexos/DecodificadorDecimalInteger.vhd ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DecodificadorDecimalInteger.vhd      ;         ;
+; GameManager/RandomGenerator.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/RandomGenerator.vhd  ;         ;
+; GameManager/StageManager.vhd              ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager/StageManager.vhd     ;         ;
+; GeneradorVideo.vhd                        ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorVideo.vhd               ;         ;
+; ../Anexos/Coder2.vhd                      ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/Coder2.vhd                           ;         ;
+; ../Anexos/DivisorFrecuencia.vhd           ; yes             ; User VHDL File                     ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Anexos/DivisorFrecuencia.vhd                ;         ;
+; Practica8.bdf                             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/Practica8.bdf                    ;         ;
+; MultiplexorRelojes.vhd                    ; yes             ; User Wizard-Generated File         ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd           ;         ;
+; GeneradorRelojJuego.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GeneradorRelojJuego.bdf          ;         ;
+; GameManager.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/GameManager.bdf                  ;         ;
+; lpm_mux.tdf                               ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                    ;         ;
+; aglobal130.inc                            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                                                                 ;         ;
+; muxlut.inc                                ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/muxlut.inc                                                                                     ;         ;
+; bypassff.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                                                                                   ;         ;
+; altshift.inc                              ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                                                                                   ;         ;
+; db/mux_33e.tdf                            ; yes             ; Auto-Generated Megafunction        ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/db/mux_33e.tdf                   ;         ;
++-------------------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -197,28 +197,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 788                                                                                                                  ;
+; Estimated Total logic elements              ; 791                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
-; Total combinational functions               ; 655                                                                                                                  ;
+; Total combinational functions               ; 658                                                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                      ;
-;     -- 4 input functions                    ; 375                                                                                                                  ;
-;     -- 3 input functions                    ; 115                                                                                                                  ;
-;     -- <=2 input functions                  ; 165                                                                                                                  ;
+;     -- 4 input functions                    ; 372                                                                                                                  ;
+;     -- 3 input functions                    ; 100                                                                                                                  ;
+;     -- <=2 input functions                  ; 186                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
 ; Logic elements by mode                      ;                                                                                                                      ;
-;     -- normal mode                          ; 533                                                                                                                  ;
-;     -- arithmetic mode                      ; 122                                                                                                                  ;
+;     -- normal mode                          ; 538                                                                                                                  ;
+;     -- arithmetic mode                      ; 120                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
-; Total registers                             ; 454                                                                                                                  ;
-;     -- Dedicated logic registers            ; 454                                                                                                                  ;
+; Total registers                             ; 447                                                                                                                  ;
+;     -- Dedicated logic registers            ; 447                                                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                                                    ;
 ;                                             ;                                                                                                                      ;
-; I/O pins                                    ; 59                                                                                                                   ;
+; I/O pins                                    ; 56                                                                                                                   ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                                    ;
 ; Maximum fan-out node                        ; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ;
 ; Maximum fan-out                             ; 298                                                                                                                  ;
-; Total fan-out                               ; 3323                                                                                                                 ;
-; Average fan-out                             ; 2.85                                                                                                                 ;
+; Total fan-out                               ; 3291                                                                                                                 ;
+; Average fan-out                             ; 2.83                                                                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -227,12 +227,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |Practica8                                  ; 655 (0)           ; 454 (0)      ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |Practica8                                                                                                       ; work         ;
+; |Practica8                                  ; 658 (0)           ; 447 (0)      ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |Practica8                                                                                                       ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1                                                                ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2                                                                ; work         ;
 ;    |DivisorDeFrecuencia:Divisor2|           ; 28 (28)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor2                                                                          ; work         ;
 ;    |DivisorDeFrecuencia:Divisor3|           ; 44 (44)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor3                                                                          ; work         ;
-;    |GameManager:Juego|                      ; 313 (3)           ; 300 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego                                                                                     ; work         ;
+;    |GameManager:Juego|                      ; 324 (3)           ; 300 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego                                                                                     ; work         ;
 ;       |EvitaRebote:inst10|                  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst10                                                                  ; work         ;
 ;       |EvitaRebote:inst2|                   ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst2                                                                   ; work         ;
 ;       |EvitaRebote:inst3|                   ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst3                                                                   ; work         ;
@@ -241,12 +241,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |PlayerController:inst5|              ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|PlayerController:inst5                                                              ; work         ;
 ;       |PlayerController:inst6|              ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|PlayerController:inst6                                                              ; work         ;
 ;       |RandomGenerator:inst1|               ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|RandomGenerator:inst1                                                               ; work         ;
-;       |StageManager:inst|                   ; 290 (290)         ; 274 (274)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
-;    |GeneradorRelojJuego:Divisor1|           ; 165 (0)           ; 87 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1                                                                          ; work         ;
+;       |StageManager:inst|                   ; 301 (301)         ; 274 (274)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
+;    |GeneradorRelojJuego:Divisor1|           ; 157 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1                                                                          ; work         ;
 ;       |DivisorDeFrecuencia:Reloj1|          ; 36 (36)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1                                               ; work         ;
-;       |DivisorDeFrecuencia:Reloj2|          ; 46 (46)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2                                               ; work         ;
-;       |DivisorDeFrecuencia:Reloj3|          ; 43 (43)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3                                               ; work         ;
-;       |DivisorDeFrecuencia:Reloj4|          ; 38 (38)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4                                               ; work         ;
+;       |DivisorDeFrecuencia:Reloj2|          ; 43 (43)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2                                               ; work         ;
+;       |DivisorDeFrecuencia:Reloj3|          ; 37 (37)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3                                               ; work         ;
+;       |DivisorDeFrecuencia:Reloj4|          ; 39 (39)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4                                               ; work         ;
 ;       |MultiplexorRelojes:inst|             ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst                                                  ; work         ;
 ;          |lpm_mux:LPM_MUX_component|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component                        ; work         ;
 ;             |mux_33e:auto_generated|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated ; work         ;
@@ -255,13 +255,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                        ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                                                                            ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst ; C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                 ; IP Include File                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Altera ; LPM_MUX      ; 13.0    ; N/A          ; N/A          ; |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst ; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/MultiplexorRelojes.vhd ;
++--------+--------------+---------+--------------+--------------+-----------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -269,17 +269,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+---------------------------------------------------------------------------------+
 ; Register name                                                       ; Reason for Removal                                                              ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
 ; DivisorDeFrecuencia:Divisor3|contador[0]                            ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[3] ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[3] ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[3] ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[4] ; Merged with GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[4] ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[4] ; Merged with GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[4] ;
-; Total Number of Removed Registers = 10                              ;                                                                                 ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[5] ; Merged with GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[5] ;
+; Total Number of Removed Registers = 16                              ;                                                                                 ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------------------+
 
 
@@ -288,7 +294,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 454   ;
+; Total registers                              ; 447   ;
 ; Number of registers using Synchronous Clear  ; 4     ;
 ; Number of registers using Synchronous Load   ; 49    ;
 ; Number of registers using Asynchronous Clear ; 6     ;
@@ -303,11 +309,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+---------+
 ; Inverted Register                                    ; Fan out ;
 +------------------------------------------------------+---------+
-; GameManager:Juego|StageManager:inst|posX[0]          ; 25      ;
+; GameManager:Juego|StageManager:inst|posX[0]          ; 26      ;
 ; GameManager:Juego|StageManager:inst|golJug[0]        ; 5       ;
 ; GameManager:Juego|EvitaRebote:inst10|isUp            ; 1       ;
-; GameManager:Juego|StageManager:inst|posY[1]          ; 61      ;
-; GameManager:Juego|StageManager:inst|posY[0]          ; 60      ;
+; GameManager:Juego|StageManager:inst|posY[0]          ; 69      ;
+; GameManager:Juego|StageManager:inst|posY[1]          ; 64      ;
 ; GameManager:Juego|PlayerController:inst5|pos[2]~reg0 ; 12      ;
 ; GameManager:Juego|PlayerController:inst6|pos[2]~reg0 ; 12      ;
 ; GameManager:Juego|EvitaRebote:inst2|isUp             ; 1       ;
@@ -323,15 +329,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Practica8|GameManager:Juego|PlayerController:inst5|pos[0]~reg0  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Practica8|GameManager:Juego|PlayerController:inst5|pos[1]~reg0  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Practica8|GameManager:Juego|PlayerController:inst6|pos[0]~reg0  ;
 ; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |Practica8|GeneradorVideo:GeneradorVideo|column[1]               ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP2[0]                          ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP1[1]                          ;
-; 8:1                ; 108 bits  ; 540 LEs       ; 324 LEs              ; 216 LEs                ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[6][14] ;
+; 8:1                ; 108 bits  ; 540 LEs       ; 324 LEs              ; 216 LEs                ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[5][6]  ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[7][13] ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posX[2]           ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posY[0]           ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posX[1]           ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posY[1]           ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Practica8|GameManager:Juego|StageManager:inst|Mux2              ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Practica8|GameManager:Juego|StageManager:inst|Mux1              ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2|salidaVector   ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1|salidaVector   ;
@@ -372,7 +379,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 7     ; Signed Float                                                                ;
+; frequency      ; 15    ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -382,7 +389,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-----------------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
-; frequency      ; 6     ; Signed Float                                                                ;
+; frequency      ; 10    ; Signed Float                                                                ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -432,13 +439,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 01 13:24:27 2022
+    Info: Processing started: Thu Jun 02 22:55:00 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica8 -c Practica8
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/playercontroller.vhd
     Info (12022): Found design unit 1: PlayerController-PC
     Info (12023): Found entity 1: PlayerController
-Info (12021): Found 2 design units, including 1 entities, in source file /users/axela/onedrive/documentos/escom/4to semestre/dcd/enterlapps-dsd/anexos/flip-flop sr.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/flip-flop sr.vhd
     Info (12022): Found design unit 1: FlipFlopSR-FFSR
     Info (12023): Found entity 1: FlipFlopSR
 Info (12021): Found 2 design units, including 1 entities, in source file evitarebote.vhd
@@ -447,7 +454,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file evitare
 Info (12021): Found 2 design units, including 1 entities, in source file testmatrix.vhd
     Info (12022): Found design unit 1: TestMatrix-TM
     Info (12023): Found entity 1: TestMatrix
-Info (12021): Found 2 design units, including 1 entities, in source file /users/axela/onedrive/documentos/escom/4to semestre/dcd/enterlapps-dsd/anexos/decodificadordecimalinteger.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/decodificadordecimalinteger.vhd
     Info (12022): Found design unit 1: DecodifiadorDecimalInteger-DecoDecInt
     Info (12023): Found entity 1: DecodifiadorDecimalInteger
 Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/randomgenerator.vhd
@@ -459,10 +466,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file gameman
 Info (12021): Found 2 design units, including 1 entities, in source file generadorvideo.vhd
     Info (12022): Found design unit 1: GeneradorVideo-GV
     Info (12023): Found entity 1: GeneradorVideo
-Info (12021): Found 2 design units, including 1 entities, in source file /users/axela/onedrive/documentos/escom/4to semestre/dcd/enterlapps-dsd/anexos/coder2.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/coder2.vhd
     Info (12022): Found design unit 1: Coder2-c2
     Info (12023): Found entity 1: Coder2
-Info (12021): Found 2 design units, including 1 entities, in source file /users/axela/onedrive/documentos/escom/4to semestre/dcd/enterlapps-dsd/anexos/divisorfrecuencia.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/luisa/onedrive - instituto politecnico nacional/diseño de sistemas digitales/enterlapps-dsd/anexos/divisorfrecuencia.vhd
     Info (12022): Found design unit 1: DivisorDeFrecuencia-DivFrec
     Info (12023): Found entity 1: DivisorDeFrecuencia
 Info (12021): Found 1 design units, including 1 entities, in source file practica8.bdf
@@ -521,12 +528,12 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 847 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 51 output pins
-    Info (21061): Implemented 788 logic cells
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 791 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Wed Jun 01 13:24:30 2022
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Thu Jun 02 22:55:05 2022
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 
