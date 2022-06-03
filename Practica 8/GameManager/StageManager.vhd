@@ -15,7 +15,7 @@ END ENTITY StageManager;
 ARCHITECTURE BC OF StageManager IS
     TYPE Matrix IS ARRAY (0 TO 7) OF STD_LOGIC_VECTOR(0 TO 15);
     SIGNAL matrixData : Matrix;
-    SIGNAL alreadyMoved, hit : STD_LOGIC := '0';
+    SIGNAL alreadyMoved : STD_LOGIC := '0';
     SIGNAL derIzq, downUp : INTEGER RANGE 0 TO 1 := 0;
     SIGNAL posX : INTEGER RANGE 0 TO 15 := 1;
     SIGNAL posY : INTEGER RANGE 0 TO 7 := 3;
@@ -91,16 +91,13 @@ BEGIN
                         --     tempDir <= 0;
                         -- END IF;
 
-                        IF (posX < 2 AND (posY = posPlayer1 OR posY = posPlayer1 - 1 OR posY = posPlayer1 + 1) AND hit = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
+                        IF (posX < 2 AND derIzq = 0 AND (posY = posPlayer1 OR posY = posPlayer1 - 1 OR posY = posPlayer1 + 1)) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
                             derIzq <= 0;
                             tempDir <= direction;
-                            hit <= '1';
-                        ELSIF (posX > 13 AND (posY = posPlayer2 OR posY = posPlayer2 - 1 OR posY = posPlayer2 + 1) AND hit = '0') THEN -- Cuando va a la derecha
+                        ELSIF (posX > 13 AND derIzq = 1 AND (posY = posPlayer2 OR posY = posPlayer2 - 1 OR posY = posPlayer2 + 1)) THEN -- Cuando va a la derecha
                             derIzq <= 1;
                             tempDir <= direction;
-                            hit <= '1';
                         ELSE
-                            hit <= '0';
                             -- Mover la pelota dependiendo de su dirección y encender el led
                             CASE tempDir IS
                                 WHEN 0 => -- 0º
