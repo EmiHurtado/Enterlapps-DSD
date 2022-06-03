@@ -91,10 +91,10 @@ BEGIN
                         --     tempDir <= 0;
                         -- END IF;
 
-                        IF (posX < 2 AND derIzq = 0 AND (posY = posPlayer1 OR posY = posPlayer1 - 1 OR posY = posPlayer1 + 1)) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
+                        IF (posX < 2 AND derIzq = 1 AND (posY = posPlayer1 OR posY = posPlayer1 - 1 OR posY = posPlayer1 + 1)) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
                             derIzq <= 0;
                             tempDir <= direction;
-                        ELSIF (posX > 13 AND derIzq = 1 AND (posY = posPlayer2 OR posY = posPlayer2 - 1 OR posY = posPlayer2 + 1)) THEN -- Cuando va a la derecha
+                        ELSIF (posX > 13 AND derIzq = 0 AND (posY = posPlayer2 OR posY = posPlayer2 - 1 OR posY = posPlayer2 + 1)) THEN -- Cuando va a la derecha
                             derIzq <= 1;
                             tempDir <= direction;
                         ELSE
