@@ -15,7 +15,7 @@ END ENTITY StageManager;
 ARCHITECTURE BC OF StageManager IS
     TYPE Matrix IS ARRAY (0 TO 7) OF STD_LOGIC_VECTOR(0 TO 15);
     SIGNAL matrixData : Matrix;
-    SIGNAL alreadyMoved : STD_LOGIC := '0';
+    SIGNAL alreadyMoved, hit : STD_LOGIC := '0';
     SIGNAL derIzq, downUp : INTEGER RANGE 0 TO 1 := 0;
     SIGNAL posX : INTEGER RANGE 0 TO 15 := 1;
     SIGNAL posY : INTEGER RANGE 0 TO 7 := 3;
@@ -87,82 +87,46 @@ BEGIN
                             downUp <= 1;
                         END IF;
 
-                        -- ?  Borrar cuando inicie el juego
-                        -- ? IF (posX = 1 AND matriz(posY)(0) = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
-                        -- ?     derIzq <= 0;
-                        -- ?     tempDir <= direction;
-                        -- ? ELSIF (posX = 14 AND matriz(posY)(15) = '0') THEN -- Cuando va a la derecha
-                        -- ?     derIzq <= 1;
-                        -- ?     tempDir <= direction;
-                        -- ? END IF;
+                        -- IF ((posX < 3 AND derIzq = 0) OR (posX > 12 AND derIzq = 1)) THEN
+                        --     tempDir <= 0;
+                        -- END IF;
 
-                        -- ! Este es el bueno, pero necesitamos más jumpers
-                        IF posX = 2 OR posX = 13 THEN
-                            tempDir <= 0;
-                        END IF;
-                        CASE tempDir IS
-                            WHEN 3 =>
-                                IF (posX = 1 AND (matrixData(posY)(0) = '0' OR matrixData(posY - 1 + (2 * downUp))(0) = '0')) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
-                                    derIzq <= 0;
-                                    tempDir <= direction;
-                                ELSIF (posX = 14 AND (matrixData(posY)(15) = '0' OR matrixData(posY - 1 + (2 * downUp))(15) = '0')) THEN -- Cuando va a la derecha
-                                    derIzq <= 1;
-                                    tempDir <= direction;
-                                END IF;
-                            WHEN OTHERS =>
-                                IF (posX = 2 AND (matrixData(posY)(0) = '0' OR matrixData(posY - 1 + (2 * downUp))(0) = '0')) THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
-                                    derIzq <= 0;
-                                    tempDir <= direction;
-                                ELSIF (posX = 13 AND (matrixData(posY)(15) = '0' OR matrixData(posY - 1 + (2 * downUp))(15) = '0')) THEN -- Cuando va a la derecha
-                                    derIzq <= 1;
-                                    tempDir <= direction;
-                                END IF;
-                        END CASE;
-
-                        -- ! CASE tempDir IS
-                        -- !     WHEN 3 =>
-                        -- !         IF posX = 1 THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
-                        -- !             derIzq <= 0;
-                        -- !             tempDir <= direction;
-                        -- !         ELSIF posX = 14 THEN -- Cuando va a la derecha
-                        -- !             derIzq <= 1;
-                        -- !             tempDir <= direction;
-                        -- !         END IF;
-                        -- !     WHEN OTHERS =>
-                        -- !         IF posX = 2 THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
-                        -- !             derIzq <= 0;
-                        -- !             tempDir <= direction;
-                        -- !         ELSIF posX = 13 THEN -- Cuando va a la derecha
-                        -- !             derIzq <= 1;
-                        -- !             tempDir <= direction;
-                        -- !         END IF;
-                        -- ! END CASE;
-
-                        -- Mover la pelota dependiendo de su dirección y encender el led
-                        CASE tempDir IS
-                            WHEN 0 => -- 0º
-                                posX <= posX + 1 - (2 * derIzq);
-                            WHEN 1 => -- 30º
-                                posX <= posX + 1 - ((2) * derIzq);
-                                IF alreadyMoved = '1' THEN
-                                    posY <= posY + 1 - ((2) * downUp);
-                                    alreadyMoved <= '0';
-                                ELSE
-                                    alreadyMoved <= '1';
-                                END IF;
-                            WHEN 2 => -- 45º
-                                posX <= posX + 1 - ((2) * derIzq);
-                                posY <= posY + 1 - ((2) * downUp);
-                            WHEN 3 => -- 60º
-                                posY <= posY + 1 - ((2) * downUp);
-                                IF alreadyMoved = '1' THEN
+                        IF (posX < 2 AND (posY = posPlayer1 OR posY = posPlayer1 - 1 OR posY = posPlayer1 + 1) AND hit = '0') THEN -- Cuando va a la izquierda y el jugador tiene su barra ahí
+                            derIzq <= 0;
+                            tempDir <= direction;
+                            hit <= '1';
+                        ELSIF (posX > 13 AND (posY = posPlayer2 OR posY = posPlayer2 - 1 OR posY = posPlayer2 + 1) AND hit = '0') THEN -- Cuando va a la derecha
+                            derIzq <= 1;
+                            tempDir <= direction;
+                            hit <= '1';
+                        ELSE
+                            hit <= '0';
+                            -- Mover la pelota dependiendo de su dirección y encender el led
+                            CASE tempDir IS
+                                WHEN 0 => -- 0º
+                                    posX <= posX + 1 - (2 * derIzq);
+                                WHEN 1 => -- 30º
                                     posX <= posX + 1 - ((2) * derIzq);
-                                    alreadyMoved <= '0';
-                                ELSE
-                                    alreadyMoved <= '1';
-                                END IF;
-                            WHEN OTHERS => NULL;
-                        END CASE;
+                                    IF alreadyMoved = '1' THEN
+                                        posY <= posY + 1 - ((2) * downUp);
+                                        alreadyMoved <= '0';
+                                    ELSE
+                                        alreadyMoved <= '1';
+                                    END IF;
+                                WHEN 2 => -- 45º
+                                    posX <= posX + 1 - ((2) * derIzq);
+                                    posY <= posY + 1 - ((2) * downUp);
+                                WHEN 3 => -- 60º
+                                    posY <= posY + 1 - ((2) * downUp);
+                                    IF alreadyMoved = '1' THEN
+                                        posX <= posX + 1 - ((2) * derIzq);
+                                        alreadyMoved <= '0';
+                                    ELSE
+                                        alreadyMoved <= '1';
+                                    END IF;
+                                WHEN OTHERS => NULL;
+                            END CASE;
+                        END IF;
                         matrixData(posY)(posX) <= '0'; -- Encendemos led donde está actualmente la pelota
                     ELSE
                         IF posX = 0 THEN

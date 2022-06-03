@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica8
-Thu Jun 02 22:55:05 2022
+Thu Jun 02 23:30:08 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -52,15 +52,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 02 22:55:05 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 02 23:30:08 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 791                                             ;
-;     Total combinational functions  ; 658                                             ;
-;     Dedicated logic registers      ; 447                                             ;
-; Total registers                    ; 447                                             ;
+; Total logic elements               ; 775                                             ;
+;     Total combinational functions  ; 642                                             ;
+;     Dedicated logic registers      ; 448                                             ;
+; Total registers                    ; 448                                             ;
 ; Total pins                         ; 56                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -197,28 +197,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 791                                                                                                                  ;
+; Estimated Total logic elements              ; 775                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
-; Total combinational functions               ; 658                                                                                                                  ;
+; Total combinational functions               ; 642                                                                                                                  ;
 ; Logic element usage by number of LUT inputs ;                                                                                                                      ;
-;     -- 4 input functions                    ; 372                                                                                                                  ;
-;     -- 3 input functions                    ; 100                                                                                                                  ;
-;     -- <=2 input functions                  ; 186                                                                                                                  ;
+;     -- 4 input functions                    ; 360                                                                                                                  ;
+;     -- 3 input functions                    ; 94                                                                                                                   ;
+;     -- <=2 input functions                  ; 188                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
 ; Logic elements by mode                      ;                                                                                                                      ;
-;     -- normal mode                          ; 538                                                                                                                  ;
+;     -- normal mode                          ; 522                                                                                                                  ;
 ;     -- arithmetic mode                      ; 120                                                                                                                  ;
 ;                                             ;                                                                                                                      ;
-; Total registers                             ; 447                                                                                                                  ;
-;     -- Dedicated logic registers            ; 447                                                                                                                  ;
+; Total registers                             ; 448                                                                                                                  ;
+;     -- Dedicated logic registers            ; 448                                                                                                                  ;
 ;     -- I/O registers                        ; 0                                                                                                                    ;
 ;                                             ;                                                                                                                      ;
 ; I/O pins                                    ; 56                                                                                                                   ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                                                                    ;
 ; Maximum fan-out node                        ; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ;
-; Maximum fan-out                             ; 298                                                                                                                  ;
-; Total fan-out                               ; 3291                                                                                                                 ;
-; Average fan-out                             ; 2.83                                                                                                                 ;
+; Maximum fan-out                             ; 299                                                                                                                  ;
+; Total fan-out                               ; 3229                                                                                                                 ;
+; Average fan-out                             ; 2.82                                                                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
@@ -227,12 +227,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |Practica8                                  ; 658 (0)           ; 447 (0)      ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |Practica8                                                                                                       ; work         ;
+; |Practica8                                  ; 642 (0)           ; 448 (0)      ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |Practica8                                                                                                       ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion1| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1                                                                ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion2| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2                                                                ; work         ;
 ;    |DivisorDeFrecuencia:Divisor2|           ; 28 (28)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor2                                                                          ; work         ;
 ;    |DivisorDeFrecuencia:Divisor3|           ; 44 (44)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|DivisorDeFrecuencia:Divisor3                                                                          ; work         ;
-;    |GameManager:Juego|                      ; 324 (3)           ; 300 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego                                                                                     ; work         ;
+;    |GameManager:Juego|                      ; 308 (3)           ; 301 (8)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego                                                                                     ; work         ;
 ;       |EvitaRebote:inst10|                  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst10                                                                  ; work         ;
 ;       |EvitaRebote:inst2|                   ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst2                                                                   ; work         ;
 ;       |EvitaRebote:inst3|                   ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|EvitaRebote:inst3                                                                   ; work         ;
@@ -241,7 +241,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |PlayerController:inst5|              ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|PlayerController:inst5                                                              ; work         ;
 ;       |PlayerController:inst6|              ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|PlayerController:inst6                                                              ; work         ;
 ;       |RandomGenerator:inst1|               ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|RandomGenerator:inst1                                                               ; work         ;
-;       |StageManager:inst|                   ; 301 (301)         ; 274 (274)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
+;       |StageManager:inst|                   ; 285 (285)         ; 275 (275)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
 ;    |GeneradorRelojJuego:Divisor1|           ; 157 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1                                                                          ; work         ;
 ;       |DivisorDeFrecuencia:Reloj1|          ; 36 (36)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1                                               ; work         ;
 ;       |DivisorDeFrecuencia:Reloj2|          ; 43 (43)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2                                               ; work         ;
@@ -269,15 +269,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+---------------------------------------------------------------------------------+
 ; Register name                                                       ; Reason for Removal                                                              ;
 +---------------------------------------------------------------------+---------------------------------------------------------------------------------+
-; DivisorDeFrecuencia:Divisor3|contador[0]                            ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[0] ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
+; DivisorDeFrecuencia:Divisor3|contador[0]                            ; Merged with DivisorDeFrecuencia:Divisor2|contador[0]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[1] ; Merged with DivisorDeFrecuencia:Divisor2|contador[1]                            ;
-; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
+; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[2] ; Merged with DivisorDeFrecuencia:Divisor2|contador[2]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[3] ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]                            ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[3] ; Merged with DivisorDeFrecuencia:Divisor2|contador[3]                            ;
@@ -294,12 +294,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 447   ;
-; Number of registers using Synchronous Clear  ; 4     ;
+; Total registers                              ; 448   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 49    ;
 ; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 140   ;
+; Number of registers using Clock Enable       ; 141   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -309,13 +309,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------+---------+
 ; Inverted Register                                    ; Fan out ;
 +------------------------------------------------------+---------+
-; GameManager:Juego|StageManager:inst|posX[0]          ; 26      ;
+; GameManager:Juego|StageManager:inst|posX[0]          ; 21      ;
+; GameManager:Juego|PlayerController:inst5|pos[2]~reg0 ; 13      ;
+; GameManager:Juego|StageManager:inst|posY[1]          ; 62      ;
+; GameManager:Juego|StageManager:inst|posY[0]          ; 59      ;
+; GameManager:Juego|PlayerController:inst6|pos[2]~reg0 ; 13      ;
 ; GameManager:Juego|StageManager:inst|golJug[0]        ; 5       ;
 ; GameManager:Juego|EvitaRebote:inst10|isUp            ; 1       ;
-; GameManager:Juego|StageManager:inst|posY[0]          ; 69      ;
-; GameManager:Juego|StageManager:inst|posY[1]          ; 64      ;
-; GameManager:Juego|PlayerController:inst5|pos[2]~reg0 ; 12      ;
-; GameManager:Juego|PlayerController:inst6|pos[2]~reg0 ; 12      ;
 ; GameManager:Juego|EvitaRebote:inst2|isUp             ; 1       ;
 ; GameManager:Juego|EvitaRebote:inst3|isUp             ; 1       ;
 ; GameManager:Juego|EvitaRebote:inst4|isUp             ; 1       ;
@@ -334,12 +334,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; Yes        ; |Practica8|GeneradorVideo:GeneradorVideo|column[1]               ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP2[0]                          ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Practica8|GameManager:Juego|ScoreP1[1]                          ;
-; 8:1                ; 108 bits  ; 540 LEs       ; 324 LEs              ; 216 LEs                ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[5][6]  ;
+; 8:1                ; 108 bits  ; 540 LEs       ; 324 LEs              ; 216 LEs                ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[7][6]  ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|matrixData[7][13] ;
-; 10:1               ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posX[1]           ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posY[1]           ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Practica8|GameManager:Juego|StageManager:inst|Mux2              ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Practica8|GameManager:Juego|StageManager:inst|Mux1              ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 3 LEs                ; 21 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posX[1]           ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 2 LEs                ; 16 LEs                 ; Yes        ; |Practica8|GameManager:Juego|StageManager:inst|posY[1]           ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2|salidaVector   ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1|salidaVector   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
@@ -439,7 +437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 02 22:55:00 2022
+    Info: Processing started: Thu Jun 02 23:30:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica8 -c Practica8
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file gamemanager/playercontroller.vhd
@@ -526,14 +524,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "h2" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 847 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 832 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 791 logic cells
+    Info (21061): Implemented 776 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
     Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Thu Jun 02 22:55:05 2022
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Thu Jun 02 23:30:08 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

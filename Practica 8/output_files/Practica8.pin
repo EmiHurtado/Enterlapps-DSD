@@ -114,7 +114,7 @@ column[3]                    : 47        : output : 3.3-V LVTTL       :         
 row2[3]                      : 48        : output : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-GND*                         : 51        :        :                   :         : 4         :                
+h1                           : 51        : output : 3.3-V LVTTL       :         : 4         : N              
 column[8]                    : 52        : output : 3.3-V LVTTL       :         : 4         : Y              
 column[5]                    : 53        : output : 3.3-V LVTTL       :         : 4         : Y              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
@@ -195,7 +195,7 @@ GND                          : 128       : gnd    :                   :         
 column[4]                    : 129       : output : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-h1                           : 132       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 132       :        :                   :         : 2         :                
 row1[5]                      : 133       : output : 3.3-V LVTTL       :         : 2         : Y              
 row2[7]                      : 134       : output : 3.3-V LVTTL       :         : 2         : Y              
 row1[2]                      : 135       : output : 3.3-V LVTTL       :         : 2         : Y              
