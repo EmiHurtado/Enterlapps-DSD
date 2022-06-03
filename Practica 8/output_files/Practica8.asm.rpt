@@ -1,5 +1,5 @@
 Assembler report for Practica8
-Thu Jun 02 23:30:16 2022
+Fri Jun 03 11:29:51 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.sof
-  6. Assembler Device Options: C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.pof
+  5. Assembler Device Options: C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.sof
+  6. Assembler Device Options: C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Jun 02 23:30:16 2022 ;
+; Assembler Status      ; Successful - Fri Jun 03 11:29:51 2022 ;
 ; Revision Name         ; Practica8                             ;
 ; Top-level Entity Name ; Practica8                             ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                                  ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                                  ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.sof ;
-; C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.pof ;
-+--------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Generated Files                                                  ;
++----------------------------------------------------------------------------+
+; File Name                                                                  ;
++----------------------------------------------------------------------------+
+; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.sof ;
+; C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.pof ;
++----------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                             ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C5T144C8                                                                                                                                         ;
-; JTAG usercode  ; 0x000EEAD7                                                                                                                                          ;
-; Checksum       ; 0x000EEAD7                                                                                                                                          ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.sof ;
++----------------+-------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                             ;
++----------------+-------------------------------------------------------------------------------------+
+; Device         ; EP2C5T144C8                                                                         ;
+; JTAG usercode  ; 0x000EB259                                                                          ;
+; Checksum       ; 0x000EB259                                                                          ;
++----------------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.pof ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                                         ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS4                                                                                                                                           ;
-; JTAG usercode      ; 0x00000000                                                                                                                                      ;
-; Checksum           ; 0x07452F5A                                                                                                                                      ;
-; Compression Ratio  ; 2                                                                                                                                               ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/projects/escom/dsd/Enterlapps-DSD/Practica 8/output_files/Practica8.pof ;
++--------------------+---------------------------------------------------------------------------------+
+; Option             ; Setting                                                                         ;
++--------------------+---------------------------------------------------------------------------------+
+; Device             ; EPCS4                                                                           ;
+; JTAG usercode      ; 0x00000000                                                                      ;
+; Checksum           ; 0x07470DC6                                                                      ;
+; Compression Ratio  ; 2                                                                               ;
++--------------------+---------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jun 02 23:30:15 2022
+    Info: Processing started: Fri Jun 03 11:29:49 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Practica8 -c Practica8
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4548 megabytes
-    Info: Processing ended: Thu Jun 02 23:30:16 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4546 megabytes
+    Info: Processing ended: Fri Jun 03 11:29:51 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

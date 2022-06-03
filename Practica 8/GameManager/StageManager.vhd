@@ -34,27 +34,18 @@ BEGIN
                     derIzq <= 0;
                     tempDir <= direction;
                     CASE direction IS
-                        WHEN 0 => downUp <= 0;
-                        WHEN 1 => downUp <= 0;
-                        WHEN OTHERS => downUp <= 1;
+                        WHEN 0 =>
+                            downUp <= 0;
+                            posX <= 1;
+                        WHEN 1 =>
+                            downUp <= 0;
+                            posX <= 1;
+                        WHEN OTHERS =>
+                            downUp <= 1;
+                            posX <= 14;
                     END CASE;
-                    matrixData(0) <= "1111111111111111";
-                    matrixData(1) <= "1111111111111111";
-                    matrixData(2) <= "1111111111111111";
-                    matrixData(3) <= "1111111111111111";
-                    matrixData(4) <= "1011111111111111";
-                    matrixData(5) <= "1111111111111111";
-                    matrixData(6) <= "1111111111111111";
-                    matrixData(7) <= "1111111111111111";
                     scoreP1 <= 0;
                     scoreP2 <= 0;
-                    -- Encendemos los focos de las barras del jugador
-                    matrixData(posPlayer1 - 1)(0) <= '0';
-                    matrixData(posPlayer1)(0) <= '0';
-                    matrixData(posPlayer1 + 1)(0) <= '0';
-                    matrixData(posPlayer2 - 1)(15) <= '0';
-                    matrixData(posPlayer2)(15) <= '0';
-                    matrixData(posPlayer2 + 1)(15) <= '0';
                     state <= 4;
                 WHEN 1 => -- Jugando
                     -- Limpiar display
@@ -69,7 +60,6 @@ BEGIN
                     IF (pause = '1') THEN -- Leer pausa
                         state <= 2; -- Pasar a pausa
                     END IF;
-                    rst <= '0';
 
                     IF posX > 0 AND posX < 15 THEN -- Verificamos que no esté tocando los bordes (Perder)
                         -- Encendemos los focos de las barras del jugador
@@ -174,7 +164,32 @@ BEGIN
                         END IF;
                     END IF;
                 WHEN 4 => -- EsperandoLanzamiento
+                    rst <= '0';
+                    matrixData(0) <= "1111111111111111";
+                    matrixData(1) <= "1111111111111111";
+                    matrixData(2) <= "1111111111111111";
+                    matrixData(3) <= "1111111111111111";
+                    matrixData(4) <= "1111111111111111";
+                    matrixData(5) <= "1111111111111111";
+                    matrixData(6) <= "1111111111111111";
+                    matrixData(7) <= "1111111111111111";
+                    -- Encendemos los focos de las barras del jugador
+                    matrixData(posPlayer1 - 1)(0) <= '0';
+                    matrixData(posPlayer1)(0) <= '0';
+                    matrixData(posPlayer1 + 1)(0) <= '0';
+                    matrixData(posPlayer2 - 1)(15) <= '0';
+                    matrixData(posPlayer2)(15) <= '0';
+                    matrixData(posPlayer2 + 1)(15) <= '0';
+
                     -- Permitir movimiento
+                    IF posX = 1 THEN
+                        posY <= posPlayer1;
+                    ELSE
+                        posY <= posPlayer2;
+                    END IF;
+
+                    matrixData(posY)(posX) <= '0'; -- Encendemos led donde está actualmente la pelota
+
                     IF (pause = '1') THEN
                         tempDir <= direction;
                         state <= 1; -- Pasar a estado jugando
@@ -195,6 +210,7 @@ BEGIN
                         matrixData(7) <= "1111111111111011";
                     END IF;
                     IF (pause = '1') THEN
+                        rst <= '1';
                         state <= 0; -- Pasar a estado noIniciado
                     END IF;
                 WHEN OTHERS => NULL;
