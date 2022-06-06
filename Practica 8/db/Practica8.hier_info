@@ -3,8 +3,8 @@ a2 <= DecodifiadorDecimalInteger:Puntuacion2.a
 CLK => GeneradorRelojJuego:Divisor1.Reloj
 CLK => DivisorDeFrecuencia:Divisor3.CLK
 CLK => DivisorDeFrecuencia:Divisor2.CLK
-A => GeneradorRelojJuego:Divisor1.A
-B => GeneradorRelojJuego:Divisor1.B
+Sel[0] => GeneradorRelojJuego:Divisor1.Sel[0]
+Sel[1] => GeneradorRelojJuego:Divisor1.Sel[1]
 PauseBTN => GameManager:Juego.PauseBTN
 upP1 => GameManager:Juego.upP1
 downP1 => GameManager:Juego.downP1
@@ -843,8 +843,8 @@ Reloj => DivisorDeFrecuencia:Reloj1.CLK
 Reloj => DivisorDeFrecuencia:Reloj2.CLK
 Reloj => DivisorDeFrecuencia:Reloj3.CLK
 Reloj => DivisorDeFrecuencia:Reloj4.CLK
-A => Coder2:CodificadorEntradas.A
-B => Coder2:CodificadorEntradas.B
+Sel[0] => MultiplexorRelojes:inst.sel[0]
+Sel[1] => MultiplexorRelojes:inst.sel[1]
 
 
 |Practica8|GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst
@@ -1094,13 +1094,6 @@ RESET => contador[22].ACLR
 RESET => contador[23].ACLR
 RESET => salida_media.ACLR
 salida <= salida_media.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Practica8|GeneradorRelojJuego:Divisor1|Coder2:CodificadorEntradas
-A => output[0].DATAIN
-B => output[1].DATAIN
-output[0] <= A.DB_MAX_OUTPUT_PORT_TYPE
-output[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica8|DivisorDeFrecuencia:Divisor3

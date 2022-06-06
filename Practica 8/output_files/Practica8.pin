@@ -87,9 +87,9 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-A                            : 24        : input  : 3.3-V LVTTL       :         : 1         : Y              
+Sel[1]                       : 24        : input  : 3.3-V LVTTL       :         : 1         : Y              
 a2                           : 25        : output : 3.3-V LVTTL       :         : 1         : Y              
-B                            : 26        : input  : 3.3-V LVTTL       :         : 1         : Y              
+Sel[0]                       : 26        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
