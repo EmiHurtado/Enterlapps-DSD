@@ -1,6 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+-- i Este código recibe un entero como entrada
+-- i y lo transforma a la salida específica y
+-- i funcional para un display de 7 segmentos
 entity DecodifiadorDecimalInteger is
 	port(
 		value : in integer range 0 to 9;

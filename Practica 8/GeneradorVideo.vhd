@@ -1,8 +1,14 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
+
+-- i Este bloque recibe varias señales de datos (que corresponden
+-- i a las filas de la matriz de leds) y las divide y controla
+-- i para que sean visibles en la matriz de leds de forma correcta
+
 ENTITY GeneradorVideo IS
     PORT (
         d0, d1, d2, d3, d4, d5, d6, d7 : IN STD_LOGIC_VECTOR(0 TO 15);
+        -- El reloj es de 1KHz para que no se noten los destellos de los leds
         CLK1KHz : IN STD_LOGIC;
         row : OUT STD_LOGIC_VECTOR(0 TO 7);
         column : OUT STD_LOGIC_VECTOR(0 TO 15)
@@ -17,6 +23,9 @@ BEGIN
 
         -- Moviendo cursor de fila y enviando datos de columna
         IF rising_edge(CLK1KHz) THEN
+            -- Cada ciclo de reloj, se envía la señal de la fila que se debe
+            --  encender junto con la información de los leds que se deben
+            --  apagar para formar la imagen deseada
             CASE numRow IS
                 WHEN 0 =>
                     row <= "10000000";

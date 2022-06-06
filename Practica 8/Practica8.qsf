@@ -94,14 +94,11 @@ set_location_assignment PIN_58 -to column[14]
 set_location_assignment PIN_71 -to column[7]
 set_location_assignment PIN_60 -to column[15]
 set_global_assignment -name VHDL_FILE GameManager/PlayerController.vhd
-set_global_assignment -name VHDL_FILE "../Anexos/Flip-Flop SR.vhd"
 set_global_assignment -name VHDL_FILE EvitaRebote.vhd
-set_global_assignment -name VHDL_FILE TestMatrix.vhd
 set_global_assignment -name VHDL_FILE ../Anexos/DecodificadorDecimalInteger.vhd
 set_global_assignment -name VHDL_FILE GameManager/RandomGenerator.vhd
 set_global_assignment -name VHDL_FILE GameManager/StageManager.vhd
 set_global_assignment -name VHDL_FILE GeneradorVideo.vhd
-set_global_assignment -name VHDL_FILE ../Anexos/Coder2.vhd
 set_global_assignment -name VHDL_FILE ../Anexos/DivisorFrecuencia.vhd
 set_global_assignment -name BDF_FILE Practica8.bdf
 set_global_assignment -name QIP_FILE MultiplexorRelojes.qip

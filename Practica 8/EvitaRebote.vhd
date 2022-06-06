@@ -2,6 +2,11 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 
+-- i Este código evita que, al dejar
+-- i presionado un botón, esta entrada
+-- i mantenga un '1' continuo, haciendo
+-- i que solo se envíe por un ciclo de
+-- i reloj
 ENTITY EvitaRebote IS
     PORT (
         clk, input : IN STD_LOGIC;
