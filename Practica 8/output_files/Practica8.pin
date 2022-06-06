@@ -142,7 +142,7 @@ d1                           : 75        : output : 3.3-V LVTTL       :         
 ~LVDS41p/nCEO~               : 76        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 77        : power  :                   : 3.3V    : 3         :                
 GND                          : 78        : gnd    :                   :         :           :                
-GND*                         : 79        :        :                   :         : 3         :                
+h2                           : 79        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : 80        :        :                   :         : 3         :                
 GND*                         : 81        :        :                   :         : 3         :                
 nSTATUS                      : 82        :        :                   :         : 3         :                
@@ -183,7 +183,7 @@ VCCIO2                       : 116       : power  :                   : 3.3V    
 GND                          : 117       : gnd    :                   :         :           :                
 row2[6]                      : 118       : output : 3.3-V LVTTL       :         : 2         : Y              
 column[1]                    : 119       : output : 3.3-V LVTTL       :         : 2         : Y              
-h2                           : 120       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 120       :        :                   :         : 2         :                
 column[2]                    : 121       : output : 3.3-V LVTTL       :         : 2         : Y              
 column[9]                    : 122       : output : 3.3-V LVTTL       :         : 2         : Y              
 GND                          : 123       : gnd    :                   :         :           :                

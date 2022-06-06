@@ -30,23 +30,44 @@ BEGIN
             -- Verificar si el juego ha sido iniciado
             CASE state IS
                 WHEN 0 => -- No iniciado
-                    rst <= '0';
-                    derIzq <= 0;
-                    tempDir <= direction;
-                    CASE direction IS
-                        WHEN 0 =>
-                            downUp <= 0;
-                            posX <= 1;
-                        WHEN 1 =>
-                            downUp <= 0;
-                            posX <= 1;
-                        WHEN OTHERS =>
-                            downUp <= 1;
-                            posX <= 14;
-                    END CASE;
-                    scoreP1 <= 0;
-                    scoreP2 <= 0;
-                    state <= 4;
+                    rst <= '1';
+
+                    matrixData(0) <= "1111111111111111";
+                    matrixData(1) <= "0001000101101000";
+                    matrixData(2) <= "0101010100101011";
+                    matrixData(3) <= "0001010101001010";
+                    matrixData(4) <= "0111000101101000";
+                    matrixData(5) <= "1111111111111111";
+                    matrixData(6) <= "1111111111111111";
+                    matrixData(7) <= "1111111111111111";
+
+                    matrixData(6)(posX) <= '0';
+
+                    IF posX > 13 THEN
+                        derIzq <= 1;
+                    ELSIF posX < 2 THEN
+                        derIzq <= 0;
+                    END IF;
+
+                    posX <= posX + 1 - (2 * derIzq);
+
+                    IF (pause = '1') THEN
+                        tempDir <= direction;
+                        CASE direction IS
+                            WHEN 0 =>
+                                downUp <= 0;
+                                posX <= 1;
+                            WHEN 1 =>
+                                downUp <= 0;
+                                posX <= 1;
+                            WHEN OTHERS =>
+                                downUp <= 1;
+                                posX <= 14;
+                        END CASE;
+                        scoreP1 <= 0;
+                        scoreP2 <= 0;
+                        state <= 4; -- Pasar a EsperandoLanzamiento
+                    END IF;
                 WHEN 1 => -- Jugando
                     -- Limpiar display
                     matrixData(0) <= "1111111111111111";
@@ -211,6 +232,9 @@ BEGIN
                     END IF;
                     IF (pause = '1') THEN
                         rst <= '1';
+                        derIzq <= 0;
+                        posX <= 0;
+                        posY <= 6;
                         state <= 0; -- Pasar a estado noIniciado
                     END IF;
                 WHEN OTHERS => NULL;
