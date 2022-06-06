@@ -1,5 +1,5 @@
 Fitter report for Practica8
-Sun Jun 05 19:17:11 2022
+Sun Jun 05 19:34:58 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,34 +10,33 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Ignored Assignments
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Input Pins
- 13. Output Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. Output Pin Default Load For Reported TCO
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Pad To Core Delay Chain Fanout
- 20. Control Signals
- 21. Global & Other Fast Signals
- 22. Non-Global High Fan-Out Signals
- 23. Other Routing Usage Summary
- 24. LAB Logic Elements
- 25. LAB-wide Signals
- 26. LAB Signals Sourced
- 27. LAB Signals Sourced Out
- 28. LAB Distinct Inputs
- 29. Fitter Device Options
- 30. Operating Settings and Conditions
- 31. Fitter Messages
- 32. Fitter Suppressed Messages
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Input Pins
+ 12. Output Pins
+ 13. I/O Bank Usage
+ 14. All Package Pins
+ 15. Output Pin Default Load For Reported TCO
+ 16. Fitter Resource Utilization by Entity
+ 17. Delay Chain Summary
+ 18. Pad To Core Delay Chain Fanout
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Non-Global High Fan-Out Signals
+ 22. Other Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Fitter Messages
+ 31. Fitter Suppressed Messages
 
 
 
@@ -63,18 +62,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jun 05 19:17:11 2022           ;
+; Fitter Status                      ; Successful - Sun Jun 05 19:34:58 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 730 / 4,608 ( 16 % )                            ;
+; Total logic elements               ; 738 / 4,608 ( 16 % )                            ;
 ;     Total combinational functions  ; 658 / 4,608 ( 14 % )                            ;
 ;     Dedicated logic registers      ; 447 / 4,608 ( 10 % )                            ;
 ; Total registers                    ; 447                                             ;
-; Total pins                         ; 56 / 89 ( 63 % )                                ;
+; Total pins                         ; 54 / 89 ( 61 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -144,25 +143,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                    ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Location ;                ;              ; PauseLed   ; PIN_3         ; QSF Assignment ;
-; Location ;                ;              ; PauseLed4  ; PIN_7         ; QSF Assignment ;
-; Location ;                ;              ; PauseLed5  ; PIN_9         ; QSF Assignment ;
-+----------+----------------+--------------+------------+---------------+----------------+
-
-
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1169 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1169 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1167 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1167 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -185,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1166    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1164    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -201,16 +189,16 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 730 / 4,608 ( 16 % ) ;
-;     -- Combinational with no register       ; 283                  ;
-;     -- Register only                        ; 72                   ;
-;     -- Combinational with a register        ; 375                  ;
+; Total logic elements                        ; 738 / 4,608 ( 16 % ) ;
+;     -- Combinational with no register       ; 291                  ;
+;     -- Register only                        ; 80                   ;
+;     -- Combinational with a register        ; 367                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
 ;     -- 4 input functions                    ; 312                  ;
 ;     -- 3 input functions                    ; 148                  ;
 ;     -- <=2 input functions                  ; 198                  ;
-;     -- Register only                        ; 72                   ;
+;     -- Register only                        ; 80                   ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
 ;     -- normal mode                          ; 538                  ;
@@ -220,9 +208,9 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ;     -- Dedicated logic registers            ; 447 / 4,608 ( 10 % ) ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 55 / 288 ( 19 % )    ;
+; Total LABs:  partially or completely used   ; 58 / 288 ( 20 % )    ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 56 / 89 ( 63 % )     ;
+; I/O pins                                    ; 54 / 89 ( 61 % )     ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
 ;                                             ;                      ;
 ; Global signals                              ; 4                    ;
@@ -235,11 +223,11 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; JTAGs                                       ; 0 / 1 ( 0 % )        ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 3% / 2% / 4%         ;
-; Peak interconnect usage (total/H/V)         ; 5% / 4% / 6%         ;
+; Average interconnect usage (total/H/V)      ; 3% / 3% / 3%         ;
+; Peak interconnect usage (total/H/V)         ; 4% / 4% / 5%         ;
 ; Maximum fan-out                             ; 298                  ;
 ; Highest non-global fan-out                  ; 128                  ;
-; Total fan-out                               ; 3251                 ;
+; Total fan-out                               ; 3258                 ;
 ; Average fan-out                             ; 2.65                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -253,16 +241,16 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 730 / 4608 ( 16 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 283                 ; 0                              ;
-;     -- Register only                        ; 72                  ; 0                              ;
-;     -- Combinational with a register        ; 375                 ; 0                              ;
+; Total logic elements                        ; 738 / 4608 ( 16 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 291                 ; 0                              ;
+;     -- Register only                        ; 80                  ; 0                              ;
+;     -- Combinational with a register        ; 367                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
 ;     -- 4 input functions                    ; 312                 ; 0                              ;
 ;     -- 3 input functions                    ; 148                 ; 0                              ;
 ;     -- <=2 input functions                  ; 198                 ; 0                              ;
-;     -- Register only                        ; 72                  ; 0                              ;
+;     -- Register only                        ; 80                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
 ;     -- normal mode                          ; 538                 ; 0                              ;
@@ -271,10 +259,10 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; Total registers                             ; 447                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 447 / 4608 ( 10 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 55 / 288 ( 19 % )   ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 58 / 288 ( 20 % )   ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 56                  ; 0                              ;
+; I/O pins                                    ; 54                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -287,7 +275,7 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 3251                ; 0                              ;
+;     -- Total Connections                    ; 3258                ; 0                              ;
 ;     -- Registered Connections               ; 1258                ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
@@ -296,7 +284,7 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
 ;     -- Input Ports                          ; 8                   ; 0                              ;
-;     -- Output Ports                         ; 48                  ; 0                              ;
+;     -- Output Ports                         ; 46                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -366,8 +354,6 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; f2         ; 40    ; 4        ; 1            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; g1         ; 70    ; 4        ; 26           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; g2         ; 42    ; 4        ; 1            ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; h1         ; 132   ; 2        ; 9            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; h2         ; 79    ; 3        ; 28           ; 5            ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; row1[0]    ; 44    ; 4        ; 3            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; row1[1]    ; 65    ; 4        ; 21           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; row1[2]    ; 135   ; 2        ; 3            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -393,8 +379,8 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 10 / 19 ( 53 % ) ; 3.3V          ; --           ;
-; 2        ; 18 / 23 ( 78 % ) ; 3.3V          ; --           ;
-; 3        ; 11 / 23 ( 48 % ) ; 3.3V          ; --           ;
+; 2        ; 17 / 23 ( 74 % ) ; 3.3V          ; --           ;
+; 3        ; 10 / 23 ( 43 % ) ; 3.3V          ; --           ;
 ; 4        ; 20 / 24 ( 83 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -482,7 +468,7 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; 76       ; 87         ; 3        ; ~LVDS41p/nCEO~                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 77       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 78       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 79       ; 95         ; 3        ; h2                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 79       ; 95         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 80       ; 97         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 81       ; 98         ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 82       ; 99         ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -535,7 +521,7 @@ The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico
 ; 129      ; 148        ; 2        ; column[4]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 130      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 131      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; 132      ; 153        ; 2        ; h1                                       ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 132      ; 153        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; 133      ; 154        ; 2        ; row1[5]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 134      ; 155        ; 2        ; row2[7]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; 135      ; 162        ; 2        ; row1[2]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -594,21 +580,21 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                              ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |Practica8                                  ; 730 (0)     ; 447 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 56   ; 0            ; 283 (0)      ; 72 (0)            ; 375 (0)          ; |Practica8                                                                                                       ; work         ;
+; |Practica8                                  ; 738 (0)     ; 447 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 54   ; 0            ; 291 (0)      ; 80 (0)            ; 367 (0)          ; |Practica8                                                                                                       ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion1| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1                                                                ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion2| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2                                                                ; work         ;
 ;    |DivisorDeFrecuencia:Divisor2|           ; 28 (28)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 17 (17)          ; |Practica8|DivisorDeFrecuencia:Divisor2                                                                          ; work         ;
 ;    |DivisorDeFrecuencia:Divisor3|           ; 44 (44)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 23 (23)          ; |Practica8|DivisorDeFrecuencia:Divisor3                                                                          ; work         ;
-;    |GameManager:Juego|                      ; 460 (10)    ; 300 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 160 (2)      ; 72 (0)            ; 228 (0)          ; |Practica8|GameManager:Juego                                                                                     ; work         ;
+;    |GameManager:Juego|                      ; 468 (10)    ; 300 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 168 (2)      ; 80 (0)            ; 220 (0)          ; |Practica8|GameManager:Juego                                                                                     ; work         ;
 ;       |EvitaRebote:inst10|                  ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst10                                                                  ; work         ;
 ;       |EvitaRebote:inst2|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst2                                                                   ; work         ;
 ;       |EvitaRebote:inst3|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst3                                                                   ; work         ;
 ;       |EvitaRebote:inst4|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst4                                                                   ; work         ;
 ;       |EvitaRebote:inst7|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst7                                                                   ; work         ;
 ;       |PlayerController:inst5|              ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |Practica8|GameManager:Juego|PlayerController:inst5                                                              ; work         ;
-;       |PlayerController:inst6|              ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |Practica8|GameManager:Juego|PlayerController:inst6                                                              ; work         ;
+;       |PlayerController:inst6|              ; 7 (7)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |Practica8|GameManager:Juego|PlayerController:inst6                                                              ; work         ;
 ;       |RandomGenerator:inst1|               ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Practica8|GameManager:Juego|RandomGenerator:inst1                                                               ; work         ;
-;       |StageManager:inst|                   ; 433 (433)   ; 274 (274)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 151 (151)    ; 67 (67)           ; 215 (215)        ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
+;       |StageManager:inst|                   ; 441 (441)   ; 274 (274)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 158 (158)    ; 75 (75)           ; 208 (208)        ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
 ;    |GeneradorRelojJuego:Divisor1|           ; 157 (0)     ; 80 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 77 (0)       ; 0 (0)             ; 80 (0)           ; |Practica8|GeneradorRelojJuego:Divisor1                                                                          ; work         ;
 ;       |DivisorDeFrecuencia:Reloj1|          ; 36 (36)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 18 (18)          ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1                                               ; work         ;
 ;       |DivisorDeFrecuencia:Reloj2|          ; 43 (43)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 0 (0)             ; 23 (23)          ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2                                               ; work         ;
@@ -635,13 +621,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; e1         ; Output   ; --            ; --            ; --                    ; --  ;
 ; f1         ; Output   ; --            ; --            ; --                    ; --  ;
 ; g1         ; Output   ; --            ; --            ; --                    ; --  ;
-; h1         ; Output   ; --            ; --            ; --                    ; --  ;
 ; b2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; c2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; d2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; e2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; f2         ; Output   ; --            ; --            ; --                    ; --  ;
-; h2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; g2         ; Output   ; --            ; --            ; --                    ; --  ;
 ; column[0]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; column[1]  ; Output   ; --            ; --            ; --                    ; --  ;
@@ -698,20 +682,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]~0 ; 1                 ; 6       ;
 ; A                                                                                                                             ;                   ;         ;
 ;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]~0 ; 0                 ; 0       ;
-;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]   ; 1                 ; 0       ;
+;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]   ; 0                 ; 0       ;
 ; CLK                                                                                                                           ;                   ;         ;
 ; upP1                                                                                                                          ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst2|output~0                                                                           ; 0                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst2|isUp~feeder                                                                        ; 0                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst2|output~0                                                                           ; 1                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst2|isUp~feeder                                                                        ; 1                 ; 6       ;
 ; downP1                                                                                                                        ;                   ;         ;
 ;      - GameManager:Juego|EvitaRebote:inst3|output~0                                                                           ; 0                 ; 6       ;
 ;      - GameManager:Juego|EvitaRebote:inst3|isUp~feeder                                                                        ; 0                 ; 6       ;
 ; upP2                                                                                                                          ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst4|isUp                                                                               ; 1                 ; 6       ;
 ;      - GameManager:Juego|EvitaRebote:inst4|output~0                                                                           ; 1                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst4|isUp~feeder                                                                        ; 1                 ; 6       ;
 ; downP2                                                                                                                        ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst7|isUp                                                                               ; 0                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst7|output~0                                                                           ; 0                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst7|output~0                                                                           ; 1                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst7|isUp~feeder                                                                        ; 1                 ; 6       ;
 +-------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -722,31 +706,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 ; CLK                                                                                                                  ; PIN_17            ; 5       ; Clock                   ; no     ; --                   ; --               ; --                        ;
 ; CLK                                                                                                                  ; PIN_17            ; 116     ; Clock                   ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X1_Y6_N21    ; 27      ; Clock                   ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X1_Y6_N27    ; 2       ; Clock                   ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux136~3                                                                         ; LCCOMB_X18_Y10_N2 ; 128     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux141~8                                                                         ; LCCOMB_X17_Y6_N10 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux161~5                                                                         ; LCCOMB_X21_Y8_N30 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|matrixData[1][7]~24                                                              ; LCCOMB_X18_Y7_N28 ; 88      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|posX[3]~5                                                                        ; LCCOMB_X18_Y6_N12 ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|posY[0]~10                                                                       ; LCCOMB_X19_Y6_N6  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|rst                                                                              ; LCFF_X20_Y6_N7    ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|state[2]                                                                         ; LCFF_X20_Y6_N25   ; 40      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|tempDir[0]~1                                                                     ; LCCOMB_X19_Y10_N6 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X1_Y3_N12  ; 298     ; Clock                   ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X9_Y5_N19    ; 27      ; Clock                   ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X7_Y9_N17    ; 2       ; Clock                   ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux136~3                                                                         ; LCCOMB_X20_Y4_N10 ; 128     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux141~8                                                                         ; LCCOMB_X22_Y7_N30 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux161~5                                                                         ; LCCOMB_X21_Y7_N0  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|matrixData[1][7]~24                                                              ; LCCOMB_X21_Y8_N18 ; 88      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|posX[3]~5                                                                        ; LCCOMB_X22_Y6_N2  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|posY[0]~10                                                                       ; LCCOMB_X21_Y6_N24 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|rst                                                                              ; LCFF_X20_Y6_N17   ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|state[2]                                                                         ; LCFF_X18_Y6_N25   ; 40      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|tempDir[0]~1                                                                     ; LCCOMB_X21_Y5_N28 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X4_Y6_N0   ; 298     ; Clock                   ; yes    ; Global Clock         ; GCLK1            ; --                        ;
 +----------------------------------------------------------------------------------------------------------------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                             ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name                                                                                                                 ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; CLK                                                                                                                  ; PIN_17           ; 116     ; Global Clock         ; GCLK2            ; --                        ;
-; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X1_Y6_N21   ; 27      ; Global Clock         ; GCLK0            ; --                        ;
-; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X1_Y6_N27   ; 2       ; Global Clock         ; GCLK1            ; --                        ;
-; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X1_Y3_N12 ; 298     ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; Name                                                                                                                 ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; CLK                                                                                                                  ; PIN_17          ; 116     ; Global Clock         ; GCLK2            ; --                        ;
+; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X9_Y5_N19  ; 27      ; Global Clock         ; GCLK3            ; --                        ;
+; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X7_Y9_N17  ; 2       ; Global Clock         ; GCLK0            ; --                        ;
+; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X4_Y6_N0 ; 298     ; Global Clock         ; GCLK1            ; --                        ;
++----------------------------------------------------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------+
@@ -1762,152 +1746,154 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+----------------------+
 ; Other Routing Resource Type ; Usage                ;
 +-----------------------------+----------------------+
-; Block interconnects         ; 909 / 15,666 ( 6 % ) ;
+; Block interconnects         ; 908 / 15,666 ( 6 % ) ;
 ; C16 interconnects           ; 2 / 812 ( < 1 % )    ;
-; C4 interconnects            ; 457 / 11,424 ( 4 % ) ;
-; Direct links                ; 213 / 15,666 ( 1 % ) ;
+; C4 interconnects            ; 422 / 11,424 ( 4 % ) ;
+; Direct links                ; 210 / 15,666 ( 1 % ) ;
 ; Global clocks               ; 4 / 8 ( 50 % )       ;
-; Local interconnects         ; 407 / 4,608 ( 9 % )  ;
-; R24 interconnects           ; 11 / 652 ( 2 % )     ;
-; R4 interconnects            ; 390 / 13,328 ( 3 % ) ;
+; Local interconnects         ; 401 / 4,608 ( 9 % )  ;
+; R24 interconnects           ; 10 / 652 ( 2 % )     ;
+; R4 interconnects            ; 406 / 13,328 ( 3 % ) ;
 +-----------------------------+----------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.27) ; Number of LABs  (Total = 55) ;
+; Number of Logic Elements  (Average = 12.72) ; Number of LABs  (Total = 58) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 2                            ;
+; 1                                           ; 1                            ;
 ; 2                                           ; 1                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 2                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 5                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 3                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 2                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 6                            ;
-; 16                                          ; 31                           ;
+; 13                                          ; 1                            ;
+; 14                                          ; 3                            ;
+; 15                                          ; 9                            ;
+; 16                                          ; 28                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.24) ; Number of LABs  (Total = 55) ;
+; LAB-wide Signals  (Average = 1.34) ; Number of LABs  (Total = 58) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 39                           ;
-; 1 Clock enable                     ; 16                           ;
-; 1 Sync. load                       ; 1                            ;
-; 2 Clocks                           ; 12                           ;
+; 1 Async. clear                     ; 1                            ;
+; 1 Clock                            ; 44                           ;
+; 1 Clock enable                     ; 17                           ;
+; 1 Sync. load                       ; 3                            ;
+; 2 Clocks                           ; 13                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.93) ; Number of LABs  (Total = 55) ;
+; Number of Signals Sourced  (Average = 19.97) ; Number of LABs  (Total = 58) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 2                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
-; 7                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 2                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 2                            ;
 ; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 4                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 2                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 3                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 5                            ;
+; 20                                           ; 6                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 3                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 4                            ;
-; 25                                           ; 4                            ;
-; 26                                           ; 6                            ;
-; 27                                           ; 3                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 5                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 4                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 6                            ;
 ; 31                                           ; 3                            ;
-; 32                                           ; 2                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.16) ; Number of LABs  (Total = 55) ;
+; Number of Signals Sourced Out  (Average = 7.86) ; Number of LABs  (Total = 58) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 1                            ;
-; 3                                               ; 4                            ;
-; 4                                               ; 4                            ;
-; 5                                               ; 5                            ;
-; 6                                               ; 4                            ;
-; 7                                               ; 4                            ;
-; 8                                               ; 5                            ;
-; 9                                               ; 3                            ;
-; 10                                              ; 4                            ;
-; 11                                              ; 4                            ;
-; 12                                              ; 2                            ;
+; 1                                               ; 3                            ;
+; 2                                               ; 7                            ;
+; 3                                               ; 5                            ;
+; 4                                               ; 6                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 3                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 7                            ;
+; 9                                               ; 6                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 6                            ;
 ; 13                                              ; 3                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 1                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 2                            ;
 ; 16                                              ; 4                            ;
-; 17                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.15) ; Number of LABs  (Total = 55) ;
+; Number of Distinct Inputs  (Average = 14.38) ; Number of LABs  (Total = 58) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 5                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 3                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 1                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 3                            ;
+; 6                                            ; 2                            ;
+; 7                                            ; 5                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 3                            ;
 ; 11                                           ; 1                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 3                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 4                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 3                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 3                            ;
 ; 19                                           ; 3                            ;
-; 20                                           ; 8                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 4                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 7                            ;
+; 22                                           ; 3                            ;
+; 23                                           ; 1                            ;
 ; 24                                           ; 2                            ;
-; 25                                           ; 3                            ;
-; 26                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 2                            ;
+; 28                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1957,9 +1943,6 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location 1
     Info (169125): Pin ~nCSO~ is reserved at location 2
     Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location 76
-Critical Warning (169085): No exact pin location assignment(s) for 2 pins of 56 total pins
-    Info (169086): Pin h1 not assigned to an exact location on the device
-    Info (169086): Pin h2 not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica8.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
@@ -1987,19 +1970,6 @@ Info (176353): Automatically promoted node DivisorDeFrecuencia:Divisor3|salida_m
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 2 (unused VREF, 3.3V VCCIO, 0 input, 2 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has 3.3V VCCIO pins. 10 total pin(s) used --  9 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 17 total pin(s) used --  6 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has 3.3V VCCIO pins. 10 total pin(s) used --  13 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has 3.3V VCCIO pins. 20 total pin(s) used --  4 pins available
-Warning (15705): Ignored locations or region assignments to the following nodes
-    Warning (15706): Node "PauseLed" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "PauseLed4" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "PauseLed5" is assigned to location or region, but does not exist in design
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2014,7 +1984,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (11888): Total time spent on timing analysis during the Fitter is 0.66 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 48 output pins without output pin load capacitance assignment
+Warning (306006): Found 46 output pins without output pin load capacitance assignment
     Info (306007): Pin "a2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "a1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "b1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2023,13 +1993,11 @@ Warning (306006): Found 48 output pins without output pin load capacitance assig
     Info (306007): Pin "e1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "f1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "g1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "h1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "b2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "c2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "d2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "e2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "f2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "h2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "g2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "column[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "column[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2066,13 +2034,12 @@ Warning (306006): Found 48 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Sun Jun 05 19:17:12 2022
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Sun Jun 05 19:34:59 2022
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 

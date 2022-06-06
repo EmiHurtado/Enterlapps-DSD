@@ -177,7 +177,7 @@ applicable agreement for further details.
 	(rotate90)
 )
 (symbol
-	(rect 448 72 608 152)
+	(rect 448 64 608 144)
 	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
 	(text "Reloj1" (rect 8 64 38 76)(font "Arial" ))
 	(port
@@ -209,7 +209,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 144 64))
 	)
-	(annotation_block (parameter)(rect 608 112 736 140))
+	(annotation_block (parameter)(rect 608 104 736 132))
 	(fill (color 170 255 255))
 )
 (symbol
@@ -394,19 +394,19 @@ applicable agreement for further details.
 	(pt 832 256)
 )
 (connector
-	(pt 368 104)
-	(pt 448 104)
+	(pt 368 96)
+	(pt 448 96)
 )
 (connector
-	(pt 840 104)
-	(pt 608 104)
+	(pt 840 96)
+	(pt 608 96)
 )
 (connector
 	(pt 840 176)
-	(pt 840 104)
+	(pt 840 96)
 )
 (connector
-	(pt 368 104)
+	(pt 368 96)
 	(pt 368 176)
 )
 (connector

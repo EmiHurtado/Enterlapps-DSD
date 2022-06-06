@@ -61,7 +61,6 @@ set_location_assignment PIN_87 -to f1
 set_location_assignment PIN_93 -to a1
 set_location_assignment PIN_96 -to b1
 set_location_assignment PIN_101 -to c1
-set_location_assignment PIN_3 -to PauseLed
 set_location_assignment PIN_113 -to row1[4]
 set_location_assignment PIN_114 -to row2[4]
 set_location_assignment PIN_115 -to row1[6]
@@ -108,8 +107,6 @@ set_global_assignment -name BDF_FILE Practica8.bdf
 set_global_assignment -name QIP_FILE MultiplexorRelojes.qip
 set_global_assignment -name BDF_FILE GeneradorRelojJuego.bdf
 set_global_assignment -name BDF_FILE GameManager.bdf
-set_location_assignment PIN_7 -to PauseLed4
-set_location_assignment PIN_9 -to PauseLed5
 set_location_assignment PIN_103 -to downP1
 set_location_assignment PIN_4 -to downP2
 set_location_assignment PIN_100 -to upP1
