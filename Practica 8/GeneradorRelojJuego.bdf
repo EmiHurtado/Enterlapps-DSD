@@ -130,42 +130,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 448 64 608 144)
-	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
-	(text "Reloj1" (rect 8 64 38 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
-		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
-		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 160 32)
-		(output)
-		(text "salida" (rect 0 0 28 12)(font "Arial" ))
-		(text "salida" (rect 116 27 144 39)(font "Arial" ))
-		(line (pt 160 32)(pt 144 32))
-	)
-	(parameter
-		"frequency"
-		"20"
-		""
-		(type "PARAMETER_SIGNED_FLOAT")	)
-	(drawing
-		(rectangle (rect 16 16 144 64))
-	)
-	(annotation_block (parameter)(rect 608 104 736 132))
-	(fill (color 170 255 255))
-)
-(symbol
 	(rect 448 304 608 384)
 	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
 	(text "Reloj4" (rect 8 64 38 76)(font "Arial" ))
@@ -192,7 +156,7 @@ applicable agreement for further details.
 	)
 	(parameter
 		"frequency"
-		"5"
+		"20"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -228,7 +192,7 @@ applicable agreement for further details.
 	)
 	(parameter
 		"frequency"
-		"10"
+		"30"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
@@ -264,13 +228,49 @@ applicable agreement for further details.
 	)
 	(parameter
 		"frequency"
-		"15"
+		"40"
 		""
 		(type "PARAMETER_SIGNED_FLOAT")	)
 	(drawing
 		(rectangle (rect 16 16 144 64))
 	)
 	(annotation_block (parameter)(rect 608 184 736 212))
+	(fill (color 170 255 255))
+)
+(symbol
+	(rect 448 64 608 144)
+	(text "DivisorDeFrecuencia" (rect 5 0 108 12)(font "Arial" ))
+	(text "Reloj1" (rect 8 64 38 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RESET" (rect 0 0 35 12)(font "Arial" ))
+		(text "RESET" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "salida" (rect 0 0 28 12)(font "Arial" ))
+		(text "salida" (rect 116 27 144 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32))
+	)
+	(parameter
+		"frequency"
+		"50"
+		""
+		(type "PARAMETER_SIGNED_FLOAT")	)
+	(drawing
+		(rectangle (rect 16 16 144 64))
+	)
+	(annotation_block (parameter)(rect 608 104 736 132))
 	(fill (color 170 255 255))
 )
 (connector

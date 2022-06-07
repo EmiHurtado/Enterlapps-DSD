@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sun Jun 05 20:21:01 2022
+Analysis & Synthesis Status : Successful - Tue Jun 07 11:19:56 2022
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : Practica8
 Top-level Entity Name : Practica8
 Family : Cyclone II
-Total logic elements : 793
-    Total combinational functions : 658
-    Dedicated logic registers : 447
-Total registers : 447
+Total logic elements : 781
+    Total combinational functions : 646
+    Dedicated logic registers : 442
+Total registers : 442
 Total pins : 54
 Total virtual pins : 0
 Total memory bits : 0
