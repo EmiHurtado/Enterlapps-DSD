@@ -38,6 +38,8 @@ BEGIN
             CASE state IS
                 WHEN 0 => -- No iniciado (Reinicia variables y muestra pantalla de título)
                     rst <= '1';
+                    scoreP1 <= 1;
+                    scoreP2 <= 2;
 
                     -- Escribe "PONG"
                     matrixData(0) <= "1111111111111111";
@@ -169,11 +171,11 @@ BEGIN
                         state <= 5;
                     ELSE -- Si no, solo muestra la pantalla de "GOL"
                         -- Festejar hasta la pausa
-                        matrixData(0) <= "1000110000101111";
-                        matrixData(1) <= "1011110110101111";
-                        matrixData(2) <= "1010010110101111";
-                        matrixData(3) <= "1011010110101111";
-                        matrixData(4) <= "1000010000100001";
+                        matrixData(0) <= "1000010000100001";
+                        matrixData(1) <= "1011110111110011";
+                        matrixData(2) <= "1000010001110011";
+                        matrixData(3) <= "1111010111110011";
+                        matrixData(4) <= "1000010000110011";
                         IF golJug = 1 THEN -- Si el jugador 1 hizo la anotación, la flecha apunta a la izquierda
                             posX <= 1;
                             matrixData(5) <= "1101111111111111";

@@ -1,5 +1,5 @@
 Fitter report for Practica8
-Tue Jun 07 11:20:00 2022
+Wed Jun 08 21:17:58 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,15 +62,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jun 07 11:20:00 2022           ;
+; Fitter Status                      ; Successful - Wed Jun 08 21:17:58 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica8                                       ;
 ; Top-level Entity Name              ; Practica8                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 723 / 4,608 ( 16 % )                            ;
-;     Total combinational functions  ; 646 / 4,608 ( 14 % )                            ;
+; Total logic elements               ; 727 / 4,608 ( 16 % )                            ;
+;     Total combinational functions  ; 651 / 4,608 ( 14 % )                            ;
 ;     Dedicated logic registers      ; 442 / 4,608 ( 10 % )                            ;
 ; Total registers                    ; 442                                             ;
 ; Total pins                         ; 54 / 89 ( 61 % )                                ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1150 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1150 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1155 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1155 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1147    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1152    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -181,7 +181,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/output_files/Practica8.pin.
+The pin-out file can be found in C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.pin.
 
 
 +--------------------------------------------------------------------+
@@ -189,26 +189,26 @@ The pin-out file can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Se
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 723 / 4,608 ( 16 % ) ;
-;     -- Combinational with no register       ; 281                  ;
-;     -- Register only                        ; 77                   ;
-;     -- Combinational with a register        ; 365                  ;
+; Total logic elements                        ; 727 / 4,608 ( 16 % ) ;
+;     -- Combinational with no register       ; 285                  ;
+;     -- Register only                        ; 76                   ;
+;     -- Combinational with a register        ; 366                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 332                  ;
-;     -- 3 input functions                    ; 146                  ;
-;     -- <=2 input functions                  ; 168                  ;
-;     -- Register only                        ; 77                   ;
+;     -- 4 input functions                    ; 343                  ;
+;     -- 3 input functions                    ; 138                  ;
+;     -- <=2 input functions                  ; 170                  ;
+;     -- Register only                        ; 76                   ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 533                  ;
+;     -- normal mode                          ; 538                  ;
 ;     -- arithmetic mode                      ; 113                  ;
 ;                                             ;                      ;
 ; Total registers*                            ; 442 / 4,851 ( 9 % )  ;
 ;     -- Dedicated logic registers            ; 442 / 4,608 ( 10 % ) ;
 ;     -- I/O registers                        ; 0 / 243 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 61 / 288 ( 21 % )    ;
+; Total LABs:  partially or completely used   ; 55 / 288 ( 19 % )    ;
 ; Virtual pins                                ; 0                    ;
 ; I/O pins                                    ; 54 / 89 ( 61 % )     ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
@@ -224,11 +224,11 @@ The pin-out file can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Se
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 3% / 3% / 3%         ;
-; Peak interconnect usage (total/H/V)         ; 5% / 5% / 5%         ;
+; Peak interconnect usage (total/H/V)         ; 5% / 4% / 7%         ;
 ; Maximum fan-out                             ; 298                  ;
 ; Highest non-global fan-out                  ; 128                  ;
-; Total fan-out                               ; 3260                 ;
-; Average fan-out                             ; 2.69                 ;
+; Total fan-out                               ; 3286                 ;
+; Average fan-out                             ; 2.70                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,25 +241,25 @@ The pin-out file can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Se
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 723 / 4608 ( 16 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 281                 ; 0                              ;
-;     -- Register only                        ; 77                  ; 0                              ;
-;     -- Combinational with a register        ; 365                 ; 0                              ;
+; Total logic elements                        ; 727 / 4608 ( 16 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 285                 ; 0                              ;
+;     -- Register only                        ; 76                  ; 0                              ;
+;     -- Combinational with a register        ; 366                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 332                 ; 0                              ;
-;     -- 3 input functions                    ; 146                 ; 0                              ;
-;     -- <=2 input functions                  ; 168                 ; 0                              ;
-;     -- Register only                        ; 77                  ; 0                              ;
+;     -- 4 input functions                    ; 343                 ; 0                              ;
+;     -- 3 input functions                    ; 138                 ; 0                              ;
+;     -- <=2 input functions                  ; 170                 ; 0                              ;
+;     -- Register only                        ; 76                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 533                 ; 0                              ;
+;     -- normal mode                          ; 538                 ; 0                              ;
 ;     -- arithmetic mode                      ; 113                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 442                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 442 / 4608 ( 10 % ) ; 0 / 4608 ( 0 % )               ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 61 / 288 ( 21 % )   ; 0 / 288 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 55 / 288 ( 19 % )   ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
 ; I/O pins                                    ; 54                  ; 0                              ;
@@ -275,8 +275,8 @@ The pin-out file can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Se
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 3260                ; 0                              ;
-;     -- Registered Connections               ; 1265                ; 0                              ;
+;     -- Total Connections                    ; 3286                ; 0                              ;
+;     -- Registered Connections               ; 1272                ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -580,21 +580,21 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                              ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------+--------------+
-; |Practica8                                  ; 723 (0)     ; 442 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 54   ; 0            ; 281 (0)      ; 77 (0)            ; 365 (0)          ; |Practica8                                                                                                       ; work         ;
+; |Practica8                                  ; 727 (0)     ; 442 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 54   ; 0            ; 285 (0)      ; 76 (0)            ; 366 (0)          ; |Practica8                                                                                                       ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion1| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion1                                                                ; work         ;
 ;    |DecodifiadorDecimalInteger:Puntuacion2| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Practica8|DecodifiadorDecimalInteger:Puntuacion2                                                                ; work         ;
 ;    |DivisorDeFrecuencia:Divisor2|           ; 28 (28)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 17 (17)          ; |Practica8|DivisorDeFrecuencia:Divisor2                                                                          ; work         ;
 ;    |DivisorDeFrecuencia:Divisor3|           ; 44 (44)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 23 (23)          ; |Practica8|DivisorDeFrecuencia:Divisor3                                                                          ; work         ;
-;    |GameManager:Juego|                      ; 465 (10)    ; 300 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 165 (2)      ; 77 (0)            ; 223 (0)          ; |Practica8|GameManager:Juego                                                                                     ; work         ;
+;    |GameManager:Juego|                      ; 469 (10)    ; 300 (8)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 169 (2)      ; 76 (0)            ; 224 (0)          ; |Practica8|GameManager:Juego                                                                                     ; work         ;
 ;       |EvitaRebote:inst10|                  ; 3 (3)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst10                                                                  ; work         ;
 ;       |EvitaRebote:inst2|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst2                                                                   ; work         ;
 ;       |EvitaRebote:inst3|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst3                                                                   ; work         ;
-;       |EvitaRebote:inst4|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst4                                                                   ; work         ;
-;       |EvitaRebote:inst7|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Practica8|GameManager:Juego|EvitaRebote:inst7                                                                   ; work         ;
+;       |EvitaRebote:inst4|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Practica8|GameManager:Juego|EvitaRebote:inst4                                                                   ; work         ;
+;       |EvitaRebote:inst7|                   ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 1 (1)            ; |Practica8|GameManager:Juego|EvitaRebote:inst7                                                                   ; work         ;
 ;       |PlayerController:inst5|              ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |Practica8|GameManager:Juego|PlayerController:inst5                                                              ; work         ;
 ;       |PlayerController:inst6|              ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |Practica8|GameManager:Juego|PlayerController:inst6                                                              ; work         ;
 ;       |RandomGenerator:inst1|               ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |Practica8|GameManager:Juego|RandomGenerator:inst1                                                               ; work         ;
-;       |StageManager:inst|                   ; 439 (439)   ; 274 (274)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 156 (156)    ; 73 (73)           ; 210 (210)        ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
+;       |StageManager:inst|                   ; 443 (443)   ; 274 (274)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 160 (160)    ; 72 (72)           ; 211 (211)        ; |Practica8|GameManager:Juego|StageManager:inst                                                                   ; work         ;
 ;    |GeneradorRelojJuego:Divisor1|           ; 145 (0)     ; 75 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (0)       ; 0 (0)             ; 75 (0)           ; |Practica8|GeneradorRelojJuego:Divisor1                                                                          ; work         ;
 ;       |DivisorDeFrecuencia:Reloj1|          ; 32 (32)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 16 (16)          ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1                                               ; work         ;
 ;       |DivisorDeFrecuencia:Reloj2|          ; 34 (34)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 18 (18)          ; |Practica8|GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2                                               ; work         ;
@@ -659,9 +659,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; row2[5]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; row2[6]    ; Output   ; --            ; --            ; --                    ; --  ;
 ; row2[7]    ; Output   ; --            ; --            ; --                    ; --  ;
-; PauseBTN   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; Sel[1]     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; Sel[0]     ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; PauseBTN   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; CLK        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; upP1       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; downP1     ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -675,27 +675,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                                                                           ; Pad To Core Index ; Setting ;
 +-------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
-; PauseBTN                                                                                                                      ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst10|output~0                                                                          ; 0                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst10|isUp~feeder                                                                       ; 0                 ; 6       ;
 ; Sel[1]                                                                                                                        ;                   ;         ;
 ;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]~0 ; 0                 ; 6       ;
 ; Sel[0]                                                                                                                        ;                   ;         ;
 ;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]~0 ; 0                 ; 0       ;
 ;      - GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]   ; 0                 ; 0       ;
+; PauseBTN                                                                                                                      ;                   ;         ;
+;      - GameManager:Juego|EvitaRebote:inst10|output~0                                                                          ; 0                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst10|isUp~feeder                                                                       ; 0                 ; 6       ;
 ; CLK                                                                                                                           ;                   ;         ;
 ; upP1                                                                                                                          ;                   ;         ;
 ;      - GameManager:Juego|EvitaRebote:inst2|output~0                                                                           ; 0                 ; 6       ;
 ;      - GameManager:Juego|EvitaRebote:inst2|isUp~feeder                                                                        ; 0                 ; 6       ;
 ; downP1                                                                                                                        ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst3|output~0                                                                           ; 1                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst3|isUp~feeder                                                                        ; 1                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst3|output~0                                                                           ; 0                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst3|isUp~feeder                                                                        ; 0                 ; 6       ;
 ; upP2                                                                                                                          ;                   ;         ;
+;      - GameManager:Juego|EvitaRebote:inst4|isUp                                                                               ; 1                 ; 6       ;
 ;      - GameManager:Juego|EvitaRebote:inst4|output~0                                                                           ; 1                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst4|isUp~feeder                                                                        ; 1                 ; 6       ;
 ; downP2                                                                                                                        ;                   ;         ;
-;      - GameManager:Juego|EvitaRebote:inst7|isUp                                                                               ; 1                 ; 6       ;
-;      - GameManager:Juego|EvitaRebote:inst7|output~0                                                                           ; 1                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst7|output~0                                                                           ; 0                 ; 6       ;
+;      - GameManager:Juego|EvitaRebote:inst7|isUp~feeder                                                                        ; 0                 ; 6       ;
 +-------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -706,31 +706,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 ; CLK                                                                                                                  ; PIN_17             ; 5       ; Clock                   ; no     ; --                   ; --               ; --                        ;
 ; CLK                                                                                                                  ; PIN_17             ; 111     ; Clock                   ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X3_Y5_N1      ; 27      ; Clock                   ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X1_Y6_N29     ; 2       ; Clock                   ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux136~3                                                                         ; LCCOMB_X24_Y8_N10  ; 128     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux141~8                                                                         ; LCCOMB_X22_Y9_N22  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|Mux161~5                                                                         ; LCCOMB_X24_Y10_N14 ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|matrixData[0][6]~24                                                              ; LCCOMB_X21_Y9_N18  ; 88      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|posX[2]~5                                                                        ; LCCOMB_X25_Y9_N12  ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|posY[1]~10                                                                       ; LCCOMB_X24_Y9_N8   ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|rst                                                                              ; LCFF_X25_Y9_N29    ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|state[2]                                                                         ; LCFF_X21_Y9_N5     ; 40      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; GameManager:Juego|StageManager:inst|tempDir[0]~1                                                                     ; LCCOMB_X22_Y9_N28  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X4_Y6_N28   ; 298     ; Clock                   ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X24_Y7_N11    ; 27      ; Clock                   ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X27_Y7_N7     ; 2       ; Clock                   ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux144~3                                                                         ; LCCOMB_X19_Y11_N22 ; 128     ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux149~8                                                                         ; LCCOMB_X19_Y8_N12  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|Mux161~4                                                                         ; LCCOMB_X20_Y8_N10  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|matrixData[5][7]~24                                                              ; LCCOMB_X20_Y8_N4   ; 88      ; Sync. load              ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|posX[3]~5                                                                        ; LCCOMB_X20_Y8_N6   ; 3       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|posY[0]~10                                                                       ; LCCOMB_X21_Y8_N22  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|rst                                                                              ; LCFF_X21_Y8_N11    ; 9       ; Async. clear            ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|state[2]                                                                         ; LCFF_X19_Y11_N29   ; 44      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; GameManager:Juego|StageManager:inst|tempDir[1]~1                                                                     ; LCCOMB_X20_Y7_N20  ; 2       ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X24_Y7_N16  ; 298     ; Clock                   ; yes    ; Global Clock         ; GCLK7            ; --                        ;
 +----------------------------------------------------------------------------------------------------------------------+--------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                             ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name                                                                                                                 ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; CLK                                                                                                                  ; PIN_17           ; 111     ; Global Clock         ; GCLK2            ; --                        ;
-; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X3_Y5_N1    ; 27      ; Global Clock         ; GCLK1            ; --                        ;
-; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X1_Y6_N29   ; 2       ; Global Clock         ; GCLK0            ; --                        ;
-; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X4_Y6_N28 ; 298     ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------------------------------------------------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                              ;
++----------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
+; Name                                                                                                                 ; Location          ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
+; CLK                                                                                                                  ; PIN_17            ; 111     ; Global Clock         ; GCLK2            ; --                        ;
+; DivisorDeFrecuencia:Divisor2|salida_media                                                                            ; LCFF_X24_Y7_N11   ; 27      ; Global Clock         ; GCLK6            ; --                        ;
+; DivisorDeFrecuencia:Divisor3|salida_media                                                                            ; LCFF_X27_Y7_N7    ; 2       ; Global Clock         ; GCLK4            ; --                        ;
+; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0] ; LCCOMB_X24_Y7_N16 ; 298     ; Global Clock         ; GCLK7            ; --                        ;
++----------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------+
@@ -738,34 +738,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                   ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------+---------+
-; GameManager:Juego|StageManager:inst|Mux136~3                                                                           ; 128     ;
-; GameManager:Juego|StageManager:inst|matrixData[0][6]~24                                                                ; 88      ;
+; GameManager:Juego|StageManager:inst|Mux144~3                                                                           ; 128     ;
+; GameManager:Juego|StageManager:inst|matrixData[5][7]~24                                                                ; 88      ;
+; GameManager:Juego|StageManager:inst|state[0]                                                                           ; 60      ;
 ; GeneradorVideo:GeneradorVideo|numRow[1]                                                                                ; 59      ;
-; GameManager:Juego|StageManager:inst|state[0]                                                                           ; 59      ;
 ; GeneradorVideo:GeneradorVideo|numRow[0]                                                                                ; 58      ;
-; GameManager:Juego|StageManager:inst|state[1]                                                                           ; 50      ;
-; GameManager:Juego|StageManager:inst|state[2]                                                                           ; 40      ;
+; GameManager:Juego|StageManager:inst|state[1]                                                                           ; 55      ;
+; GameManager:Juego|StageManager:inst|state[2]                                                                           ; 44      ;
 ; GameManager:Juego|StageManager:inst|posY[1]                                                                            ; 28      ;
 ; GameManager:Juego|StageManager:inst|posY[0]                                                                            ; 26      ;
 ; GeneradorVideo:GeneradorVideo|numRow[2]                                                                                ; 25      ;
 ; GameManager:Juego|StageManager:inst|posY[2]                                                                            ; 25      ;
-; GameManager:Juego|StageManager:inst|posX[1]                                                                            ; 24      ;
-; GameManager:Juego|StageManager:inst|posX[2]                                                                            ; 23      ;
-; GameManager:Juego|StageManager:inst|posX[0]                                                                            ; 23      ;
-; GameManager:Juego|StageManager:inst|posX[3]                                                                            ; 22      ;
-; GameManager:Juego|StageManager:inst|process_0~0                                                                        ; 19      ;
-; GameManager:Juego|StageManager:inst|Mux27~0                                                                            ; 18      ;
-; GameManager:Juego|StageManager:inst|Decoder6~4                                                                         ; 17      ;
-; GameManager:Juego|EvitaRebote:inst10|output                                                                            ; 17      ;
+; GameManager:Juego|StageManager:inst|posX[1]                                                                            ; 23      ;
+; GameManager:Juego|StageManager:inst|posX[2]                                                                            ; 22      ;
+; GameManager:Juego|StageManager:inst|posX[0]                                                                            ; 22      ;
+; GameManager:Juego|StageManager:inst|process_0~0                                                                        ; 21      ;
+; GameManager:Juego|StageManager:inst|posX[3]                                                                            ; 21      ;
+; GameManager:Juego|StageManager:inst|Mux66~0                                                                            ; 20      ;
+; GameManager:Juego|StageManager:inst|Mux52~0                                                                            ; 16      ;
 ; GameManager:Juego|StageManager:inst|Decoder6~6                                                                         ; 16      ;
+; GameManager:Juego|StageManager:inst|Decoder6~4                                                                         ; 16      ;
 ; GameManager:Juego|StageManager:inst|Decoder6~2                                                                         ; 16      ;
+; GameManager:Juego|EvitaRebote:inst10|output                                                                            ; 16      ;
+; GameManager:Juego|StageManager:inst|Equal8~0                                                                           ; 16      ;
 ; DivisorDeFrecuencia:Divisor3|Equal0~6                                                                                  ; 15      ;
 ; DivisorDeFrecuencia:Divisor3|Equal0~4                                                                                  ; 15      ;
+; GameManager:Juego|StageManager:inst|Decoder6~5                                                                         ; 15      ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|contador[1]                                                    ; 15      ;
 ; GameManager:Juego|PlayerController:inst5|pos[1]~reg0                                                                   ; 15      ;
-; GameManager:Juego|StageManager:inst|Mux45~0                                                                            ; 14      ;
-; GameManager:Juego|StageManager:inst|Mux106~0                                                                           ; 14      ;
-; GameManager:Juego|StageManager:inst|Decoder6~5                                                                         ; 14      ;
+; GameManager:Juego|StageManager:inst|Mux51~0                                                                            ; 14      ;
+; GameManager:Juego|StageManager:inst|Mux114~0                                                                           ; 14      ;
 ; GameManager:Juego|StageManager:inst|Decoder6~1                                                                         ; 14      ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|Equal0~5                                                       ; 14      ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|Equal0~4                                                       ; 14      ;
@@ -775,28 +777,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|PlayerController:inst6|pos[2]~reg0                                                                   ; 13      ;
 ; GameManager:Juego|PlayerController:inst5|pos[0]~reg0                                                                   ; 13      ;
 ; GameManager:Juego|StageManager:inst|Mux157~2                                                                           ; 13      ;
-; GameManager:Juego|StageManager:inst|Mux135~0                                                                           ; 12      ;
+; GameManager:Juego|ScoreP1[0]                                                                                           ; 13      ;
+; GameManager:Juego|StageManager:inst|Mux143~0                                                                           ; 12      ;
 ; GameManager:Juego|StageManager:inst|Mux159~0                                                                           ; 12      ;
-; GameManager:Juego|ScoreP1[0]                                                                                           ; 12      ;
+; GameManager:Juego|ScoreP2[1]                                                                                           ; 12      ;
 ; GameManager:Juego|ScoreP2[0]                                                                                           ; 12      ;
 ; GameManager:Juego|StageManager:inst|Equal12~0                                                                          ; 11      ;
 ; GameManager:Juego|PlayerController:inst6|pos[0]~reg0                                                                   ; 11      ;
-; GameManager:Juego|StageManager:inst|Equal8~0                                                                           ; 11      ;
 ; GameManager:Juego|ScoreP1[2]                                                                                           ; 11      ;
 ; GameManager:Juego|ScoreP1[1]                                                                                           ; 11      ;
 ; GameManager:Juego|ScoreP2[2]                                                                                           ; 11      ;
-; GameManager:Juego|ScoreP2[1]                                                                                           ; 11      ;
-; GameManager:Juego|StageManager:inst|Mux44~0                                                                            ; 10      ;
-; GameManager:Juego|StageManager:inst|Mux43~0                                                                            ; 10      ;
+; GameManager:Juego|StageManager:inst|Mux67~0                                                                            ; 10      ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|contador[4]                                                    ; 10      ;
-; GameManager:Juego|StageManager:inst|Mux136~2                                                                           ; 10      ;
 ; GameManager:Juego|ScoreP1[3]                                                                                           ; 10      ;
 ; GameManager:Juego|ScoreP2[3]                                                                                           ; 10      ;
 ; GameManager:Juego|StageManager:inst|Decoder7~13                                                                        ; 9       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|Equal0~4                                                       ; 9       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|Equal0~3                                                       ; 9       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|Equal0~5                                                       ; 9       ;
-; GameManager:Juego|StageManager:inst|Mux161~3                                                                           ; 9       ;
+; GameManager:Juego|StageManager:inst|Mux144~2                                                                           ; 9       ;
+; GameManager:Juego|StageManager:inst|Mux161~2                                                                           ; 9       ;
 ; GameManager:Juego|StageManager:inst|rst                                                                                ; 9       ;
 ; GameManager:Juego|StageManager:inst|derIzq                                                                             ; 9       ;
 ; GameManager:Juego|StageManager:inst|Decoder7~12                                                                        ; 8       ;
@@ -814,12 +814,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|Decoder7~0                                                                         ; 8       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|Equal0~4                                                       ; 8       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|Equal0~2                                                       ; 8       ;
-; GameManager:Juego|StageManager:inst|Mux72~0                                                                            ; 7       ;
-; GameManager:Juego|StageManager:inst|Mux105~2                                                                           ; 7       ;
+; GameManager:Juego|StageManager:inst|Mux80~0                                                                            ; 7       ;
+; GameManager:Juego|StageManager:inst|Mux113~2                                                                           ; 7       ;
 ; DivisorDeFrecuencia:Divisor2|Equal0~4                                                                                  ; 7       ;
 ; DivisorDeFrecuencia:Divisor2|contador[0]                                                                               ; 7       ;
 ; GameManager:Juego|StageManager:inst|state[2]~_wirecell                                                                 ; 5       ;
-; GameManager:Juego|StageManager:inst|Mux89~0                                                                            ; 5       ;
+; GameManager:Juego|StageManager:inst|Mux97~0                                                                            ; 5       ;
 ; DivisorDeFrecuencia:Divisor2|contador[1]                                                                               ; 5       ;
 ; DivisorDeFrecuencia:Divisor2|contador[2]                                                                               ; 5       ;
 ; DivisorDeFrecuencia:Divisor2|contador[3]                                                                               ; 5       ;
@@ -827,6 +827,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|golJug[0]                                                                          ; 5       ;
 ; GameManager:Juego|RandomGenerator:inst1|value[1]~reg0                                                                  ; 5       ;
 ; GameManager:Juego|StageManager:inst|process_0~12                                                                       ; 5       ;
+; GameManager:Juego|StageManager:inst|Equal9~0                                                                           ; 5       ;
 ; CLK                                                                                                                    ; 4       ;
 ; GameManager:Juego|StageManager:inst|Decoder6~0                                                                         ; 4       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[4]                                                    ; 4       ;
@@ -834,28 +835,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|EvitaRebote:inst2|output                                                                             ; 4       ;
 ; DivisorDeFrecuencia:Divisor2|Equal0~0                                                                                  ; 4       ;
 ; GameManager:Juego|StageManager:inst|process_0~13                                                                       ; 4       ;
-; GameManager:Juego|StageManager:inst|posX[2]~2                                                                          ; 4       ;
-; GameManager:Juego|StageManager:inst|Equal9~0                                                                           ; 4       ;
-; GameManager:Juego|ScoreP1[0]~0                                                                                         ; 4       ;
-; GameManager:Juego|ScoreP2[3]~0                                                                                         ; 4       ;
-; GameManager:Juego|StageManager:inst|Mux26~0                                                                            ; 3       ;
+; GameManager:Juego|StageManager:inst|posX[3]~2                                                                          ; 4       ;
 ; GameManager:Juego|RandomGenerator:inst1|value[0]~reg0                                                                  ; 3       ;
 ; GameManager:Juego|StageManager:inst|Decoder5~0                                                                         ; 3       ;
 ; GameManager:Juego|StageManager:inst|downUp                                                                             ; 3       ;
 ; GameManager:Juego|StageManager:inst|Decoder2~0                                                                         ; 3       ;
-; GameManager:Juego|StageManager:inst|posX[2]~5                                                                          ; 3       ;
-; GameManager:Juego|StageManager:inst|Mux140~1                                                                           ; 3       ;
+; GameManager:Juego|StageManager:inst|posX[3]~5                                                                          ; 3       ;
+; GameManager:Juego|StageManager:inst|Mux148~1                                                                           ; 3       ;
 ; GameManager:Juego|StageManager:inst|posX~1                                                                             ; 3       ;
 ; GameManager:Juego|StageManager:inst|tempDir[0]                                                                         ; 3       ;
 ; GameManager:Juego|StageManager:inst|alreadyMoved                                                                       ; 3       ;
 ; GameManager:Juego|StageManager:inst|posX~0                                                                             ; 3       ;
+; GameManager:Juego|StageManager:inst|Equal10~0                                                                          ; 3       ;
+; GameManager:Juego|ScoreP1[1]~0                                                                                         ; 3       ;
 ; downP2                                                                                                                 ; 2       ;
 ; upP2                                                                                                                   ; 2       ;
 ; downP1                                                                                                                 ; 2       ;
 ; upP1                                                                                                                   ; 2       ;
-; Sel[0]                                                                                                                 ; 2       ;
 ; PauseBTN                                                                                                               ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux161~5                                                                           ; 2       ;
+; Sel[0]                                                                                                                 ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux161~4                                                                           ; 2       ;
+; GameManager:Juego|ScoreP2[3]~2                                                                                         ; 2       ;
 ; DivisorDeFrecuencia:Divisor3|contador[1]                                                                               ; 2       ;
 ; DivisorDeFrecuencia:Divisor3|contador[2]                                                                               ; 2       ;
 ; DivisorDeFrecuencia:Divisor3|contador[4]                                                                               ; 2       ;
@@ -878,10 +878,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DivisorDeFrecuencia:Divisor3|contador[19]                                                                              ; 2       ;
 ; DivisorDeFrecuencia:Divisor3|contador[21]                                                                              ; 2       ;
 ; DivisorDeFrecuencia:Divisor3|contador[22]                                                                              ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux56~0                                                                            ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux64~0                                                                            ; 2       ;
 ; GameManager:Juego|StageManager:inst|matrixData~28                                                                      ; 2       ;
 ; GameManager:Juego|StageManager:inst|matrixData~27                                                                      ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux9~1                                                                             ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux17~1                                                                            ; 2       ;
 ; GameManager:Juego|StageManager:inst|matrixData~17                                                                      ; 2       ;
 ; GameManager:Juego|StageManager:inst|matrixData~16                                                                      ; 2       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|contador[6]                                                    ; 2       ;
@@ -952,12 +952,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[20]                                                   ; 2       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[18]                                                   ; 2       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|contador[21]                                                   ; 2       ;
-; GameManager:Juego|StageManager:inst|tempDir[0]~1                                                                       ; 2       ;
+; GameManager:Juego|StageManager:inst|tempDir[1]~1                                                                       ; 2       ;
 ; GameManager:Juego|PlayerController:inst6|pos~2                                                                         ; 2       ;
 ; GameManager:Juego|EvitaRebote:inst7|output                                                                             ; 2       ;
-; GameManager:Juego|StageManager:inst|posY[1]~10                                                                         ; 2       ;
+; GameManager:Juego|StageManager:inst|posY[0]~10                                                                         ; 2       ;
 ; GameManager:Juego|PlayerController:inst5|pos~2                                                                         ; 2       ;
-; GameManager:Juego|StageManager:inst|posY[1]~4                                                                          ; 2       ;
+; GameManager:Juego|StageManager:inst|posY[0]~4                                                                          ; 2       ;
 ; GameManager:Juego|EvitaRebote:inst3|output                                                                             ; 2       ;
 ; DivisorDeFrecuencia:Divisor2|contador[4]                                                                               ; 2       ;
 ; DivisorDeFrecuencia:Divisor2|contador[5]                                                                               ; 2       ;
@@ -975,16 +975,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj3|salida_media                                                   ; 2       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj2|salida_media                                                   ; 2       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|salida_media                                                   ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux141~8                                                                           ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux141~0                                                                           ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux149~8                                                                           ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux149~0                                                                           ; 2       ;
 ; GameManager:Juego|StageManager:inst|tempDir[1]                                                                         ; 2       ;
 ; GameManager:Juego|StageManager:inst|process_0~8                                                                        ; 2       ;
 ; GameManager:Juego|StageManager:inst|process_0~7                                                                        ; 2       ;
 ; GameManager:Juego|StageManager:inst|process_0~6                                                                        ; 2       ;
 ; GameManager:Juego|StageManager:inst|process_0~2                                                                        ; 2       ;
 ; GameManager:Juego|StageManager:inst|process_0~1                                                                        ; 2       ;
-; GameManager:Juego|StageManager:inst|Equal10~0                                                                          ; 2       ;
-; GameManager:Juego|StageManager:inst|Mux161~2                                                                           ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux15~6                                                                            ; 2       ;
+; GameManager:Juego|StageManager:inst|Mux15~5                                                                            ; 2       ;
 ; GeneradorVideo:GeneradorVideo|row[7]                                                                                   ; 2       ;
 ; GeneradorVideo:GeneradorVideo|row[6]                                                                                   ; 2       ;
 ; GeneradorVideo:GeneradorVideo|row[5]                                                                                   ; 2       ;
@@ -1000,7 +1000,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|RandomGenerator:inst1|value[0]~0                                                                     ; 1       ;
 ; GeneradorVideo:GeneradorVideo|numRow[0]~2                                                                              ; 1       ;
 ; GeneradorRelojJuego:Divisor1|MultiplexorRelojes:inst|lpm_mux:LPM_MUX_component|mux_33e:auto_generated|result_node[0]~0 ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux136~6                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux144~6                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~40                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~39                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~38                                                                      ; 1       ;
@@ -1008,11 +1008,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|matrixData~36                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~35                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~34                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux121~4                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux129~4                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux157~4                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|posY[2]~11                                                                         ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux153~3                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux155~4                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux12~6                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux12~5                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux15~8                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux15~7                                                                            ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|contador~13                                                                               ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|contador~12                                                                               ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|contador~11                                                                               ; 1       ;
@@ -1083,37 +1086,98 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|EvitaRebote:inst3|isUp                                                                               ; 1       ;
 ; GameManager:Juego|EvitaRebote:inst2|output~0                                                                           ; 1       ;
 ; GameManager:Juego|EvitaRebote:inst2|isUp                                                                               ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux72~1                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux80~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~33                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~32                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux24~2                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux24~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux24~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux56~2                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux56~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux40~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux32~2                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux32~1                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux32~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux64~2                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux64~1                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux48~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~31                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux136~5                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux136~4                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux88~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux144~5                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux144~4                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux96~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~30                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~29                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux104~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux112~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux112~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux128~2                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux128~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux128~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux79~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux31~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux47~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux143~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux95~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux111~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux127~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux78~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux30~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux62~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux46~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|matrixData~26                                                                      ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux94~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux110~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux126~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux77~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux29~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux61~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux45~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux141~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux93~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux109~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux125~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux76~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux28~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux60~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux44~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux140~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux92~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux108~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux124~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux75~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux27~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux43~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux139~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux91~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux107~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux123~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux74~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux26~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux58~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux138~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux90~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux106~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux122~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux73~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux25~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux57~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux41~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux137~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux89~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux105~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux121~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux72~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux24~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux56~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux40~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux136~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux88~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux104~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux120~2                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux120~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux120~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux71~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux23~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux55~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux39~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux135~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux135~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux87~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux103~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux119~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux70~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux22~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux54~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux38~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|matrixData~26                                                                      ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux134~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux86~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux102~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux118~0                                                                           ; 1       ;
@@ -1127,115 +1191,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|Mux117~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux68~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux20~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux52~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux52~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux36~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux132~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux84~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux100~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux116~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux67~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux67~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux19~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux51~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux35~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux131~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|matrixData~25                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux83~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux99~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux115~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux66~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux66~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux18~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux50~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux34~1                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux34~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux130~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux82~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux98~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux114~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux65~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux17~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux49~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux33~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux129~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux81~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux97~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux113~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux64~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux16~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux48~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux32~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux128~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux80~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux96~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux112~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux63~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux15~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux47~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux31~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux127~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux79~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux95~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux111~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux62~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux30~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux126~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux78~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux94~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux110~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux61~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux13~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux45~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux29~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux125~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux77~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux93~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux109~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux60~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux12~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux44~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux28~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux124~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux76~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux92~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux108~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux59~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux11~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux43~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux27~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|matrixData~25                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux75~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux91~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux107~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux58~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux10~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux42~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux26~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux122~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux74~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux90~0                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux106~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux114~1                                                                           ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~5                                                                                ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~4                                                                                ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~3                                                                                ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~2                                                                                ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~1                                                                                ; 1       ;
 ; DivisorDeFrecuencia:Divisor2|contador~0                                                                                ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux57~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux65~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~23                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~22                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux9~3                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux9~2                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux9~0                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux25~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux17~3                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux17~2                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux17~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux33~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~21                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux41~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux49~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~20                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux121~3                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux121~2                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux73~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux129~3                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux129~2                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux81~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~19                                                                      ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData~18                                                                      ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux89~2                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux89~1                                                                            ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux105~3                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux105~1                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux105~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux97~2                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux97~1                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux113~3                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux113~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux113~0                                                                           ; 1       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|salida_media~0                                                 ; 1       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|Equal0~3                                                       ; 1       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj1|Equal0~1                                                       ; 1       ;
@@ -1256,10 +1260,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|Equal0~1                                                       ; 1       ;
 ; GeneradorRelojJuego:Divisor1|DivisorDeFrecuencia:Reloj4|Equal0~0                                                       ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux160~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux161~4                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux161~3                                                                           ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|salida_media                                                                              ; 1       ;
 ; GameManager:Juego|RandomGenerator:inst1|Add0~0                                                                         ; 1       ;
-; GameManager:Juego|StageManager:inst|tempDir[0]~0                                                                       ; 1       ;
+; GameManager:Juego|StageManager:inst|tempDir[1]~0                                                                       ; 1       ;
 ; GameManager:Juego|StageManager:inst|alreadyMoved~1                                                                     ; 1       ;
 ; GameManager:Juego|StageManager:inst|alreadyMoved~0                                                                     ; 1       ;
 ; GameManager:Juego|PlayerController:inst6|pos~4                                                                         ; 1       ;
@@ -1267,16 +1271,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|PlayerController:inst6|pos~3                                                                         ; 1       ;
 ; GameManager:Juego|PlayerController:inst6|pos~1                                                                         ; 1       ;
 ; GameManager:Juego|PlayerController:inst6|pos~0                                                                         ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux137~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux145~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|derIzq~2                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux137~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux145~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|derIzq~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|derIzq~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux157~3                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add5~0                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|posY[1]~9                                                                          ; 1       ;
-; GameManager:Juego|StageManager:inst|posY[1]~8                                                                          ; 1       ;
-; GameManager:Juego|StageManager:inst|posY[1]~7                                                                          ; 1       ;
+; GameManager:Juego|StageManager:inst|posY[0]~9                                                                          ; 1       ;
+; GameManager:Juego|StageManager:inst|posY[0]~8                                                                          ; 1       ;
+; GameManager:Juego|StageManager:inst|posY[0]~7                                                                          ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux158~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux158~0                                                                           ; 1       ;
 ; GameManager:Juego|PlayerController:inst5|pos~4                                                                         ; 1       ;
@@ -1299,6 +1303,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|matrixData[5][15]                                                                  ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[6][15]                                                                  ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[3][14]                                                                  ; 1       ;
+; GameManager:Juego|StageManager:inst|matrixData[0][14]                                                                  ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[1][14]                                                                  ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[7][14]                                                                  ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[4][14]                                                                  ; 1       ;
@@ -1336,7 +1341,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|matrixData[3][9]                                                                   ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[0][9]                                                                   ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[2][9]                                                                   ; 1       ;
-; GameManager:Juego|StageManager:inst|matrixData[1][9]                                                                   ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[7][9]                                                                   ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[4][9]                                                                   ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[5][9]                                                                   ; 1       ;
@@ -1415,35 +1419,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|matrixData[5][0]                                                                   ; 1       ;
 ; GeneradorVideo:GeneradorVideo|numRow[1]~0                                                                              ; 1       ;
 ; GameManager:Juego|StageManager:inst|matrixData[6][0]                                                                   ; 1       ;
+; GameManager:Juego|EvitaRebote:inst10|output~0                                                                          ; 1       ;
+; GameManager:Juego|EvitaRebote:inst10|isUp                                                                              ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux153~2                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux154~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux154~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux138~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux146~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add7~2                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux139~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux147~0                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add7~1                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|posX[2]~4                                                                          ; 1       ;
-; GameManager:Juego|StageManager:inst|posX[2]~3                                                                          ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux140~2                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|posX[3]~4                                                                          ; 1       ;
+; GameManager:Juego|StageManager:inst|posX[3]~3                                                                          ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux148~2                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add7~0                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux140~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~7                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~6                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~5                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~4                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~3                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~2                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux141~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux148~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~7                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~6                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~5                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~4                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~3                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~2                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux149~1                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~11                                                                       ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~10                                                                       ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~9                                                                        ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~5                                                                        ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~4                                                                        ; 1       ;
 ; GameManager:Juego|StageManager:inst|process_0~3                                                                        ; 1       ;
-; GameManager:Juego|EvitaRebote:inst10|output~0                                                                          ; 1       ;
-; GameManager:Juego|EvitaRebote:inst10|isUp                                                                              ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux155~3                                                                           ; 1       ;
 ; GameManager:Juego|StageManager:inst|Mux155~2                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux155~1                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux155~0                                                                           ; 1       ;
 ; GeneradorVideo:GeneradorVideo|Mux0~7                                                                                   ; 1       ;
 ; GeneradorVideo:GeneradorVideo|Mux0~6                                                                                   ; 1       ;
 ; GeneradorVideo:GeneradorVideo|Mux0~5                                                                                   ; 1       ;
@@ -1661,18 +1666,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GameManager:Juego|StageManager:inst|d4[0]                                                                              ; 1       ;
 ; GameManager:Juego|StageManager:inst|d5[0]                                                                              ; 1       ;
 ; GameManager:Juego|StageManager:inst|d6[0]                                                                              ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux145~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux9~0                                                                             ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add9~1                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux146~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux10~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add9~0                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux147~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux148~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux149~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux11~0                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux12~4                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux13~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add8~1                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux150~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux14~0                                                                            ; 1       ;
 ; GameManager:Juego|StageManager:inst|Add8~0                                                                             ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux151~0                                                                           ; 1       ;
-; GameManager:Juego|StageManager:inst|Mux152~0                                                                           ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux15~4                                                                            ; 1       ;
+; GameManager:Juego|StageManager:inst|Mux16~0                                                                            ; 1       ;
 ; GeneradorVideo:GeneradorVideo|column[15]                                                                               ; 1       ;
 ; GeneradorVideo:GeneradorVideo|column[14]                                                                               ; 1       ;
 ; GeneradorVideo:GeneradorVideo|column[13]                                                                               ; 1       ;
@@ -1733,11 +1738,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DivisorDeFrecuencia:Divisor3|Add0~15                                                                                   ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|Add0~14                                                                                   ; 1       ;
 ; DivisorDeFrecuencia:Divisor3|Add0~13                                                                                   ; 1       ;
-; DivisorDeFrecuencia:Divisor3|Add0~12                                                                                   ; 1       ;
-; DivisorDeFrecuencia:Divisor3|Add0~11                                                                                   ; 1       ;
-; DivisorDeFrecuencia:Divisor3|Add0~10                                                                                   ; 1       ;
-; DivisorDeFrecuencia:Divisor3|Add0~9                                                                                    ; 1       ;
-; DivisorDeFrecuencia:Divisor3|Add0~8                                                                                    ; 1       ;
 +------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1746,155 +1746,156 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+----------------------+
 ; Other Routing Resource Type ; Usage                ;
 +-----------------------------+----------------------+
-; Block interconnects         ; 877 / 15,666 ( 6 % ) ;
-; C16 interconnects           ; 1 / 812 ( < 1 % )    ;
-; C4 interconnects            ; 388 / 11,424 ( 3 % ) ;
-; Direct links                ; 177 / 15,666 ( 1 % ) ;
+; Block interconnects         ; 886 / 15,666 ( 6 % ) ;
+; C16 interconnects           ; 5 / 812 ( < 1 % )    ;
+; C4 interconnects            ; 441 / 11,424 ( 4 % ) ;
+; Direct links                ; 210 / 15,666 ( 1 % ) ;
 ; Global clocks               ; 4 / 8 ( 50 % )       ;
-; Local interconnects         ; 418 / 4,608 ( 9 % )  ;
-; R24 interconnects           ; 5 / 652 ( < 1 % )    ;
-; R4 interconnects            ; 476 / 13,328 ( 4 % ) ;
+; Local interconnects         ; 394 / 4,608 ( 9 % )  ;
+; R24 interconnects           ; 17 / 652 ( 3 % )     ;
+; R4 interconnects            ; 389 / 13,328 ( 3 % ) ;
 +-----------------------------+----------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.85) ; Number of LABs  (Total = 61) ;
+; Number of Logic Elements  (Average = 13.22) ; Number of LABs  (Total = 55) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 6                            ;
-; 2                                           ; 3                            ;
-; 3                                           ; 2                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 2                            ;
 ; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 2                            ;
-; 11                                          ; 2                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 4                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 3                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 31                           ;
+; 15                                          ; 5                            ;
+; 16                                          ; 33                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.25) ; Number of LABs  (Total = 61) ;
+; LAB-wide Signals  (Average = 1.22) ; Number of LABs  (Total = 55) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 45                           ;
-; 1 Clock enable                     ; 18                           ;
-; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 10                           ;
+; 1 Async. clear                     ; 1                            ;
+; 1 Clock                            ; 39                           ;
+; 1 Clock enable                     ; 14                           ;
+; 1 Sync. load                       ; 1                            ;
+; 2 Clocks                           ; 12                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.70) ; Number of LABs  (Total = 61) ;
+; Number of Signals Sourced  (Average = 20.87) ; Number of LABs  (Total = 55) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 3                            ;
-; 2                                            ; 5                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 3                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 2                            ;
+; 8                                            ; 1                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
+; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
+; 13                                           ; 2                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 4                            ;
-; 20                                           ; 8                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
+; 16                                           ; 1                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 4                            ;
+; 19                                           ; 0                            ;
+; 20                                           ; 3                            ;
+; 21                                           ; 4                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 3                            ;
 ; 25                                           ; 3                            ;
-; 26                                           ; 6                            ;
-; 27                                           ; 2                            ;
+; 26                                           ; 4                            ;
+; 27                                           ; 1                            ;
 ; 28                                           ; 1                            ;
-; 29                                           ; 2                            ;
-; 30                                           ; 4                            ;
-; 31                                           ; 4                            ;
-; 32                                           ; 2                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 2                            ;
+; 31                                           ; 6                            ;
+; 32                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.95) ; Number of LABs  (Total = 61) ;
+; Number of Signals Sourced Out  (Average = 7.91) ; Number of LABs  (Total = 55) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 9                            ;
+; 1                                               ; 4                            ;
 ; 2                                               ; 8                            ;
-; 3                                               ; 4                            ;
-; 4                                               ; 1                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 6                            ;
 ; 5                                               ; 2                            ;
-; 6                                               ; 5                            ;
-; 7                                               ; 8                            ;
-; 8                                               ; 5                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 1                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 3                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 8                            ;
+; 12                                              ; 2                            ;
 ; 13                                              ; 3                            ;
-; 14                                              ; 5                            ;
-; 15                                              ; 0                            ;
+; 14                                              ; 4                            ;
+; 15                                              ; 2                            ;
 ; 16                                              ; 3                            ;
-; 17                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.41) ; Number of LABs  (Total = 61) ;
+; Number of Distinct Inputs  (Average = 14.47) ; Number of LABs  (Total = 55) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 7                            ;
-; 5                                            ; 4                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 4                            ;
+; 5                                            ; 3                            ;
 ; 6                                            ; 2                            ;
-; 7                                            ; 3                            ;
+; 7                                            ; 4                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 2                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 4                            ;
-; 18                                           ; 4                            ;
-; 19                                           ; 3                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 3                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 4                            ;
 ; 20                                           ; 4                            ;
-; 21                                           ; 6                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
+; 21                                           ; 7                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 1                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1983,7 +1984,7 @@ Info (170195): Router estimated average interconnect usage is 2% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.61 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 46 output pins without output pin load capacitance assignment
     Info (306007): Pin "a2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2035,19 +2036,19 @@ Warning (306006): Found 46 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/output_files/Practica8.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4709 megabytes
-    Info: Processing ended: Tue Jun 07 11:20:00 2022
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Wed Jun 08 21:17:58 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/axela/OneDrive/Documentos/ESCOM/4to Semestre/DCD/Enterlapps-DSD/Practica 8/output_files/Practica8.fit.smsg.
+The suppressed messages can be found in C:/Users/luisa/OneDrive - Instituto Politecnico Nacional/Diseño de sistemas digitales/Enterlapps-DSD/Practica 8/output_files/Practica8.fit.smsg.
 
 
